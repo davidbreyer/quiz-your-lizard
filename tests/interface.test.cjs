@@ -78,6 +78,19 @@ test('library loads the 521 linked legacy cards and icons without network resour
   assert.match(t.$('#quiz-grid').textContent, /German Numbers/);
   end(t);
 });
+test('the footer release version also versions static and dynamically rendered assets', () => {
+  const t = boot();
+  const version = t.$('meta[name="app-version"]').content;
+  assert.match(version, /^v\d{8}-\d{4}$/);
+  assert.equal(t.$('#app-version').textContent, version);
+  for (const el of t.w.document.querySelectorAll('script[src], link[href], img[src]')) {
+    const url = new URL(el.getAttribute('src') || el.getAttribute('href'), t.w.location.href);
+    assert.equal(url.searchParams.get('v'), version, url.href);
+  }
+  t.click('[data-action="open-quiz"]');
+  assert.equal(new URL(t.$('.practice-art img').src).searchParams.get('v'), version);
+  end(t);
+});
 test('quiz and question create/edit survive reload, including custom wrong answers', () => {
   const t = boot(fixture());
   t.click('[data-action="new-quiz"]');

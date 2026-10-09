@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Check out prototype
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -34,21 +36,24 @@ jobs:
           cp -R assets vendor _site/
           touch _site/.nojekyll
 
-      - name: Version browser assets
+      - name: Keep previous asset URLs during the versioning transition
         run: |
           python - <<'PY'
           import hashlib
           from pathlib import Path
-          site = Path('_site')
-          page = (site / 'index.html').read_text()
+          import subprocess
+          previous = '38577d6999484a6df68581b0bc0639d00a364d85'
           for name in ('styles.css', 'app.js', 'core.js', 'seed.js'):
-              asset = site / name
-              digest = hashlib.sha256(asset.read_bytes()).hexdigest()[:16]
-              versioned = f'{asset.stem}.{digest}{asset.suffix}'
-              asset.rename(site / versioned)
-              page = page.replace(f'"{name}"', f'"{versioned}"')
-          (site / 'index.html').write_text(page)
+              content = subprocess.check_output(['git', 'show', f'{previous}:{name}'])
+              digest = hashlib.sha256(content).hexdigest()[:16]
+              asset = Path(name)
+              Path('_site', f'{asset.stem}.{digest}{asset.suffix}').write_bytes(content)
           PY
+
+      - name: Version browser assets
+        run: |
+          version="$(TZ=America/New_York date +v%Y%m%d-%H%M)"
+          python tools/version-site.py --directory _site --version "$version"
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v4

@@ -18,6 +18,24 @@ Only the app files listed below are included in the deployment artifact.
 The hosted app stores quizzes in your browser at the Pages address. To move data
 from the local prototype, export a JSON backup there and import it on the hosted site.
 
+## Release Versions and Caching
+
+The footer displays a release version such as `v20260826-1747` (year, month, day,
+and 24-hour time). Each Pages deployment generates this timestamp in
+`America/New_York` and stamps the same value into every local asset reference:
+`app.js?v=v20260826-1747`, for example. Scripts, stylesheets, the favicon, and
+images all use this query parameter, including images created by JavaScript.
+Filenames stay stable. Inline SVG icons do not fetch separate files.
+
+For local releases, run `python tools/version-site.py --version vYYYYMMDD-HHMM`
+with the actual release timestamp. The deployed artifact is stamped automatically.
+Release versions are separate from base-quiz revisions and the saved-data format.
+
+Cloudflare must include the `v` query parameter in its cache key for this to refresh
+cached assets. If the HTML page itself is cached, it must also be refreshed or
+purged so browsers receive the new asset URLs. See
+[Cloudflare cache keys](https://developers.cloudflare.com/cache/how-to/cache-keys/).
+
 ## Run
 
 Open `index.html` in Chrome or Edge. All scripts, icons, and images are bundled locally.
