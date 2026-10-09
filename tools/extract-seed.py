@@ -15,19 +15,26 @@ for set_id, name in db.execute('SELECT SetId, Name FROM [Set] ORDER BY SetId'):
     quizzes.append(dict(id=f'legacy-set-{set_id}', name=name, description='Original collection, 2011', cards=cards))
 db.close()
 
-update = json.loads((root / 'data/state-capitals-update.json').read_text(encoding='utf-8'))
+updates = {
+    'legacy-set-4': json.loads((root / 'data/state-capitals-update.json').read_text(encoding='utf-8')),
+    'legacy-set-9': json.loads((root / 'data/world-capitals-update.json').read_text(encoding='utf-8')),
+}
 previous = []
 for quiz in quizzes:
     quiz['revision'] = 1
-    if quiz['id'] != 'legacy-set-4':
+    if quiz['id'] not in updates:
         continue
+    update = updates[quiz['id']]
     previous.append(copy.deepcopy(quiz))
     quiz.update({key: update[key] for key in ('revision', 'description', 'updateNotes')})
     for card in quiz['cards']:
-        card['wrongAnswers'] = update['wrongAnswers'][card['question']]
-        assert len(set([card['answer'], *card['wrongAnswers']])) == 4
+        card['wrongAnswers'] = update['wrongAnswers'].get(card['id'], update['wrongAnswers'].get(card['question']))
+        card.update(update.get('cardOverrides', {}).get(card['id'], {}))
+        assert len(card['wrongAnswers']) == 3
+        assert len(set(value.casefold() for value in [card['answer'], *card['wrongAnswers']])) == 4
 target = root / 'seed.js'
-target.write_text('window.QUIZ_SEED = ' + json.dumps(quizzes, ensure_ascii=True, indent=2) + ';\n', encoding='utf-8')
+credit = '// World city alternatives adapted from GeoNames (https://www.geonames.org/), CC BY 4.0\n// (https://creativecommons.org/licenses/by/4.0/). Curated selections; see data/world-capitals-update.json.\n'
+target.write_text(credit + 'window.QUIZ_SEED = ' + json.dumps(quizzes, ensure_ascii=True, indent=2) + ';\n', encoding='utf-8')
 with target.open('a', encoding='utf-8') as output:
     output.write('window.QUIZ_SEED_PREVIOUS = ' + json.dumps(previous, ensure_ascii=True, indent=2) + ';\n')
 print(f'Extracted {len(quizzes)} quizzes and {sum(len(q["cards"]) for q in quizzes)} linked cards.')

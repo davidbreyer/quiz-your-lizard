@@ -96,8 +96,21 @@ each of its 50 questions. The alternatives were verified against the
 Hawaii alternatives are census-designated places. Reverse sessions continue to use
 other state names as alternatives.
 
+World Capitals revision 2 adds three curated alternatives to each of its 196
+questions. These are cities or towns in the same country, except Monaco,
+Singapore, and Vatican City, which use nearby capitals. Several outdated answers
+are corrected; questions about countries with multiple capitals specify the
+capital's role. Alternative legitimate capitals are excluded from wrong answers.
+City names are adapted from [GeoNames](https://www.geonames.org/), licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Curated choices, source
+record IDs, and references for capital corrections live in
+`data/world-capitals-update.json`. To verify the choices, download
+[cities500.zip](https://download.geonames.org/export/dump/cities500.zip) and run
+`python tools/verify-world-cities.py PATH_TO_ZIP`.
+
 For maintenance, curated capital alternatives and release notes live in
-`data/state-capitals-update.json`. Run `python tools/extract-seed.py` to regenerate
+`data/state-capitals-update.json` and `data/world-capitals-update.json`.
+Run `python tools/extract-seed.py` to regenerate
 `seed.js`, retaining the original edition for safe adoption of older saved copies.
 Increase the quiz's revision for every published content change. Future revisions
 must keep stable quiz IDs; preserve original edition data for browsers that have

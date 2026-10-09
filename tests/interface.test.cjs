@@ -32,7 +32,7 @@ function boot(saved) {
 const end = t => t.dom.window.close();
 function oldCapitalsState() {
   const t = boot(), saved = t.savedData();
-  saved.quizzes = JSON.parse(JSON.stringify(t.w.QUIZ_SEED_PREVIOUS));
+  saved.quizzes = JSON.parse(JSON.stringify(t.w.QUIZ_SEED_PREVIOUS)).filter(q => q.id === 'legacy-set-4');
   end(t); return saved;
 }
 

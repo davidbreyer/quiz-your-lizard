@@ -1,3 +1,5 @@
+// World city alternatives adapted from GeoNames (https://www.geonames.org/), CC BY 4.0
+// (https://creativecommons.org/licenses/by/4.0/). Curated selections; see data/world-capitals-update.json.
 window.QUIZ_SEED = [
   {
     "id": "legacy-set-4",
@@ -2502,6 +2504,2531 @@ window.QUIZ_SEED = [
   {
     "id": "legacy-set-9",
     "name": "World Capitals",
+    "description": "Learn world capitals with plausible city and town choices from the same country, or nearby capitals for city-states.",
+    "cards": [
+      {
+        "id": "legacy-card-1492",
+        "question": "Afghanistan",
+        "answer": "Kabul",
+        "notes": "Population: 2,206,300",
+        "wrongAnswers": [
+          "Herat",
+          "Mazar-e Sharif",
+          "Kandahar"
+        ]
+      },
+      {
+        "id": "legacy-card-1493",
+        "question": "Albania",
+        "answer": "Tirana",
+        "notes": "Population: 353,400",
+        "wrongAnswers": [
+          "Durres",
+          "Vlore",
+          "Elbasan"
+        ]
+      },
+      {
+        "id": "legacy-card-1494",
+        "question": "Algeria",
+        "answer": "Algiers",
+        "notes": "Population: 3,917,000 (metro. area), 1,742,800 (city proper)",
+        "wrongAnswers": [
+          "Oran",
+          "Constantine",
+          "Annaba"
+        ]
+      },
+      {
+        "id": "legacy-card-1495",
+        "question": "Andorra",
+        "answer": "Andorra la Vella",
+        "notes": "Population: 23,000",
+        "wrongAnswers": [
+          "les Escaldes",
+          "Encamp",
+          "Sant Julia de Loria"
+        ]
+      },
+      {
+        "id": "legacy-card-1496",
+        "question": "Angola",
+        "answer": "Luanda",
+        "notes": "Population: 2,297,200",
+        "wrongAnswers": [
+          "Lubango",
+          "Benguela",
+          "Huambo"
+        ]
+      },
+      {
+        "id": "legacy-card-1497",
+        "question": "Antigua and Barbuda",
+        "answer": "St. John's",
+        "notes": "Population: 23,500",
+        "wrongAnswers": [
+          "All Saints",
+          "Liberta",
+          "Codrington"
+        ]
+      },
+      {
+        "id": "legacy-card-1498",
+        "question": "Argentina",
+        "answer": "Buenos Aires",
+        "notes": "Population: 13,349,000 (metro. area), 2,768,772 (city proper)",
+        "wrongAnswers": [
+          "Cordoba",
+          "Rosario",
+          "Mar del Plata"
+        ]
+      },
+      {
+        "id": "legacy-card-1499",
+        "question": "Armenia",
+        "answer": "Yerevan",
+        "notes": "Population: 1,462,700 (metro. area), 1,267,600 (city proper)",
+        "wrongAnswers": [
+          "Gyumri",
+          "Vanadzor",
+          "Abovyan"
+        ]
+      },
+      {
+        "id": "legacy-card-1500",
+        "question": "Australia",
+        "answer": "Canberra",
+        "notes": "Population: 327,700",
+        "wrongAnswers": [
+          "Sydney",
+          "Melbourne",
+          "Brisbane"
+        ]
+      },
+      {
+        "id": "legacy-card-1501",
+        "question": "Austria",
+        "answer": "Vienna",
+        "notes": "Population:  2,041,300 (metro area), 1,523,600 (city proper)",
+        "wrongAnswers": [
+          "Graz",
+          "Linz",
+          "Salzburg"
+        ]
+      },
+      {
+        "id": "legacy-card-1502",
+        "question": "Azerbaijan",
+        "answer": "Baku",
+        "notes": "Population:  2,118,600 (metro area), 1,235,400 (city proper), a port on the Caspian Sea",
+        "wrongAnswers": [
+          "Sumgayit",
+          "Ganja",
+          "Khirdalan"
+        ]
+      },
+      {
+        "id": "legacy-card-1503",
+        "question": "Bahamas",
+        "answer": "Nassau",
+        "notes": "Population:  222,200",
+        "wrongAnswers": [
+          "Freeport",
+          "Marsh Harbour",
+          "West End"
+        ]
+      },
+      {
+        "id": "legacy-card-1504",
+        "question": "Bahrain",
+        "answer": "Al-Man\u00e1mah",
+        "notes": "Population:  527,000 (metro area), 149,900 (city proper)",
+        "wrongAnswers": [
+          "Al Muharraq",
+          "Madinat Hamad",
+          "Ar Rifa'"
+        ]
+      },
+      {
+        "id": "legacy-card-1505",
+        "question": "Bangladesh",
+        "answer": "Dhaka",
+        "notes": "Population:  12,560,000 (metro.area), 5,378,023 (city proper)",
+        "wrongAnswers": [
+          "Chattogram",
+          "Gazipur",
+          "Khulna"
+        ]
+      },
+      {
+        "id": "legacy-card-1506",
+        "question": "Barbados",
+        "answer": "Bridgetown",
+        "notes": "Population:  98,900",
+        "wrongAnswers": [
+          "Speightstown",
+          "Oistins",
+          "Holetown"
+        ]
+      },
+      {
+        "id": "legacy-card-1507",
+        "question": "Belarus",
+        "answer": "Minsk",
+        "notes": "Population:  1,769,500",
+        "wrongAnswers": [
+          "Gomel",
+          "Grodno",
+          "Vitebsk"
+        ]
+      },
+      {
+        "id": "legacy-card-1508",
+        "question": "Belgium",
+        "answer": "Brussels",
+        "notes": "Population:  1,750,600 (metro area), 981,200 (city proper)",
+        "wrongAnswers": [
+          "Antwerp",
+          "Ghent",
+          "Charleroi"
+        ]
+      },
+      {
+        "id": "legacy-card-1509",
+        "question": "Belize",
+        "answer": "Belmopan",
+        "notes": "Population:  8,700",
+        "wrongAnswers": [
+          "Belize City",
+          "San Ignacio",
+          "San Pedro"
+        ]
+      },
+      {
+        "id": "legacy-card-1510",
+        "question": "Benin",
+        "answer": "Porto-Novo",
+        "notes": "Population:  231,600; Largest city and seat of government: Cotonou 734,600",
+        "wrongAnswers": [
+          "Parakou",
+          "Abomey",
+          "Bohicon"
+        ]
+      },
+      {
+        "id": "legacy-card-1511",
+        "question": "Bhutan",
+        "answer": "Thimphu",
+        "notes": "Population:  60,200",
+        "wrongAnswers": [
+          "Phuntsholing",
+          "Paro",
+          "Punakha"
+        ]
+      },
+      {
+        "id": "legacy-card-1512",
+        "question": "Bolivia",
+        "answer": "Sucre",
+        "notes": "Population:  204,200; Administrative capital: La Paz, 1,576,100 (metro. area), 830,500 (city proper)",
+        "wrongAnswers": [
+          "Santa Cruz de la Sierra",
+          "Cochabamba",
+          "Oruro"
+        ]
+      },
+      {
+        "id": "legacy-card-1513",
+        "question": "Bosnia and Herzegovina",
+        "answer": "Sarajevo",
+        "notes": "Population:  581,500 (unofficial)",
+        "wrongAnswers": [
+          "Banja Luka",
+          "Zenica",
+          "Tuzla"
+        ]
+      },
+      {
+        "id": "legacy-card-1514",
+        "question": "Botswana",
+        "answer": "Gaborone",
+        "notes": "Population:  195,000",
+        "wrongAnswers": [
+          "Francistown",
+          "Mogoditshane",
+          "Maun"
+        ]
+      },
+      {
+        "id": "legacy-card-1515",
+        "question": "Brazil",
+        "answer": "Bras\u00edlia",
+        "notes": "Population:  2,160,100",
+        "wrongAnswers": [
+          "Sao Paulo",
+          "Rio de Janeiro",
+          "Belo Horizonte"
+        ]
+      },
+      {
+        "id": "legacy-card-1516",
+        "question": "Brunei",
+        "answer": "Bandar Seri Begawan",
+        "notes": "Population:  78,000",
+        "wrongAnswers": [
+          "Sengkurong",
+          "Mentiri",
+          "Kuala Belait"
+        ]
+      },
+      {
+        "id": "legacy-card-1517",
+        "question": "Bulgaria",
+        "answer": "Sofia",
+        "notes": "Population:  1,088,700",
+        "wrongAnswers": [
+          "Plovdiv",
+          "Varna",
+          "Burgas"
+        ]
+      },
+      {
+        "id": "legacy-card-1518",
+        "question": "Burkina Faso",
+        "answer": "Ouagadougou",
+        "notes": "Population:  962,100",
+        "wrongAnswers": [
+          "Bobo-Dioulasso",
+          "Koudougou",
+          "Saaba"
+        ]
+      },
+      {
+        "id": "legacy-card-1519",
+        "question": "Burundi (political capital)",
+        "answer": "Gitega",
+        "notes": "Gitega is the political capital; Bujumbura remains the economic capital.",
+        "wrongAnswers": [
+          "Ngozi",
+          "Rumonge",
+          "Bururi"
+        ]
+      },
+      {
+        "id": "legacy-card-1520",
+        "question": "Cambodia",
+        "answer": "Phnom Penh",
+        "notes": "Population:  1,169,800",
+        "wrongAnswers": [
+          "Siem Reap",
+          "Battambang",
+          "Sihanoukville"
+        ]
+      },
+      {
+        "id": "legacy-card-1521",
+        "question": "Cameroon",
+        "answer": "Yaound\u00e9",
+        "notes": "Population:  1,395,200 (metro. area), 1,154,400 (city proper)",
+        "wrongAnswers": [
+          "Douala",
+          "Bamenda",
+          "Bafoussam"
+        ]
+      },
+      {
+        "id": "legacy-card-1522",
+        "question": "Canada",
+        "answer": "Ottawa",
+        "notes": "Population:  Ontario, 1,142,700 (metro. area)",
+        "wrongAnswers": [
+          "Toronto",
+          "Montreal",
+          "Calgary"
+        ]
+      },
+      {
+        "id": "legacy-card-1523",
+        "question": "Cape Verde",
+        "answer": "Praia",
+        "notes": "Population:  99,400",
+        "wrongAnswers": [
+          "Mindelo",
+          "Espargos",
+          "Assomada"
+        ]
+      },
+      {
+        "id": "legacy-card-1524",
+        "question": "Central African Republic",
+        "answer": "Bangui",
+        "notes": "Population:  810,000 (metro. area), 669,800 (city proper)",
+        "wrongAnswers": [
+          "Bimbo",
+          "Berberati",
+          "Bambari"
+        ]
+      },
+      {
+        "id": "legacy-card-1525",
+        "question": "Chad",
+        "answer": "N'Djamena",
+        "notes": "Population:  609,600",
+        "wrongAnswers": [
+          "Moundou",
+          "Abeche",
+          "Sarh"
+        ]
+      },
+      {
+        "id": "legacy-card-1526",
+        "question": "Chile",
+        "answer": "Santiago",
+        "notes": "Population:  5,333,100 (metro. area), 4,372,800 (city proper)",
+        "wrongAnswers": [
+          "Valparaiso",
+          "Concepcion",
+          "Antofagasta"
+        ]
+      },
+      {
+        "id": "legacy-card-1527",
+        "question": "China",
+        "answer": "Beijing",
+        "notes": "Population:  10,849,000 (metro. area), 8,689,000 (city proper)",
+        "wrongAnswers": [
+          "Shanghai",
+          "Chongqing",
+          "Chengdu"
+        ]
+      },
+      {
+        "id": "legacy-card-1528",
+        "question": "Colombia",
+        "answer": "Santaf\u00e9 de Bogot\u00e1",
+        "notes": "Population:  7,594,000 (metro. area), 7,185,889 (city proper)",
+        "wrongAnswers": [
+          "Cali",
+          "Medellin",
+          "Barranquilla"
+        ]
+      },
+      {
+        "id": "legacy-card-1529",
+        "question": "Comoros",
+        "answer": "Moroni",
+        "notes": "Population:  60,200",
+        "wrongAnswers": [
+          "Moutsamoudou",
+          "Fomboni",
+          "Tsimbeo"
+        ]
+      },
+      {
+        "id": "legacy-card-1530",
+        "question": "Democratic Republic of the Congo",
+        "answer": "Kinshasa",
+        "notes": "Population:  6,541,300",
+        "wrongAnswers": [
+          "Lubumbashi",
+          "Mbuji-Mayi",
+          "Kisangani"
+        ]
+      },
+      {
+        "id": "legacy-card-1531",
+        "question": "Republic of the Congo",
+        "answer": "Brazzaville",
+        "notes": "Population:  1,169,900",
+        "wrongAnswers": [
+          "Pointe-Noire",
+          "Dolisie",
+          "Nkayi"
+        ]
+      },
+      {
+        "id": "legacy-card-1532",
+        "question": "Costa Rica",
+        "answer": "San Jos\u00e9",
+        "notes": "Population:  1,527,300 (metro. area), 337,200 (city proper)",
+        "wrongAnswers": [
+          "Limon",
+          "Alajuela",
+          "Liberia"
+        ]
+      },
+      {
+        "id": "legacy-card-1533",
+        "question": "C\u00f4te d'Ivoire",
+        "answer": "Yamoussoukro",
+        "notes": "Population:  185,600; Largest city and administrative center: Abidjan, 4,113,600 (metro. area), 3,427,500 (city proper)",
+        "wrongAnswers": [
+          "Bouake",
+          "Korhogo",
+          "Daloa"
+        ]
+      },
+      {
+        "id": "legacy-card-1534",
+        "question": "Croatia",
+        "answer": "Zagreb",
+        "notes": "Population:  685,500",
+        "wrongAnswers": [
+          "Split",
+          "Rijeka",
+          "Osijek"
+        ]
+      },
+      {
+        "id": "legacy-card-1535",
+        "question": "Cuba",
+        "answer": "Havana",
+        "notes": "Population:  2,686,000 (metro. area), 2,343,700 (city proper)",
+        "wrongAnswers": [
+          "Santiago de Cuba",
+          "Camaguey",
+          "Holguin"
+        ]
+      },
+      {
+        "id": "legacy-card-1536",
+        "question": "Cyprus",
+        "answer": "Lefkosia",
+        "notes": "Population:  197,600",
+        "wrongAnswers": [
+          "Limassol",
+          "Larnaca",
+          "Paphos"
+        ]
+      },
+      {
+        "id": "legacy-card-1537",
+        "question": "Czech Republic",
+        "answer": "Prague",
+        "notes": "Population:  1,378,700 (metro. area), 1,169,800 (city proper)",
+        "wrongAnswers": [
+          "Brno",
+          "Ostrava",
+          "Pilsen"
+        ]
+      },
+      {
+        "id": "legacy-card-1538",
+        "question": "Denmark",
+        "answer": "Copenhagen",
+        "notes": "Population:  1,094,400",
+        "wrongAnswers": [
+          "Aarhus",
+          "Odense",
+          "Aalborg"
+        ]
+      },
+      {
+        "id": "legacy-card-1539",
+        "question": "Djibouti",
+        "answer": "Djibouti",
+        "notes": "Population:  383,000",
+        "wrongAnswers": [
+          "Ali Sabieh",
+          "Dikhil",
+          "Tadjoura"
+        ]
+      },
+      {
+        "id": "legacy-card-1540",
+        "question": "Dominica",
+        "answer": "Roseau",
+        "notes": "Population:  20,000",
+        "wrongAnswers": [
+          "Portsmouth",
+          "Marigot",
+          "Berekua"
+        ]
+      },
+      {
+        "id": "legacy-card-1541",
+        "question": "Dominican Republic",
+        "answer": "Santo Domingo",
+        "notes": "Population:  2,851,300 (metro. area), 2,252,400 (city proper)",
+        "wrongAnswers": [
+          "Santiago de los Caballeros",
+          "La Romana",
+          "San Pedro de Macoris"
+        ]
+      },
+      {
+        "id": "legacy-card-1542",
+        "question": "East Timor",
+        "answer": "Dili",
+        "notes": "Population:  50,800",
+        "wrongAnswers": [
+          "Maliana",
+          "Suai",
+          "Likisa"
+        ]
+      },
+      {
+        "id": "legacy-card-1543",
+        "question": "Ecuador",
+        "answer": "Quito",
+        "notes": "Population:  1,780,700 (metro. area), 1,443,900 (city proper)",
+        "wrongAnswers": [
+          "Guayaquil",
+          "Cuenca",
+          "Machala"
+        ]
+      },
+      {
+        "id": "legacy-card-1544",
+        "question": "Egypt",
+        "answer": "Cairo",
+        "notes": "Population:  11,146,000 (metro. area), 7,629,866 (city proper)",
+        "wrongAnswers": [
+          "Alexandria",
+          "Luxor",
+          "Aswan"
+        ]
+      },
+      {
+        "id": "legacy-card-1545",
+        "question": "El Salvador",
+        "answer": "San Salvador",
+        "notes": "Population:  1,791,700 (metro. area), 504,700 (city proper)",
+        "wrongAnswers": [
+          "Soyapango",
+          "San Miguel",
+          "Santa Ana"
+        ]
+      },
+      {
+        "id": "legacy-card-1546",
+        "question": "Equatorial Guinea",
+        "answer": "Ciudad de la Paz",
+        "notes": "Ciudad de la Paz replaced Malabo as the capital in January 2026.",
+        "wrongAnswers": [
+          "Bata",
+          "Malabo",
+          "Ebebiyin"
+        ]
+      },
+      {
+        "id": "legacy-card-1547",
+        "question": "Eritrea",
+        "answer": "Asmara",
+        "notes": "Population:  899,000 (metro. area), 400,000 (city proper)",
+        "wrongAnswers": [
+          "Keren",
+          "Himora",
+          "Af'abet"
+        ]
+      },
+      {
+        "id": "legacy-card-1548",
+        "question": "Estonia",
+        "answer": "Tallinn",
+        "notes": "Population:  379,000",
+        "wrongAnswers": [
+          "Tartu",
+          "Narva",
+          "Paernu"
+        ]
+      },
+      {
+        "id": "legacy-card-1549",
+        "question": "Ethiopia",
+        "answer": "Addis Ababa",
+        "notes": "Population:  2,716,200",
+        "wrongAnswers": [
+          "Gondar",
+          "Mekele",
+          "Dire Dawa"
+        ]
+      },
+      {
+        "id": "legacy-card-1550",
+        "question": "Fiji",
+        "answer": "Suva",
+        "notes": "Population:  177,300",
+        "wrongAnswers": [
+          "Nasinu",
+          "Lautoka",
+          "Nadi"
+        ]
+      },
+      {
+        "id": "legacy-card-1551",
+        "question": "Finland",
+        "answer": "Helsinki",
+        "notes": "Population:  1,162,900 (metro. area), 582,600 (city proper)",
+        "wrongAnswers": [
+          "Espoo",
+          "Tampere",
+          "Vantaa"
+        ]
+      },
+      {
+        "id": "legacy-card-1552",
+        "question": "France",
+        "answer": "Paris",
+        "notes": "Population:  9,854,000 (metro. area), 2,110,400 (city proper)",
+        "wrongAnswers": [
+          "Marseille",
+          "Lyon",
+          "Toulouse"
+        ]
+      },
+      {
+        "id": "legacy-card-1553",
+        "question": "Gabon",
+        "answer": "Libreville",
+        "notes": "Population:  661,600",
+        "wrongAnswers": [
+          "Port-Gentil",
+          "Franceville",
+          "Owendo"
+        ]
+      },
+      {
+        "id": "legacy-card-1554",
+        "question": "Gambia",
+        "answer": "Banjul",
+        "notes": "Population:  46,700",
+        "wrongAnswers": [
+          "Serekunda",
+          "Brikama",
+          "Sukuta"
+        ]
+      },
+      {
+        "id": "legacy-card-1555",
+        "question": "Georgia",
+        "answer": "Tbilisi",
+        "notes": "Population:  1,440,000 (metro. area), 1,240,200 (city proper)",
+        "wrongAnswers": [
+          "Batumi",
+          "Kutaisi",
+          "Rustavi"
+        ]
+      },
+      {
+        "id": "legacy-card-1556",
+        "question": "Germany",
+        "answer": "Berlin",
+        "notes": "Population:  3,933,300 (metro. area), 3,274,500 (city proper) - (capital since Oct. 3, 1990)",
+        "wrongAnswers": [
+          "Hamburg",
+          "Munich",
+          "Cologne"
+        ]
+      },
+      {
+        "id": "legacy-card-1557",
+        "question": "Ghana",
+        "answer": "Accra",
+        "notes": "Population:  2,825,800 (metro. area), 1,661,400 (city proper)",
+        "wrongAnswers": [
+          "Kumasi",
+          "Tamale",
+          "Takoradi"
+        ]
+      },
+      {
+        "id": "legacy-card-1558",
+        "question": "Greece",
+        "answer": "Athens",
+        "notes": "Population:  3,247,000 (metro. area), 747,300 (city proper)",
+        "wrongAnswers": [
+          "Thessaloniki",
+          "Patra",
+          "Piraeus"
+        ]
+      },
+      {
+        "id": "legacy-card-1559",
+        "question": "Grenada",
+        "answer": "St. George's",
+        "notes": "Population:  4,300",
+        "wrongAnswers": [
+          "Gouyave",
+          "Grenville",
+          "Grand Roy"
+        ]
+      },
+      {
+        "id": "legacy-card-1560",
+        "question": "Guatemala",
+        "answer": "Guatemala City",
+        "notes": "Population:  2,655,900 (metro. area), 1,128,800 (city proper)",
+        "wrongAnswers": [
+          "Villa Nueva",
+          "Mixco",
+          "Coban"
+        ]
+      },
+      {
+        "id": "legacy-card-1561",
+        "question": "Guinea",
+        "answer": "Conakry",
+        "notes": "Population:  1,767,200",
+        "wrongAnswers": [
+          "Kankan",
+          "Nzerekore",
+          "Kindia"
+        ]
+      },
+      {
+        "id": "legacy-card-1562",
+        "question": "Guinea-Bissau",
+        "answer": "Bissau",
+        "notes": "Population:  296,900",
+        "wrongAnswers": [
+          "Gabu",
+          "Bafata",
+          "Cacheu"
+        ]
+      },
+      {
+        "id": "legacy-card-1563",
+        "question": "Guyana",
+        "answer": "Georgetown",
+        "notes": "Population:  227,700",
+        "wrongAnswers": [
+          "Linden",
+          "New Amsterdam",
+          "Anna Regina"
+        ]
+      },
+      {
+        "id": "legacy-card-1564",
+        "question": "Haiti",
+        "answer": "Port-au-Prince",
+        "notes": "Population:  1,764,000 (metro. area), 1,119,000 (city proper)",
+        "wrongAnswers": [
+          "Cap-Haitien",
+          "Gonaives",
+          "Jacmel"
+        ]
+      },
+      {
+        "id": "legacy-card-1565",
+        "question": "Honduras",
+        "answer": "Tegucigalpa",
+        "notes": "Population:  1,436,000 (metro. area), 1,248,300 (city proper)",
+        "wrongAnswers": [
+          "San Pedro Sula",
+          "Danli",
+          "La Ceiba"
+        ]
+      },
+      {
+        "id": "legacy-card-1566",
+        "question": "Hungary",
+        "answer": "Budapest",
+        "notes": "Population:  2,597,000 (metro. area), 1,769,500 (city proper)",
+        "wrongAnswers": [
+          "Debrecen",
+          "Szeged",
+          "Miskolc"
+        ]
+      },
+      {
+        "id": "legacy-card-1567",
+        "question": "Iceland",
+        "answer": "Reykjavik",
+        "notes": "Population:  184,200 (metro. area), 114,800 (city proper)",
+        "wrongAnswers": [
+          "Akureyri",
+          "Kopavogur",
+          "Hafnarfjordur"
+        ]
+      },
+      {
+        "id": "legacy-card-1568",
+        "question": "India",
+        "answer": "New Delhi",
+        "notes": "Population:  15,334,000 (metro. area), 9,817,439 (city proper)",
+        "wrongAnswers": [
+          "Mumbai",
+          "Bengaluru",
+          "Kolkata"
+        ]
+      },
+      {
+        "id": "legacy-card-1569",
+        "question": "Indonesia",
+        "answer": "Jakarta",
+        "notes": "Population:  13,194,000 (metro. area), 8,389,443 (city proper)",
+        "wrongAnswers": [
+          "Surabaya",
+          "Bekasi",
+          "Bandung"
+        ]
+      },
+      {
+        "id": "legacy-card-1570",
+        "question": "Iran",
+        "answer": "Tehran",
+        "notes": "Population:  7,796,257 (city proper)",
+        "wrongAnswers": [
+          "Mashhad",
+          "Isfahan",
+          "Karaj"
+        ]
+      },
+      {
+        "id": "legacy-card-1571",
+        "question": "Iraq",
+        "answer": "Baghdad",
+        "notes": "Population:  6,777,300 (metro. area), 5,772,000 (city proper)",
+        "wrongAnswers": [
+          "Mosul",
+          "Erbil",
+          "Basrah"
+        ]
+      },
+      {
+        "id": "legacy-card-1572",
+        "question": "Ireland",
+        "answer": "Dublin",
+        "notes": "Population:  1,018,500",
+        "wrongAnswers": [
+          "Cork",
+          "Limerick",
+          "Galway"
+        ]
+      },
+      {
+        "id": "legacy-card-1573",
+        "question": "Israel",
+        "answer": "Jerusalem",
+        "notes": "Population:  695,500",
+        "wrongAnswers": [
+          "Tel Aviv",
+          "Haifa",
+          "Beersheba"
+        ]
+      },
+      {
+        "id": "legacy-card-1574",
+        "question": "Italy",
+        "answer": "Rome",
+        "notes": "Population:  3,550,900 (metro. area), 2,455,600 (city proper)",
+        "wrongAnswers": [
+          "Milan",
+          "Naples",
+          "Turin"
+        ]
+      },
+      {
+        "id": "legacy-card-1575",
+        "question": "Jamaica",
+        "answer": "Kingston",
+        "notes": "Population:  937,700 (metro. area), 590,500 (city proper)",
+        "wrongAnswers": [
+          "Spanish Town",
+          "Portmore",
+          "Montego Bay"
+        ]
+      },
+      {
+        "id": "legacy-card-1576",
+        "question": "Japan",
+        "answer": "Tokyo",
+        "notes": "Population:  35,327,000 (metro. area), 8,483,050 (city proper)",
+        "wrongAnswers": [
+          "Yokohama",
+          "Osaka",
+          "Nagoya"
+        ]
+      },
+      {
+        "id": "legacy-card-1577",
+        "question": "Jordan",
+        "answer": "Amman",
+        "notes": "Population:  2,677,500 (metro. area), 1,293,200",
+        "wrongAnswers": [
+          "Zarqa",
+          "Irbid",
+          "Russeifa"
+        ]
+      },
+      {
+        "id": "legacy-card-1578",
+        "question": "Kazakhstan",
+        "answer": "Astana",
+        "notes": "Population:  288,200",
+        "wrongAnswers": [
+          "Almaty",
+          "Shymkent",
+          "Aktobe"
+        ]
+      },
+      {
+        "id": "legacy-card-1579",
+        "question": "Kenya",
+        "answer": "Nairobi",
+        "notes": "Population:  3,064,800 (metro. area), 2,411,900 (city proper)",
+        "wrongAnswers": [
+          "Mombasa",
+          "Kisumu",
+          "Nakuru"
+        ]
+      },
+      {
+        "id": "legacy-card-1580",
+        "question": "Kiribati",
+        "answer": "Tarawa",
+        "notes": "Population:  26,600",
+        "wrongAnswers": [
+          "Rungata",
+          "London Village",
+          "Tabwakea Village"
+        ]
+      },
+      {
+        "id": "legacy-card-1581",
+        "question": "North Korea",
+        "answer": "Pyongyang",
+        "notes": "Population:  3,222,000 (metro. area), 2,767,900",
+        "wrongAnswers": [
+          "Hamhung",
+          "Namp'o",
+          "Sunch'on"
+        ]
+      },
+      {
+        "id": "legacy-card-1582",
+        "question": "South Korea",
+        "answer": "Seoul",
+        "notes": "Population:  10,287,847 (city proper)",
+        "wrongAnswers": [
+          "Busan",
+          "Incheon",
+          "Daegu"
+        ]
+      },
+      {
+        "id": "legacy-card-1583",
+        "question": "Kosovo",
+        "answer": "Pristina",
+        "notes": "Population:  400,000 (est.)",
+        "wrongAnswers": [
+          "Prizren",
+          "Mitrovice",
+          "Gjakove"
+        ]
+      },
+      {
+        "id": "legacy-card-1584",
+        "question": "Kuwait",
+        "answer": "Kuwait",
+        "notes": "Population:  1,709,800 (metro. area), 32,600 (city proper)",
+        "wrongAnswers": [
+          "Al Ahmadi",
+          "Hawalli",
+          "Sabah as Salim"
+        ]
+      },
+      {
+        "id": "legacy-card-1585",
+        "question": "Kyrgyzstan",
+        "answer": "Bishkek",
+        "notes": "Population:  824,900",
+        "wrongAnswers": [
+          "Osh",
+          "Manas",
+          "Karakol"
+        ]
+      },
+      {
+        "id": "legacy-card-1586",
+        "question": "Laos",
+        "answer": "Vientiane",
+        "notes": "Population:  194,200",
+        "wrongAnswers": [
+          "Savannakhet",
+          "Thakhek",
+          "Pakse"
+        ]
+      },
+      {
+        "id": "legacy-card-1587",
+        "question": "Latvia",
+        "answer": "Riga",
+        "notes": "Population:  867,700 (metro. area), 706,200 (city proper)",
+        "wrongAnswers": [
+          "Daugavpils",
+          "Liepaja",
+          "Jelgava"
+        ]
+      },
+      {
+        "id": "legacy-card-1588",
+        "question": "Lebanon",
+        "answer": "Beirut",
+        "notes": "Population:  1,916,100 (metro. area), 1,171,000 (city proper)",
+        "wrongAnswers": [
+          "Tripoli",
+          "Sidon",
+          "Tyre"
+        ]
+      },
+      {
+        "id": "legacy-card-1589",
+        "question": "Lesotho",
+        "answer": "Maseru",
+        "notes": "Population:  173,700",
+        "wrongAnswers": [
+          "Maputsoe",
+          "Mohale's Hoek",
+          "Mafeteng"
+        ]
+      },
+      {
+        "id": "legacy-card-1590",
+        "question": "Liberia",
+        "answer": "Monrovia",
+        "notes": "Population:  1,348,900 (metro. area), 550,200 (city proper)",
+        "wrongAnswers": [
+          "Gbarnga",
+          "Buchanan",
+          "Ganta"
+        ]
+      },
+      {
+        "id": "legacy-card-1591",
+        "question": "Libya",
+        "answer": "Tripoli",
+        "notes": "Population:  2,357,800 (metro. area), 1,269,700 (city proper)",
+        "wrongAnswers": [
+          "Benghazi",
+          "Misratah",
+          "Zliten"
+        ]
+      },
+      {
+        "id": "legacy-card-1592",
+        "question": "Liechtenstein",
+        "answer": "Vaduz",
+        "notes": "Population:  5,300",
+        "wrongAnswers": [
+          "Schaan",
+          "Triesen",
+          "Balzers"
+        ]
+      },
+      {
+        "id": "legacy-card-1593",
+        "question": "Lithuania",
+        "answer": "Vilnius",
+        "notes": "Population:  543,500",
+        "wrongAnswers": [
+          "Kaunas",
+          "Klaipeda",
+          "Siauliai"
+        ]
+      },
+      {
+        "id": "legacy-card-1594",
+        "question": "Luxembourg",
+        "answer": "Luxembourg",
+        "notes": "Population:  78,800",
+        "wrongAnswers": [
+          "Esch-sur-Alzette",
+          "Dudelange",
+          "Belvaux"
+        ]
+      },
+      {
+        "id": "legacy-card-1595",
+        "question": "North Macedonia",
+        "answer": "Skopje",
+        "notes": "Population:  587,300 (metro. area), 452,500 (city proper)",
+        "wrongAnswers": [
+          "Kumanovo",
+          "Prilep",
+          "Bitola"
+        ]
+      },
+      {
+        "id": "legacy-card-1596",
+        "question": "Madagascar",
+        "answer": "Antananarivo",
+        "notes": "Population:  1,390,800",
+        "wrongAnswers": [
+          "Toamasina",
+          "Antsirabe",
+          "Mahajanga"
+        ]
+      },
+      {
+        "id": "legacy-card-1597",
+        "question": "Malawi",
+        "answer": "Lilongwe",
+        "notes": "Population:  499,200",
+        "wrongAnswers": [
+          "Blantyre",
+          "Mzuzu",
+          "Zomba"
+        ]
+      },
+      {
+        "id": "legacy-card-1598",
+        "question": "Malaysia",
+        "answer": "Kuala Lumpur",
+        "notes": "Population:  3,688,200 (metro. area), 1,403,400",
+        "wrongAnswers": [
+          "George Town",
+          "Johor Bahru",
+          "Ipoh"
+        ]
+      },
+      {
+        "id": "legacy-card-1599",
+        "question": "Maldives",
+        "answer": "Mal\u00e9",
+        "notes": "Population:  81,600",
+        "wrongAnswers": [
+          "Fuvahmulah",
+          "Hithadhoo",
+          "Kulhudhuffushi"
+        ]
+      },
+      {
+        "id": "legacy-card-1600",
+        "question": "Mali",
+        "answer": "Bamako",
+        "notes": "Population:  1,323,200 (metro. area), 935,400",
+        "wrongAnswers": [
+          "Sikasso",
+          "Koutiala",
+          "Segou"
+        ]
+      },
+      {
+        "id": "legacy-card-1601",
+        "question": "Malta",
+        "answer": "Valletta",
+        "notes": "Population:  194,200 (metro. area) 6,900 (city proper)",
+        "wrongAnswers": [
+          "San Pawl il-Bahar",
+          "Birkirkara",
+          "Mosta"
+        ]
+      },
+      {
+        "id": "legacy-card-1602",
+        "question": "Marshall Islands",
+        "answer": "Majuro",
+        "notes": "Population:  20,500",
+        "wrongAnswers": [
+          "Ebaye",
+          "Jabor",
+          "Wotje"
+        ]
+      },
+      {
+        "id": "legacy-card-1603",
+        "question": "Mauritania",
+        "answer": "Nouakchott",
+        "notes": "Population:  661,400",
+        "wrongAnswers": [
+          "Nouadhibou",
+          "Kiffa",
+          "Dar Naim"
+        ]
+      },
+      {
+        "id": "legacy-card-1604",
+        "question": "Mauritius",
+        "answer": "Port Louis",
+        "notes": "Population:  577,200 (metro. area), 143,800 (city proper)",
+        "wrongAnswers": [
+          "Vacoas",
+          "Beau Bassin-Rose Hill",
+          "Curepipe"
+        ]
+      },
+      {
+        "id": "legacy-card-1605",
+        "question": "Mexico",
+        "answer": "Mexico City",
+        "notes": "Population:  19,013,000 (metro. area), 8,591,309 (city proper)",
+        "wrongAnswers": [
+          "Guadalajara",
+          "Monterrey",
+          "Puebla"
+        ]
+      },
+      {
+        "id": "legacy-card-1606",
+        "question": "Micronesia",
+        "answer": "Palikir",
+        "notes": "Population:  11,600",
+        "wrongAnswers": [
+          "Weno",
+          "Tofol",
+          "Colonia"
+        ]
+      },
+      {
+        "id": "legacy-card-1607",
+        "question": "Moldova",
+        "answer": "Chisinau",
+        "notes": "Population:  772,500 (metro. area), 709,900 (city proper)",
+        "wrongAnswers": [
+          "Tiraspol",
+          "Balti",
+          "Bender"
+        ]
+      },
+      {
+        "id": "legacy-card-1608",
+        "question": "Monaco",
+        "answer": "Monaco",
+        "notes": "Population:  1,400",
+        "wrongAnswers": [
+          "Rome",
+          "Paris",
+          "Andorra la Vella"
+        ]
+      },
+      {
+        "id": "legacy-card-1609",
+        "question": "Mongolia",
+        "answer": "Ulaan Baatar",
+        "notes": "Population:  804,200",
+        "wrongAnswers": [
+          "Erdenet",
+          "Darkhan",
+          "Choibalsan"
+        ]
+      },
+      {
+        "id": "legacy-card-1610",
+        "question": "Montenegro",
+        "answer": "Podgorica",
+        "notes": "Population:  117,875",
+        "wrongAnswers": [
+          "Niksic",
+          "Herceg Novi",
+          "Pljevlja"
+        ]
+      },
+      {
+        "id": "legacy-card-1611",
+        "question": "Morocco",
+        "answer": "Rabat",
+        "notes": "Population:  1,636,600",
+        "wrongAnswers": [
+          "Casablanca",
+          "Fes",
+          "Tangier"
+        ]
+      },
+      {
+        "id": "legacy-card-1612",
+        "question": "Mozambique",
+        "answer": "Maputo",
+        "notes": "Population:  1,691,000 (metro. area), 1,114,000 (city proper)",
+        "wrongAnswers": [
+          "Matola",
+          "Nampula",
+          "Beira"
+        ]
+      },
+      {
+        "id": "legacy-card-1613",
+        "question": "Myanmar",
+        "answer": "Naypyidaw",
+        "notes": "Also spelled Nay Pyi Taw. Yangon (formerly Rangoon) was the previous capital.",
+        "wrongAnswers": [
+          "Yangon",
+          "Mandalay",
+          "Mawlamyine"
+        ]
+      },
+      {
+        "id": "legacy-card-1614",
+        "question": "Namibia",
+        "answer": "Windhoek",
+        "notes": "Population:  221,000",
+        "wrongAnswers": [
+          "Rundu",
+          "Walvis Bay",
+          "Swakopmund"
+        ]
+      },
+      {
+        "id": "legacy-card-1615",
+        "question": "Nauru (seat of government)",
+        "answer": "Yaren",
+        "notes": "Government offices are in Yaren district; Nauru has no officially designated capital.",
+        "wrongAnswers": [
+          "Denigomodu",
+          "Menen",
+          "Anabar"
+        ]
+      },
+      {
+        "id": "legacy-card-1616",
+        "question": "Nepal",
+        "answer": "Kathmandu",
+        "notes": "Population:  1,203,100 (metro. area), 729,000 (city proper)",
+        "wrongAnswers": [
+          "Pokhara",
+          "Bharatpur",
+          "Patan"
+        ]
+      },
+      {
+        "id": "legacy-card-1617",
+        "question": "Netherlands",
+        "answer": "Amsterdam",
+        "notes": "Population:  737,900",
+        "wrongAnswers": [
+          "Rotterdam",
+          "Utrecht",
+          "Groningen"
+        ]
+      },
+      {
+        "id": "legacy-card-1618",
+        "question": "New Zealand",
+        "answer": "Wellington",
+        "notes": "Population:  342,500 (metro. area), 165,100 (city proper)",
+        "wrongAnswers": [
+          "Auckland",
+          "Christchurch",
+          "Hamilton"
+        ]
+      },
+      {
+        "id": "legacy-card-1619",
+        "question": "Nicaragua",
+        "answer": "Managua",
+        "notes": "Population:  1,390,500 (metro. area), 1,146,000 (city proper)",
+        "wrongAnswers": [
+          "Leon",
+          "Masaya",
+          "Chinandega"
+        ]
+      },
+      {
+        "id": "legacy-card-1620",
+        "question": "Niger",
+        "answer": "Niamey",
+        "notes": "Population:  748,600",
+        "wrongAnswers": [
+          "Maradi",
+          "Zinder",
+          "Tahoua"
+        ]
+      },
+      {
+        "id": "legacy-card-1621",
+        "question": "Nigeria",
+        "answer": "Abuja",
+        "notes": "Population:  590,400 (metro. area), 165,700 (city proper)",
+        "wrongAnswers": [
+          "Lagos",
+          "Kano",
+          "Ibadan"
+        ]
+      },
+      {
+        "id": "legacy-card-1622",
+        "question": "Norway",
+        "answer": "Oslo",
+        "notes": "Population:  791,500",
+        "wrongAnswers": [
+          "Bergen",
+          "Trondheim",
+          "Stavanger"
+        ]
+      },
+      {
+        "id": "legacy-card-1623",
+        "question": "Oman",
+        "answer": "Muscat",
+        "notes": "Population:  797,000 (metro. area), 54,800 (city proper)",
+        "wrongAnswers": [
+          "Salalah",
+          "Sohar",
+          "Nizwa"
+        ]
+      },
+      {
+        "id": "legacy-card-1624",
+        "question": "Pakistan",
+        "answer": "Islamabad",
+        "notes": "Population:  601,600",
+        "wrongAnswers": [
+          "Lahore",
+          "Karachi",
+          "Peshawar"
+        ]
+      },
+      {
+        "id": "legacy-card-1625",
+        "question": "Palau",
+        "answer": "Ngerulmud",
+        "notes": "The national government moved from Koror to Ngerulmud, in Melekeok State, in 2006.",
+        "wrongAnswers": [
+          "Koror",
+          "Kloulklubed",
+          "Ulimang"
+        ]
+      },
+      {
+        "id": "legacy-card-1626",
+        "question": "Panama",
+        "answer": "Panama City",
+        "notes": "Population:  1,053,500 (metro. area), 437,200 (city proper)",
+        "wrongAnswers": [
+          "Colon",
+          "David",
+          "Santiago"
+        ]
+      },
+      {
+        "id": "legacy-card-1627",
+        "question": "Papua New Guinea",
+        "answer": "Port Moresby",
+        "notes": "Population:  324,900",
+        "wrongAnswers": [
+          "Lae",
+          "Arawa",
+          "Mount Hagen"
+        ]
+      },
+      {
+        "id": "legacy-card-1628",
+        "question": "Paraguay",
+        "answer": "Asunci\u00f3n",
+        "notes": "Population:  1,482,200 (metro. area), 525,100",
+        "wrongAnswers": [
+          "Ciudad del Este",
+          "Encarnacion",
+          "San Lorenzo"
+        ]
+      },
+      {
+        "id": "legacy-card-1629",
+        "question": "Peru",
+        "answer": "Lima",
+        "notes": "Population:  8,180,000 (metro. area), 7,029,928 (city proper)",
+        "wrongAnswers": [
+          "Callao",
+          "Arequipa",
+          "Trujillo"
+        ]
+      },
+      {
+        "id": "legacy-card-1630",
+        "question": "Philippines",
+        "answer": "Manila",
+        "notes": "Population:  10,677,000 (metro. area), 1,581,082 (city proper)",
+        "wrongAnswers": [
+          "Quezon City",
+          "Davao",
+          "Caloocan"
+        ]
+      },
+      {
+        "id": "legacy-card-1631",
+        "question": "Poland",
+        "answer": "Warsaw",
+        "notes": "Population:  2,201,900 (metro. area), 1,607,600 (city proper)",
+        "wrongAnswers": [
+          "Krakow",
+          "Wroclaw",
+          "Lodz"
+        ]
+      },
+      {
+        "id": "legacy-card-1632",
+        "question": "Portugal",
+        "answer": "Lisbon",
+        "notes": "Population:  2,618,100 (metro. area), 559,400",
+        "wrongAnswers": [
+          "Porto",
+          "Braga",
+          "Amadora"
+        ]
+      },
+      {
+        "id": "legacy-card-1633",
+        "question": "Qatar",
+        "answer": "Doha",
+        "notes": "Population:  550,700 (metro. area), 318,500 (city proper)",
+        "wrongAnswers": [
+          "Al Wakrah",
+          "Al Khor",
+          "Lusail"
+        ]
+      },
+      {
+        "id": "legacy-card-1634",
+        "question": "Romania",
+        "answer": "Bucharest",
+        "notes": "Population:  2,210,800 (metro. area), 1,906,800 (city proper)",
+        "wrongAnswers": [
+          "Iasi",
+          "Constanta",
+          "Cluj-Napoca"
+        ]
+      },
+      {
+        "id": "legacy-card-1635",
+        "question": "Russia",
+        "answer": "Moscow",
+        "notes": "Population:  10,672,000 (metro. area), 10,101,500 (city proper)",
+        "wrongAnswers": [
+          "Saint Petersburg",
+          "Novosibirsk",
+          "Yekaterinburg"
+        ]
+      },
+      {
+        "id": "legacy-card-1636",
+        "question": "Rwanda",
+        "answer": "Kigali",
+        "notes": "Population:  298,100",
+        "wrongAnswers": [
+          "Gisenyi",
+          "Musanze",
+          "Nyagatare"
+        ]
+      },
+      {
+        "id": "legacy-card-1637",
+        "question": "St. Kitts and Nevis",
+        "answer": "Basseterre",
+        "notes": "Population:  11,500",
+        "wrongAnswers": [
+          "Sandy Point Town",
+          "Charlestown",
+          "Dieppe Bay Town"
+        ]
+      },
+      {
+        "id": "legacy-card-1638",
+        "question": "St. Lucia",
+        "answer": "Castries",
+        "notes": "Population:  60,300",
+        "wrongAnswers": [
+          "Gros Islet",
+          "Vieux Fort",
+          "Soufriere"
+        ]
+      },
+      {
+        "id": "legacy-card-1639",
+        "question": "St. Vincent and the Grenadines",
+        "answer": "Kingstown",
+        "notes": "Population:  17,600",
+        "wrongAnswers": [
+          "Calliaqua",
+          "Barrouallie",
+          "Georgetown"
+        ]
+      },
+      {
+        "id": "legacy-card-1640",
+        "question": "Samoa",
+        "answer": "Apia",
+        "notes": "Population:  35,900",
+        "wrongAnswers": [
+          "Vaitele",
+          "Asau",
+          "Safotu"
+        ]
+      },
+      {
+        "id": "legacy-card-1641",
+        "question": "San Marino",
+        "answer": "San Marino",
+        "notes": "Population:  4,300",
+        "wrongAnswers": [
+          "Serravalle",
+          "Borgo Maggiore",
+          "Acquaviva"
+        ]
+      },
+      {
+        "id": "legacy-card-1642",
+        "question": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "answer": "S\u00e3o Tom\u00e9",
+        "notes": "Population:  53,300",
+        "wrongAnswers": [
+          "Neves",
+          "Santo Antonio",
+          "Trindade"
+        ]
+      },
+      {
+        "id": "legacy-card-1643",
+        "question": "Saudi Arabia",
+        "answer": "Riyadh",
+        "notes": "Population:  3,724,100",
+        "wrongAnswers": [
+          "Jeddah",
+          "Makkah",
+          "Madinah"
+        ]
+      },
+      {
+        "id": "legacy-card-1644",
+        "question": "Senegal",
+        "answer": "Dakar",
+        "notes": "Population:  2,476,400",
+        "wrongAnswers": [
+          "Pikine",
+          "Touba",
+          "Guediawaye"
+        ]
+      },
+      {
+        "id": "legacy-card-1645",
+        "question": "Serbia",
+        "answer": "Belgrade",
+        "notes": "Population:  1,717,800 (metro. area), 1,285,200 (city proper)",
+        "wrongAnswers": [
+          "Novi Sad",
+          "Nis",
+          "Kragujevac"
+        ]
+      },
+      {
+        "id": "legacy-card-1646",
+        "question": "Seychelles",
+        "answer": "Victoria",
+        "notes": "Population:  23,000",
+        "wrongAnswers": [
+          "Beau Vallon",
+          "Anse Royale",
+          "Baie Sainte Anne"
+        ]
+      },
+      {
+        "id": "legacy-card-1647",
+        "question": "Sierra Leone",
+        "answer": "Freetown",
+        "notes": "Population:  1,051,000",
+        "wrongAnswers": [
+          "Kenema",
+          "Bo",
+          "Koidu"
+        ]
+      },
+      {
+        "id": "legacy-card-1648",
+        "question": "Singapore",
+        "answer": "Singapore",
+        "notes": "Population:  3,438,600",
+        "wrongAnswers": [
+          "Kuala Lumpur",
+          "Bandar Seri Begawan",
+          "Jakarta"
+        ]
+      },
+      {
+        "id": "legacy-card-1649",
+        "question": "Slovakia",
+        "answer": "Bratislava",
+        "notes": "Population:  428,800",
+        "wrongAnswers": [
+          "Kosice",
+          "Presov",
+          "Nitra"
+        ]
+      },
+      {
+        "id": "legacy-card-1650",
+        "question": "Slovenia",
+        "answer": "Ljubljana",
+        "notes": "Population:  258,000",
+        "wrongAnswers": [
+          "Maribor",
+          "Celje",
+          "Kranj"
+        ]
+      },
+      {
+        "id": "legacy-card-1651",
+        "question": "Solomon Islands",
+        "answer": "Honiara",
+        "notes": "Population:  54,600",
+        "wrongAnswers": [
+          "Gizo",
+          "Auki",
+          "Noro"
+        ]
+      },
+      {
+        "id": "legacy-card-1652",
+        "question": "Somalia",
+        "answer": "Mogadishu",
+        "notes": "Population:  1,208,800",
+        "wrongAnswers": [
+          "Kismayo",
+          "Baidoa",
+          "Bosaso"
+        ]
+      },
+      {
+        "id": "legacy-card-1653",
+        "question": "South Africa (administrative capital)",
+        "answer": "Pretoria",
+        "notes": "Pretoria is the administrative capital; Cape Town is legislative and Bloemfontein is judicial.",
+        "wrongAnswers": [
+          "Johannesburg",
+          "Durban",
+          "Gqeberha"
+        ]
+      },
+      {
+        "id": "legacy-card-1654",
+        "question": "Spain",
+        "answer": "Madrid",
+        "notes": "Population:  5,130,000 (metro. area), 3,169,400 (city proper)",
+        "wrongAnswers": [
+          "Barcelona",
+          "Valencia",
+          "Zaragoza"
+        ]
+      },
+      {
+        "id": "legacy-card-1655",
+        "question": "Sri Lanka (legislative capital)",
+        "answer": "Sri Jayewardenepura Kotte",
+        "notes": "Sri Jayewardenepura Kotte is the legislative capital. Colombo also has major government functions.",
+        "wrongAnswers": [
+          "Kandy",
+          "Galle",
+          "Jaffna"
+        ]
+      },
+      {
+        "id": "legacy-card-1656",
+        "question": "Sudan",
+        "answer": "Khartoum",
+        "notes": "Population:  5,717,300 (metro. area), 1,397,900 (city proper)",
+        "wrongAnswers": [
+          "Omdurman",
+          "Nyala",
+          "Kassala"
+        ]
+      },
+      {
+        "id": "legacy-card-1657",
+        "question": "Suriname",
+        "answer": "Paramaribo",
+        "notes": "Population:  217,300",
+        "wrongAnswers": [
+          "Lelydorp",
+          "Brokopondo",
+          "Nieuw Nickerie"
+        ]
+      },
+      {
+        "id": "legacy-card-1658",
+        "question": "Eswatini (administrative capital)",
+        "answer": "Mbabane",
+        "notes": "Mbabane is the administrative capital. Lobamba is the royal and legislative capital.",
+        "wrongAnswers": [
+          "Manzini",
+          "Malkerns",
+          "Nhlangano"
+        ]
+      },
+      {
+        "id": "legacy-card-1659",
+        "question": "Sweden",
+        "answer": "Stockholm",
+        "notes": "Population:  1,622,300 (metro. area), 1,251,900 (city proper)",
+        "wrongAnswers": [
+          "Gothenburg",
+          "Malmo",
+          "Uppsala"
+        ]
+      },
+      {
+        "id": "legacy-card-1660",
+        "question": "Switzerland",
+        "answer": "Bern",
+        "notes": "Population:  122,700",
+        "wrongAnswers": [
+          "Zurich",
+          "Geneva",
+          "Basel"
+        ]
+      },
+      {
+        "id": "legacy-card-1661",
+        "question": "Syria",
+        "answer": "Damascus",
+        "notes": "Population:  2,381,800 (metro. area), 1,861,900",
+        "wrongAnswers": [
+          "Aleppo",
+          "Homs",
+          "Latakia"
+        ]
+      },
+      {
+        "id": "legacy-card-1662",
+        "question": "Taiwan",
+        "answer": "Taipei",
+        "notes": "Population:  7,871,900 (metro. area), 2,722,600 (city proper)",
+        "wrongAnswers": [
+          "Taichung",
+          "Kaohsiung",
+          "Tainan"
+        ]
+      },
+      {
+        "id": "legacy-card-1663",
+        "question": "Tajikistan",
+        "answer": "Dushanbe",
+        "notes": "Population:  817,100 (metro. area), 590,300 (city proper)",
+        "wrongAnswers": [
+          "Khujand",
+          "Kulob",
+          "Bokhtar"
+        ]
+      },
+      {
+        "id": "legacy-card-1664",
+        "question": "Tanzania",
+        "answer": "Dodoma",
+        "notes": "Population:  164,500",
+        "wrongAnswers": [
+          "Mwanza",
+          "Arusha",
+          "Mbeya"
+        ]
+      },
+      {
+        "id": "legacy-card-1665",
+        "question": "Thailand",
+        "answer": "Bangkok",
+        "notes": "Population:  6,320,174 (city proper)",
+        "wrongAnswers": [
+          "Chiang Mai",
+          "Phuket",
+          "Khon Kaen"
+        ]
+      },
+      {
+        "id": "legacy-card-1666",
+        "question": "Togo",
+        "answer": "Lom\u00e9",
+        "notes": "Population:  749,700 (metro. area), 676,400 (city proper)",
+        "wrongAnswers": [
+          "Sokode",
+          "Kara",
+          "Atakpame"
+        ]
+      },
+      {
+        "id": "legacy-card-1667",
+        "question": "Tonga",
+        "answer": "Nuku'alofa",
+        "notes": "Population:  24,500",
+        "wrongAnswers": [
+          "Mu'a",
+          "Neiafu",
+          "Haveluloto"
+        ]
+      },
+      {
+        "id": "legacy-card-1668",
+        "question": "Trinidad and Tobago",
+        "answer": "Port-of-Spain",
+        "notes": "Population:  263,800 (metro. area), 45,300 (city proper)",
+        "wrongAnswers": [
+          "Chaguanas",
+          "San Fernando",
+          "Arima"
+        ]
+      },
+      {
+        "id": "legacy-card-1669",
+        "question": "Tunisia",
+        "answer": "Tunis",
+        "notes": "Population:  1,660,300 (metro. area), 699,700 (city proper)",
+        "wrongAnswers": [
+          "Sfax",
+          "Sousse",
+          "Kairouan"
+        ]
+      },
+      {
+        "id": "legacy-card-1670",
+        "question": "Turkey",
+        "answer": "Ankara",
+        "notes": "Population:  3,582,000 (metro. area), 3,456,100 (city proper)",
+        "wrongAnswers": [
+          "Istanbul",
+          "Bursa",
+          "Izmir"
+        ]
+      },
+      {
+        "id": "legacy-card-1671",
+        "question": "Turkmenistan",
+        "answer": "Ashgabat",
+        "notes": "Population:  727,700",
+        "wrongAnswers": [
+          "Turkmenabat",
+          "Dasoguz",
+          "Mary"
+        ]
+      },
+      {
+        "id": "legacy-card-1672",
+        "question": "Tuvalu",
+        "answer": "Funafuti",
+        "notes": "Population:  5,300",
+        "wrongAnswers": [
+          "Savave Village",
+          "Tanrake Village",
+          "Kulia Village"
+        ]
+      },
+      {
+        "id": "legacy-card-1673",
+        "question": "Uganda",
+        "answer": "Kampala",
+        "notes": "Population:  1,461,600 (metro. area), 1,244,000 (city proper)",
+        "wrongAnswers": [
+          "Gulu",
+          "Jinja",
+          "Mbarara"
+        ]
+      },
+      {
+        "id": "legacy-card-1674",
+        "question": "Ukraine",
+        "answer": "Kyiv",
+        "notes": "Population:  3,296,100 (metro. area), 2,588,400 (city proper)",
+        "wrongAnswers": [
+          "Kharkiv",
+          "Odesa",
+          "Dnipro"
+        ]
+      },
+      {
+        "id": "legacy-card-1675",
+        "question": "United Arab Emirates",
+        "answer": "Abu Dhabi",
+        "notes": "Population:  539,800",
+        "wrongAnswers": [
+          "Dubai",
+          "Sharjah",
+          "Al Ain City"
+        ]
+      },
+      {
+        "id": "legacy-card-1676",
+        "question": "United Kingdom",
+        "answer": "London",
+        "notes": "Population:  7,615,000 (metro. area), 7,429,200 (city proper)",
+        "wrongAnswers": [
+          "Birmingham",
+          "Glasgow",
+          "Manchester"
+        ]
+      },
+      {
+        "id": "legacy-card-1677",
+        "question": "United States",
+        "answer": "Washington",
+        "notes": "Population:  570,898",
+        "wrongAnswers": [
+          "New York City",
+          "Los Angeles",
+          "Chicago"
+        ]
+      },
+      {
+        "id": "legacy-card-1678",
+        "question": "Uruguay",
+        "answer": "Montevideo",
+        "notes": "Population:  1,745,100 (metro. area), 1,347,600 (city proper)",
+        "wrongAnswers": [
+          "Salto",
+          "Maldonado",
+          "Rivera"
+        ]
+      },
+      {
+        "id": "legacy-card-1679",
+        "question": "Uzbekistan",
+        "answer": "Tashkent",
+        "notes": "Population:  3,457,500 (metro. area), 2,155,400 (city proper)",
+        "wrongAnswers": [
+          "Andijon",
+          "Namangan",
+          "Samarkand"
+        ]
+      },
+      {
+        "id": "legacy-card-1680",
+        "question": "Holy See",
+        "answer": "Vatican City",
+        "notes": "Population:  829",
+        "wrongAnswers": [
+          "Rome",
+          "San Marino",
+          "Monaco"
+        ]
+      },
+      {
+        "id": "legacy-card-1681",
+        "question": "Vanuatu",
+        "answer": "Port Vila",
+        "notes": "Population:  35,300",
+        "wrongAnswers": [
+          "Luganville",
+          "Norsup",
+          "Pango"
+        ]
+      },
+      {
+        "id": "legacy-card-1682",
+        "question": "Venezuela",
+        "answer": "Caracas",
+        "notes": "Population:  3,517,300 (metro. area), 1,741,400 (city proper)",
+        "wrongAnswers": [
+          "Maracaibo",
+          "Valencia",
+          "Barquisimeto"
+        ]
+      },
+      {
+        "id": "legacy-card-1683",
+        "question": "Vietnam",
+        "answer": "Hanoi",
+        "notes": "Population:  2,543,700 (metro. area), 1,396,500 (city proper)",
+        "wrongAnswers": [
+          "Ho Chi Minh City",
+          "Haiphong",
+          "Can Tho"
+        ]
+      },
+      {
+        "id": "legacy-card-1684",
+        "question": "Western Sahara (main administrative city)",
+        "answer": "El Aaiun",
+        "notes": "El Aaiun (Laayoune) is the main administrative city. The territory's status is disputed.",
+        "wrongAnswers": [
+          "Dakhla",
+          "Boujdour",
+          "El Aargub"
+        ]
+      },
+      {
+        "id": "legacy-card-1685",
+        "question": "Yemen",
+        "answer": "Sana\u00e1",
+        "notes": "Population:  1,778,900",
+        "wrongAnswers": [
+          "Taiz",
+          "Ibb",
+          "Al Hudaydah"
+        ]
+      },
+      {
+        "id": "legacy-card-1686",
+        "question": "Zambia",
+        "answer": "Lusaka",
+        "notes": "Population:  1,773,300 (metro. area), 1,265,000 (city proper)",
+        "wrongAnswers": [
+          "Kitwe",
+          "Ndola",
+          "Chipata"
+        ]
+      },
+      {
+        "id": "legacy-card-1687",
+        "question": "Zimbabwe",
+        "answer": "Harare",
+        "notes": "Population:  2,331,400 (metro. area), 1,919,700 (city proper)",
+        "wrongAnswers": [
+          "Bulawayo",
+          "Chitungwiza",
+          "Mutare"
+        ]
+      }
+    ],
+    "revision": 2,
+    "updateNotes": "All 196 questions now have three curated wrong answers, mostly cities and towns from the same country. Monaco, Singapore, and Vatican City use nearby capitals. Outdated capital answers are corrected, and questions with multiple capitals specify the role being asked. Your edits and practice history are preserved."
+  }
+];
+window.QUIZ_SEED_PREVIOUS = [
+  {
+    "id": "legacy-set-4",
+    "name": "US State Capitals",
+    "description": "Original collection, 2011",
+    "cards": [
+      {
+        "id": "legacy-card-13",
+        "question": "Alabama",
+        "answer": "Montgomery",
+        "notes": "Capital since 1846",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-14",
+        "question": "Alaska",
+        "answer": "Juneau",
+        "notes": "Capital since 1906",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-15",
+        "question": "Arizona",
+        "answer": "Phoenix",
+        "notes": "Capital since 1889",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-16",
+        "question": "Arkansas",
+        "answer": "Little Rock",
+        "notes": "Capital since 1821",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-17",
+        "question": "California",
+        "answer": "Sacramento",
+        "notes": "Capital since 1854",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-18",
+        "question": "Colorado",
+        "answer": "Denver",
+        "notes": "Capital since 1867",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-19",
+        "question": "Connecticut",
+        "answer": "Hartford",
+        "notes": "Capital since 1875",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-20",
+        "question": "Delaware",
+        "answer": "Dover",
+        "notes": "Capital since 1777",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-21",
+        "question": "Florida",
+        "answer": "Tallahassee",
+        "notes": "Capital since 1824",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-22",
+        "question": "Georgia",
+        "answer": "Atlanta",
+        "notes": "Capital since 1868",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-23",
+        "question": "Hawaii",
+        "answer": "Honolulu",
+        "notes": "Capital since 1845",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-24",
+        "question": "Idaho",
+        "answer": "Boise",
+        "notes": "Capital since 1865",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-25",
+        "question": "Illinois",
+        "answer": "Springfield",
+        "notes": "Capital since 1837",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-26",
+        "question": "Indiana",
+        "answer": "Indianapolis",
+        "notes": "Capital since 1825",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-27",
+        "question": "Iowa",
+        "answer": "Des Moines",
+        "notes": "Capital since 1857",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-28",
+        "question": "Kansas",
+        "answer": "Topeka",
+        "notes": "Capital since 1856",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-29",
+        "question": "Kentucky",
+        "answer": "Frankfort",
+        "notes": "Capital since 1792",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-30",
+        "question": "Louisiana",
+        "answer": "Baton Rouge",
+        "notes": "Capital since 1880",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-31",
+        "question": "Maine",
+        "answer": "Augusta",
+        "notes": "Capital since 1832",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-32",
+        "question": "Maryland",
+        "answer": "Annapolis",
+        "notes": "Capital since 1694",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-33",
+        "question": "Massachusetts",
+        "answer": "Boston",
+        "notes": "Capital since 1630",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-34",
+        "question": "Michigan",
+        "answer": "Lansing",
+        "notes": "Capital since 1847",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-35",
+        "question": "Minnesota",
+        "answer": "Saint Paul",
+        "notes": "Capital since 1849",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-36",
+        "question": "Mississippi",
+        "answer": "Jackson",
+        "notes": "Capital since 1821",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-37",
+        "question": "Missouri",
+        "answer": "Jefferson City",
+        "notes": "Capital since 1826",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-38",
+        "question": "Montana",
+        "answer": "Helena",
+        "notes": "Capital since 1875",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-39",
+        "question": "Nebraska",
+        "answer": "Lincoln",
+        "notes": "Capital since 1867",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-40",
+        "question": "Nevada",
+        "answer": "Carson City",
+        "notes": "Capital since 1861",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-41",
+        "question": "New Hampshire",
+        "answer": "Concord",
+        "notes": "Capital since 1808",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-42",
+        "question": "New Jersey",
+        "answer": "Trenton",
+        "notes": "Capital since 1784",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-43",
+        "question": "New Mexico",
+        "answer": "Santa Fe",
+        "notes": "Capital since 1610",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-44",
+        "question": "New York",
+        "answer": "Albany",
+        "notes": "Capital since 1797",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-45",
+        "question": "North Carolina",
+        "answer": "Raleigh",
+        "notes": "Capital since 1794",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-46",
+        "question": "North Dakota",
+        "answer": "Bismarck",
+        "notes": "Capital since 1883",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-47",
+        "question": "Ohio",
+        "answer": "Columbus",
+        "notes": "Capital since 1816",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-48",
+        "question": "Oklahoma",
+        "answer": "Oklahoma City",
+        "notes": "Capital since 1910",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-49",
+        "question": "Oregon",
+        "answer": "Salem",
+        "notes": "Capital since 1855",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-50",
+        "question": "Pennsylvania",
+        "answer": "Harrisburg",
+        "notes": "Capital since 1812",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-51",
+        "question": "Rhode Island",
+        "answer": "Providence",
+        "notes": "Capital since 1900",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-52",
+        "question": "South Carolina",
+        "answer": "Columbia",
+        "notes": "Capital since 1786",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-53",
+        "question": "South Dakota",
+        "answer": "Pierre",
+        "notes": "Capital since 1889",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-54",
+        "question": "Tennessee",
+        "answer": "Nashville",
+        "notes": "Capital since 1826",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-55",
+        "question": "Texas",
+        "answer": "Austin",
+        "notes": "Capital since 1839",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-56",
+        "question": "Utah",
+        "answer": "Salt Lake City",
+        "notes": "Capital since 1858",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-57",
+        "question": "Vermont",
+        "answer": "Montpelier",
+        "notes": "Capital since 1805",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-58",
+        "question": "Virginia",
+        "answer": "Richmond",
+        "notes": "Capital since 1780",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-59",
+        "question": "Washington",
+        "answer": "Olympia",
+        "notes": "Capital since 1853",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-60",
+        "question": "West Virginia",
+        "answer": "Charleston",
+        "notes": "Capital since 1885",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-61",
+        "question": "Wisconsin",
+        "answer": "Madison",
+        "notes": "Capital since 1838",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-62",
+        "question": "Wyoming",
+        "answer": "Cheyenne",
+        "notes": "Capital since 1869",
+        "wrongAnswers": []
+      }
+    ],
+    "revision": 1
+  },
+  {
+    "id": "legacy-set-9",
+    "name": "World Capitals",
     "description": "Original collection, 2011",
     "cards": [
       {
@@ -3874,366 +6401,6 @@ window.QUIZ_SEED = [
         "question": "Zimbabwe",
         "answer": "Harare",
         "notes": "Population:  2,331,400 (metro. area), 1,919,700 (city proper)",
-        "wrongAnswers": []
-      }
-    ],
-    "revision": 1
-  }
-];
-window.QUIZ_SEED_PREVIOUS = [
-  {
-    "id": "legacy-set-4",
-    "name": "US State Capitals",
-    "description": "Original collection, 2011",
-    "cards": [
-      {
-        "id": "legacy-card-13",
-        "question": "Alabama",
-        "answer": "Montgomery",
-        "notes": "Capital since 1846",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-14",
-        "question": "Alaska",
-        "answer": "Juneau",
-        "notes": "Capital since 1906",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-15",
-        "question": "Arizona",
-        "answer": "Phoenix",
-        "notes": "Capital since 1889",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-16",
-        "question": "Arkansas",
-        "answer": "Little Rock",
-        "notes": "Capital since 1821",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-17",
-        "question": "California",
-        "answer": "Sacramento",
-        "notes": "Capital since 1854",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-18",
-        "question": "Colorado",
-        "answer": "Denver",
-        "notes": "Capital since 1867",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-19",
-        "question": "Connecticut",
-        "answer": "Hartford",
-        "notes": "Capital since 1875",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-20",
-        "question": "Delaware",
-        "answer": "Dover",
-        "notes": "Capital since 1777",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-21",
-        "question": "Florida",
-        "answer": "Tallahassee",
-        "notes": "Capital since 1824",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-22",
-        "question": "Georgia",
-        "answer": "Atlanta",
-        "notes": "Capital since 1868",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-23",
-        "question": "Hawaii",
-        "answer": "Honolulu",
-        "notes": "Capital since 1845",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-24",
-        "question": "Idaho",
-        "answer": "Boise",
-        "notes": "Capital since 1865",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-25",
-        "question": "Illinois",
-        "answer": "Springfield",
-        "notes": "Capital since 1837",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-26",
-        "question": "Indiana",
-        "answer": "Indianapolis",
-        "notes": "Capital since 1825",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-27",
-        "question": "Iowa",
-        "answer": "Des Moines",
-        "notes": "Capital since 1857",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-28",
-        "question": "Kansas",
-        "answer": "Topeka",
-        "notes": "Capital since 1856",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-29",
-        "question": "Kentucky",
-        "answer": "Frankfort",
-        "notes": "Capital since 1792",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-30",
-        "question": "Louisiana",
-        "answer": "Baton Rouge",
-        "notes": "Capital since 1880",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-31",
-        "question": "Maine",
-        "answer": "Augusta",
-        "notes": "Capital since 1832",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-32",
-        "question": "Maryland",
-        "answer": "Annapolis",
-        "notes": "Capital since 1694",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-33",
-        "question": "Massachusetts",
-        "answer": "Boston",
-        "notes": "Capital since 1630",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-34",
-        "question": "Michigan",
-        "answer": "Lansing",
-        "notes": "Capital since 1847",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-35",
-        "question": "Minnesota",
-        "answer": "Saint Paul",
-        "notes": "Capital since 1849",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-36",
-        "question": "Mississippi",
-        "answer": "Jackson",
-        "notes": "Capital since 1821",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-37",
-        "question": "Missouri",
-        "answer": "Jefferson City",
-        "notes": "Capital since 1826",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-38",
-        "question": "Montana",
-        "answer": "Helena",
-        "notes": "Capital since 1875",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-39",
-        "question": "Nebraska",
-        "answer": "Lincoln",
-        "notes": "Capital since 1867",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-40",
-        "question": "Nevada",
-        "answer": "Carson City",
-        "notes": "Capital since 1861",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-41",
-        "question": "New Hampshire",
-        "answer": "Concord",
-        "notes": "Capital since 1808",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-42",
-        "question": "New Jersey",
-        "answer": "Trenton",
-        "notes": "Capital since 1784",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-43",
-        "question": "New Mexico",
-        "answer": "Santa Fe",
-        "notes": "Capital since 1610",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-44",
-        "question": "New York",
-        "answer": "Albany",
-        "notes": "Capital since 1797",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-45",
-        "question": "North Carolina",
-        "answer": "Raleigh",
-        "notes": "Capital since 1794",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-46",
-        "question": "North Dakota",
-        "answer": "Bismarck",
-        "notes": "Capital since 1883",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-47",
-        "question": "Ohio",
-        "answer": "Columbus",
-        "notes": "Capital since 1816",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-48",
-        "question": "Oklahoma",
-        "answer": "Oklahoma City",
-        "notes": "Capital since 1910",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-49",
-        "question": "Oregon",
-        "answer": "Salem",
-        "notes": "Capital since 1855",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-50",
-        "question": "Pennsylvania",
-        "answer": "Harrisburg",
-        "notes": "Capital since 1812",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-51",
-        "question": "Rhode Island",
-        "answer": "Providence",
-        "notes": "Capital since 1900",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-52",
-        "question": "South Carolina",
-        "answer": "Columbia",
-        "notes": "Capital since 1786",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-53",
-        "question": "South Dakota",
-        "answer": "Pierre",
-        "notes": "Capital since 1889",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-54",
-        "question": "Tennessee",
-        "answer": "Nashville",
-        "notes": "Capital since 1826",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-55",
-        "question": "Texas",
-        "answer": "Austin",
-        "notes": "Capital since 1839",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-56",
-        "question": "Utah",
-        "answer": "Salt Lake City",
-        "notes": "Capital since 1858",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-57",
-        "question": "Vermont",
-        "answer": "Montpelier",
-        "notes": "Capital since 1805",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-58",
-        "question": "Virginia",
-        "answer": "Richmond",
-        "notes": "Capital since 1780",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-59",
-        "question": "Washington",
-        "answer": "Olympia",
-        "notes": "Capital since 1853",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-60",
-        "question": "West Virginia",
-        "answer": "Charleston",
-        "notes": "Capital since 1885",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-61",
-        "question": "Wisconsin",
-        "answer": "Madison",
-        "notes": "Capital since 1838",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-62",
-        "question": "Wyoming",
-        "answer": "Cheyenne",
-        "notes": "Capital since 1869",
         "wrongAnswers": []
       }
     ],
