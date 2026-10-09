@@ -5,6 +5,18 @@ No framework, build step, account, backend, or runtime network dependency.
 
 Repository: https://github.com/davidbreyer/quiz-your-lizard
 
+## GitHub Pages
+
+Site address: https://davidbreyer.github.io/quiz-your-lizard/
+
+The workflow in `.github/workflows/pages.yml` publishes the static app on every
+push to `main` and can also be run manually from GitHub Actions. In the repository's
+Settings > Pages, select **GitHub Actions** as the publishing source to enable it.
+Only the app files listed below are included in the deployment artifact.
+
+The hosted app stores quizzes in your browser at the Pages address. To move data
+from the local prototype, export a JSON backup there and import it on the hosted site.
+
 ## Run
 
 Open `index.html` in Chrome or Edge. All scripts, icons, and images are bundled locally.
