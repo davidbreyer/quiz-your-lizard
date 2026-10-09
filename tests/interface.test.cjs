@@ -30,6 +30,45 @@ function boot(saved) {
   return { dom, w, $, click, fill, submit, savedData, errors, downloads };
 }
 const end = t => t.dom.window.close();
+function oldCapitalsState() {
+  const t = boot(), saved = t.savedData();
+  saved.quizzes = JSON.parse(JSON.stringify(t.w.QUIZ_SEED_PREVIOUS));
+  end(t); return saved;
+}
+
+test('update available is visible in library and quiz; Later leaves data untouched', () => {
+  const old = oldCapitalsState(), t = boot(old);
+  assert.match(t.$('[data-action="base-update"]').textContent, /Update available/);
+  t.click('[data-action="base-update"]');
+  assert.match(t.$('#dialog-content').textContent, /same-state cities/);
+  t.click('[data-action="close-dialog"]');
+  assert.deepEqual(t.savedData(), old);
+  t.click('[data-action="open-quiz"]');
+  assert.ok(t.$('[data-action="base-update"]'));
+  t.click('[data-action="base-update"]'); t.click('[data-action="install-base-update"]');
+  assert.equal(t.$('[data-action="base-update"]'), null);
+  assert.equal(t.savedData().quizzes.length, 1);
+  assert.equal(t.savedData().quizzes[0].base.revision, 2);
+  const saved = t.savedData(); end(t);
+  const again = boot(saved); assert.equal(again.$('[data-action="base-update"]'), null); end(again);
+});
+test('edited old quizzes explain preservation and keep edits when updated', () => {
+  const old = oldCapitalsState(); old.quizzes[0].cards[0].notes = 'My memory trick';
+  const t = boot(old); t.click('[data-action="base-update"]');
+  assert.match(t.$('#dialog-content').textContent, /personal copy/);
+  t.click('[data-action="install-base-update"]');
+  const personal = t.savedData().quizzes.find(q => !q.base);
+  assert.equal(personal.cards[0].notes, 'My memory trick');
+  assert.equal(t.$('#quiz-grid').children.length, 2); end(t);
+});
+test('failed base update retains the dialog and previous library for retry', () => {
+  const old = oldCapitalsState(), t = boot(old); t.click('[data-action="base-update"]');
+  t.w.Storage.prototype.setItem = () => { throw new Error('Quota'); };
+  t.click('[data-action="install-base-update"]');
+  assert.equal(t.$('#dialog').open, true);
+  assert.match(t.$('.dialog-error').textContent, /Could not save/);
+  assert.deepEqual(t.savedData(), old); end(t);
+});
 test('library loads the 521 linked legacy cards and icons without network resources', () => {
   const t = boot();
   assert.equal(t.$('#quiz-grid').children.length, 4);
@@ -116,6 +155,13 @@ test('JSON imports append fresh identifiers and preserve/remap history', async (
   assert.notEqual(saved.quizzes[1].id, saved.quizzes[0].id);
   assert.equal(saved.history[0].quizId, saved.quizzes[1].id);
   assert.notEqual(saved.quizzes[1].cards[0].id, 'a'); end(t);
+});
+test('importing a base quiz creates an independent personal copy', async () => {
+  const source = boot(), backup = source.savedData(); end(source);
+  const t = boot(fixture()); await upload(t, JSON.stringify(backup)); t.click('[data-action="confirm-import"]');
+  assert.ok(t.savedData().quizzes.slice(1).every(q => q.base === undefined));
+  const saved = t.savedData(); end(t);
+  const reloaded = boot(saved); assert.equal(reloaded.$('[data-action="base-update"]'), null); end(reloaded);
 });
 test('legacy QYL imports handle XML escaping, notes, and custom distractors', async () => {
   const t = boot(fixture());

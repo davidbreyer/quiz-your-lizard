@@ -2,359 +2,561 @@ window.QUIZ_SEED = [
   {
     "id": "legacy-set-4",
     "name": "US State Capitals",
-    "description": "Original collection, 2011",
+    "description": "Learn all 50 state capitals with choices from the same state.",
     "cards": [
       {
         "id": "legacy-card-13",
         "question": "Alabama",
         "answer": "Montgomery",
         "notes": "Capital since 1846",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Birmingham",
+          "Mobile",
+          "Huntsville"
+        ]
       },
       {
         "id": "legacy-card-14",
         "question": "Alaska",
         "answer": "Juneau",
         "notes": "Capital since 1906",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Anchorage",
+          "Fairbanks",
+          "Sitka"
+        ]
       },
       {
         "id": "legacy-card-15",
         "question": "Arizona",
         "answer": "Phoenix",
         "notes": "Capital since 1889",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Tucson",
+          "Mesa",
+          "Flagstaff"
+        ]
       },
       {
         "id": "legacy-card-16",
         "question": "Arkansas",
         "answer": "Little Rock",
         "notes": "Capital since 1821",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Fayetteville",
+          "Fort Smith",
+          "Jonesboro"
+        ]
       },
       {
         "id": "legacy-card-17",
         "question": "California",
         "answer": "Sacramento",
         "notes": "Capital since 1854",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Los Angeles",
+          "San Diego",
+          "San Francisco"
+        ]
       },
       {
         "id": "legacy-card-18",
         "question": "Colorado",
         "answer": "Denver",
         "notes": "Capital since 1867",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Colorado Springs",
+          "Aurora",
+          "Fort Collins"
+        ]
       },
       {
         "id": "legacy-card-19",
         "question": "Connecticut",
         "answer": "Hartford",
         "notes": "Capital since 1875",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Bridgeport",
+          "New Haven",
+          "Stamford"
+        ]
       },
       {
         "id": "legacy-card-20",
         "question": "Delaware",
         "answer": "Dover",
         "notes": "Capital since 1777",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Wilmington",
+          "Newark",
+          "Milford"
+        ]
       },
       {
         "id": "legacy-card-21",
         "question": "Florida",
         "answer": "Tallahassee",
         "notes": "Capital since 1824",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Miami",
+          "Orlando",
+          "Tampa"
+        ]
       },
       {
         "id": "legacy-card-22",
         "question": "Georgia",
         "answer": "Atlanta",
         "notes": "Capital since 1868",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Savannah",
+          "Augusta",
+          "Columbus"
+        ]
       },
       {
         "id": "legacy-card-23",
         "question": "Hawaii",
         "answer": "Honolulu",
         "notes": "Capital since 1845",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Hilo",
+          "Kailua",
+          "Kahului"
+        ]
       },
       {
         "id": "legacy-card-24",
         "question": "Idaho",
         "answer": "Boise",
         "notes": "Capital since 1865",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Meridian",
+          "Nampa",
+          "Idaho Falls"
+        ]
       },
       {
         "id": "legacy-card-25",
         "question": "Illinois",
         "answer": "Springfield",
         "notes": "Capital since 1837",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Chicago",
+          "Aurora",
+          "Rockford"
+        ]
       },
       {
         "id": "legacy-card-26",
         "question": "Indiana",
         "answer": "Indianapolis",
         "notes": "Capital since 1825",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Fort Wayne",
+          "Evansville",
+          "South Bend"
+        ]
       },
       {
         "id": "legacy-card-27",
         "question": "Iowa",
         "answer": "Des Moines",
         "notes": "Capital since 1857",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Cedar Rapids",
+          "Davenport",
+          "Sioux City"
+        ]
       },
       {
         "id": "legacy-card-28",
         "question": "Kansas",
         "answer": "Topeka",
         "notes": "Capital since 1856",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Wichita",
+          "Overland Park",
+          "Kansas City"
+        ]
       },
       {
         "id": "legacy-card-29",
         "question": "Kentucky",
         "answer": "Frankfort",
         "notes": "Capital since 1792",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Louisville",
+          "Lexington",
+          "Bowling Green"
+        ]
       },
       {
         "id": "legacy-card-30",
         "question": "Louisiana",
         "answer": "Baton Rouge",
         "notes": "Capital since 1880",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "New Orleans",
+          "Shreveport",
+          "Lafayette"
+        ]
       },
       {
         "id": "legacy-card-31",
         "question": "Maine",
         "answer": "Augusta",
         "notes": "Capital since 1832",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Portland",
+          "Bangor",
+          "Lewiston"
+        ]
       },
       {
         "id": "legacy-card-32",
         "question": "Maryland",
         "answer": "Annapolis",
         "notes": "Capital since 1694",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Baltimore",
+          "Frederick",
+          "Rockville"
+        ]
       },
       {
         "id": "legacy-card-33",
         "question": "Massachusetts",
         "answer": "Boston",
         "notes": "Capital since 1630",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Worcester",
+          "Springfield",
+          "Lowell"
+        ]
       },
       {
         "id": "legacy-card-34",
         "question": "Michigan",
         "answer": "Lansing",
         "notes": "Capital since 1847",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Detroit",
+          "Grand Rapids",
+          "Ann Arbor"
+        ]
       },
       {
         "id": "legacy-card-35",
         "question": "Minnesota",
         "answer": "Saint Paul",
         "notes": "Capital since 1849",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Minneapolis",
+          "Duluth",
+          "Rochester"
+        ]
       },
       {
         "id": "legacy-card-36",
         "question": "Mississippi",
         "answer": "Jackson",
         "notes": "Capital since 1821",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Gulfport",
+          "Biloxi",
+          "Hattiesburg"
+        ]
       },
       {
         "id": "legacy-card-37",
         "question": "Missouri",
         "answer": "Jefferson City",
         "notes": "Capital since 1826",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Kansas City",
+          "St. Louis",
+          "Springfield"
+        ]
       },
       {
         "id": "legacy-card-38",
         "question": "Montana",
         "answer": "Helena",
         "notes": "Capital since 1875",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Billings",
+          "Missoula",
+          "Great Falls"
+        ]
       },
       {
         "id": "legacy-card-39",
         "question": "Nebraska",
         "answer": "Lincoln",
         "notes": "Capital since 1867",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Omaha",
+          "Bellevue",
+          "Kearney"
+        ]
       },
       {
         "id": "legacy-card-40",
         "question": "Nevada",
         "answer": "Carson City",
         "notes": "Capital since 1861",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Las Vegas",
+          "Reno",
+          "Henderson"
+        ]
       },
       {
         "id": "legacy-card-41",
         "question": "New Hampshire",
         "answer": "Concord",
         "notes": "Capital since 1808",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Manchester",
+          "Nashua",
+          "Portsmouth"
+        ]
       },
       {
         "id": "legacy-card-42",
         "question": "New Jersey",
         "answer": "Trenton",
         "notes": "Capital since 1784",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Newark",
+          "Jersey City",
+          "Atlantic City"
+        ]
       },
       {
         "id": "legacy-card-43",
         "question": "New Mexico",
         "answer": "Santa Fe",
         "notes": "Capital since 1610",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Albuquerque",
+          "Las Cruces",
+          "Roswell"
+        ]
       },
       {
         "id": "legacy-card-44",
         "question": "New York",
         "answer": "Albany",
         "notes": "Capital since 1797",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "New York",
+          "Buffalo",
+          "Rochester"
+        ]
       },
       {
         "id": "legacy-card-45",
         "question": "North Carolina",
         "answer": "Raleigh",
         "notes": "Capital since 1794",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Charlotte",
+          "Durham",
+          "Greensboro"
+        ]
       },
       {
         "id": "legacy-card-46",
         "question": "North Dakota",
         "answer": "Bismarck",
         "notes": "Capital since 1883",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Fargo",
+          "Grand Forks",
+          "Minot"
+        ]
       },
       {
         "id": "legacy-card-47",
         "question": "Ohio",
         "answer": "Columbus",
         "notes": "Capital since 1816",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Cleveland",
+          "Cincinnati",
+          "Toledo"
+        ]
       },
       {
         "id": "legacy-card-48",
         "question": "Oklahoma",
         "answer": "Oklahoma City",
         "notes": "Capital since 1910",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Tulsa",
+          "Norman",
+          "Lawton"
+        ]
       },
       {
         "id": "legacy-card-49",
         "question": "Oregon",
         "answer": "Salem",
         "notes": "Capital since 1855",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Portland",
+          "Eugene",
+          "Bend"
+        ]
       },
       {
         "id": "legacy-card-50",
         "question": "Pennsylvania",
         "answer": "Harrisburg",
         "notes": "Capital since 1812",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Philadelphia",
+          "Pittsburgh",
+          "Allentown"
+        ]
       },
       {
         "id": "legacy-card-51",
         "question": "Rhode Island",
         "answer": "Providence",
         "notes": "Capital since 1900",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Warwick",
+          "Cranston",
+          "Newport"
+        ]
       },
       {
         "id": "legacy-card-52",
         "question": "South Carolina",
         "answer": "Columbia",
         "notes": "Capital since 1786",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Charleston",
+          "Greenville",
+          "Rock Hill"
+        ]
       },
       {
         "id": "legacy-card-53",
         "question": "South Dakota",
         "answer": "Pierre",
         "notes": "Capital since 1889",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Sioux Falls",
+          "Aberdeen",
+          "Brookings"
+        ]
       },
       {
         "id": "legacy-card-54",
         "question": "Tennessee",
         "answer": "Nashville",
         "notes": "Capital since 1826",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Memphis",
+          "Knoxville",
+          "Chattanooga"
+        ]
       },
       {
         "id": "legacy-card-55",
         "question": "Texas",
         "answer": "Austin",
         "notes": "Capital since 1839",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Houston",
+          "Dallas",
+          "San Antonio"
+        ]
       },
       {
         "id": "legacy-card-56",
         "question": "Utah",
         "answer": "Salt Lake City",
         "notes": "Capital since 1858",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Provo",
+          "Ogden",
+          "Logan"
+        ]
       },
       {
         "id": "legacy-card-57",
         "question": "Vermont",
         "answer": "Montpelier",
         "notes": "Capital since 1805",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Burlington",
+          "Rutland",
+          "South Burlington"
+        ]
       },
       {
         "id": "legacy-card-58",
         "question": "Virginia",
         "answer": "Richmond",
         "notes": "Capital since 1780",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Norfolk",
+          "Roanoke",
+          "Virginia Beach"
+        ]
       },
       {
         "id": "legacy-card-59",
         "question": "Washington",
         "answer": "Olympia",
         "notes": "Capital since 1853",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Seattle",
+          "Spokane",
+          "Tacoma"
+        ]
       },
       {
         "id": "legacy-card-60",
         "question": "West Virginia",
         "answer": "Charleston",
         "notes": "Capital since 1885",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Huntington",
+          "Morgantown",
+          "Parkersburg"
+        ]
       },
       {
         "id": "legacy-card-61",
         "question": "Wisconsin",
         "answer": "Madison",
         "notes": "Capital since 1838",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Milwaukee",
+          "Green Bay",
+          "Kenosha"
+        ]
       },
       {
         "id": "legacy-card-62",
         "question": "Wyoming",
         "answer": "Cheyenne",
         "notes": "Capital since 1869",
-        "wrongAnswers": []
+        "wrongAnswers": [
+          "Casper",
+          "Laramie",
+          "Gillette"
+        ]
       }
-    ]
+    ],
+    "revision": 2,
+    "updateNotes": "Three same-state cities now make each multiple-choice question more challenging. All 50 capitals and study notes are retained."
   },
   {
     "id": "legacy-set-5",
@@ -1068,7 +1270,8 @@ window.QUIZ_SEED = [
         "notes": "",
         "wrongAnswers": []
       }
-    ]
+    ],
+    "revision": 1
   },
   {
     "id": "legacy-set-8",
@@ -2293,7 +2496,8 @@ window.QUIZ_SEED = [
         "notes": "",
         "wrongAnswers": []
       }
-    ]
+    ],
+    "revision": 1
   },
   {
     "id": "legacy-set-9",
@@ -3672,6 +3876,367 @@ window.QUIZ_SEED = [
         "notes": "Population:  2,331,400 (metro. area), 1,919,700 (city proper)",
         "wrongAnswers": []
       }
-    ]
+    ],
+    "revision": 1
+  }
+];
+window.QUIZ_SEED_PREVIOUS = [
+  {
+    "id": "legacy-set-4",
+    "name": "US State Capitals",
+    "description": "Original collection, 2011",
+    "cards": [
+      {
+        "id": "legacy-card-13",
+        "question": "Alabama",
+        "answer": "Montgomery",
+        "notes": "Capital since 1846",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-14",
+        "question": "Alaska",
+        "answer": "Juneau",
+        "notes": "Capital since 1906",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-15",
+        "question": "Arizona",
+        "answer": "Phoenix",
+        "notes": "Capital since 1889",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-16",
+        "question": "Arkansas",
+        "answer": "Little Rock",
+        "notes": "Capital since 1821",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-17",
+        "question": "California",
+        "answer": "Sacramento",
+        "notes": "Capital since 1854",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-18",
+        "question": "Colorado",
+        "answer": "Denver",
+        "notes": "Capital since 1867",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-19",
+        "question": "Connecticut",
+        "answer": "Hartford",
+        "notes": "Capital since 1875",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-20",
+        "question": "Delaware",
+        "answer": "Dover",
+        "notes": "Capital since 1777",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-21",
+        "question": "Florida",
+        "answer": "Tallahassee",
+        "notes": "Capital since 1824",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-22",
+        "question": "Georgia",
+        "answer": "Atlanta",
+        "notes": "Capital since 1868",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-23",
+        "question": "Hawaii",
+        "answer": "Honolulu",
+        "notes": "Capital since 1845",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-24",
+        "question": "Idaho",
+        "answer": "Boise",
+        "notes": "Capital since 1865",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-25",
+        "question": "Illinois",
+        "answer": "Springfield",
+        "notes": "Capital since 1837",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-26",
+        "question": "Indiana",
+        "answer": "Indianapolis",
+        "notes": "Capital since 1825",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-27",
+        "question": "Iowa",
+        "answer": "Des Moines",
+        "notes": "Capital since 1857",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-28",
+        "question": "Kansas",
+        "answer": "Topeka",
+        "notes": "Capital since 1856",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-29",
+        "question": "Kentucky",
+        "answer": "Frankfort",
+        "notes": "Capital since 1792",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-30",
+        "question": "Louisiana",
+        "answer": "Baton Rouge",
+        "notes": "Capital since 1880",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-31",
+        "question": "Maine",
+        "answer": "Augusta",
+        "notes": "Capital since 1832",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-32",
+        "question": "Maryland",
+        "answer": "Annapolis",
+        "notes": "Capital since 1694",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-33",
+        "question": "Massachusetts",
+        "answer": "Boston",
+        "notes": "Capital since 1630",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-34",
+        "question": "Michigan",
+        "answer": "Lansing",
+        "notes": "Capital since 1847",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-35",
+        "question": "Minnesota",
+        "answer": "Saint Paul",
+        "notes": "Capital since 1849",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-36",
+        "question": "Mississippi",
+        "answer": "Jackson",
+        "notes": "Capital since 1821",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-37",
+        "question": "Missouri",
+        "answer": "Jefferson City",
+        "notes": "Capital since 1826",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-38",
+        "question": "Montana",
+        "answer": "Helena",
+        "notes": "Capital since 1875",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-39",
+        "question": "Nebraska",
+        "answer": "Lincoln",
+        "notes": "Capital since 1867",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-40",
+        "question": "Nevada",
+        "answer": "Carson City",
+        "notes": "Capital since 1861",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-41",
+        "question": "New Hampshire",
+        "answer": "Concord",
+        "notes": "Capital since 1808",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-42",
+        "question": "New Jersey",
+        "answer": "Trenton",
+        "notes": "Capital since 1784",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-43",
+        "question": "New Mexico",
+        "answer": "Santa Fe",
+        "notes": "Capital since 1610",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-44",
+        "question": "New York",
+        "answer": "Albany",
+        "notes": "Capital since 1797",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-45",
+        "question": "North Carolina",
+        "answer": "Raleigh",
+        "notes": "Capital since 1794",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-46",
+        "question": "North Dakota",
+        "answer": "Bismarck",
+        "notes": "Capital since 1883",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-47",
+        "question": "Ohio",
+        "answer": "Columbus",
+        "notes": "Capital since 1816",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-48",
+        "question": "Oklahoma",
+        "answer": "Oklahoma City",
+        "notes": "Capital since 1910",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-49",
+        "question": "Oregon",
+        "answer": "Salem",
+        "notes": "Capital since 1855",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-50",
+        "question": "Pennsylvania",
+        "answer": "Harrisburg",
+        "notes": "Capital since 1812",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-51",
+        "question": "Rhode Island",
+        "answer": "Providence",
+        "notes": "Capital since 1900",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-52",
+        "question": "South Carolina",
+        "answer": "Columbia",
+        "notes": "Capital since 1786",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-53",
+        "question": "South Dakota",
+        "answer": "Pierre",
+        "notes": "Capital since 1889",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-54",
+        "question": "Tennessee",
+        "answer": "Nashville",
+        "notes": "Capital since 1826",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-55",
+        "question": "Texas",
+        "answer": "Austin",
+        "notes": "Capital since 1839",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-56",
+        "question": "Utah",
+        "answer": "Salt Lake City",
+        "notes": "Capital since 1858",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-57",
+        "question": "Vermont",
+        "answer": "Montpelier",
+        "notes": "Capital since 1805",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-58",
+        "question": "Virginia",
+        "answer": "Richmond",
+        "notes": "Capital since 1780",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-59",
+        "question": "Washington",
+        "answer": "Olympia",
+        "notes": "Capital since 1853",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-60",
+        "question": "West Virginia",
+        "answer": "Charleston",
+        "notes": "Capital since 1885",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-61",
+        "question": "Wisconsin",
+        "answer": "Madison",
+        "notes": "Capital since 1838",
+        "wrongAnswers": []
+      },
+      {
+        "id": "legacy-card-62",
+        "question": "Wyoming",
+        "answer": "Cheyenne",
+        "notes": "Capital since 1869",
+        "wrongAnswers": []
+      }
+    ],
+    "revision": 1
   }
 ];

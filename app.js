@@ -11,7 +11,7 @@
   let store, data, view = 'library', activeId = null, tab = 'practice', mode = 'study', session = null, search = '', cardSearch = '', imported = null;
   let readOnly = false, recovery = null, toastTimer;
   try {
-    store = new C.Store(localStorage, window.QUIZ_SEED);
+    store = new C.Store(localStorage, window.QUIZ_SEED, window.QUIZ_SEED_PREVIOUS);
     data = store.data;
     if (store.raw === null) data = store.save(data);
   } catch (error) {
@@ -71,6 +71,15 @@
   }
   const colors = ['sage', 'peach', 'lilac', 'sky'];
   const symbols = ['globe', 'languages', 'terminal', 'map'];
+  function updateNotice(q) {
+    const update = !readOnly && C.baseUpdate(q, window.QUIZ_SEED);
+    return update ? `<div class="quiz-update"><span>A new edition is ready</span>${button('base-update', 'Update available', 'refresh-cw', 'text-button', `data-id="${esc(q.id)}" aria-label="Update available for ${esc(q.name)}"`)}</div>` : '';
+  }
+  function showBaseUpdate(id) {
+    const q = data.quizzes.find(item => item.id === id), update = C.baseUpdate(q, window.QUIZ_SEED);
+    if (!update || readOnly) return;
+    openDialog('Update ' + update.latest.name, `<p>${esc(update.notes)}</p><p class="update-preservation">${update.keepCopy ? `Your edited quiz and its practice history will be kept as <strong>${esc(q.name)} (personal copy)</strong>. The new edition will appear alongside it.` : 'Your practice history and settings will be kept. The new edition will replace this untouched base quiz.'}</p><div class="dialog-actions">${button('close-dialog', 'Later', null, 'button secondary')}${button('install-base-update', 'Update quiz', 'refresh-cw', 'button', `data-id="${esc(id)}"`)}</div>`);
+  }
   function renderLibrary() {
     const total = data.quizzes.reduce((sum, q) => sum + q.cards.length, 0);
     main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">A CURIOUS MIND IS A GOOD START</div><h1>Your quiz library<span class="heading-dot">.</span></h1><p>A familiar topic, a new challenge. What will you learn today?</p></div><div class="heading-actions">${button('import', 'Import', 'upload', 'button secondary')}${button('new-quiz', 'New quiz', 'plus')}</div></div>
@@ -83,7 +92,7 @@
     $('#quiz-grid').innerHTML = filtered.map(q => {
       const index = data.quizzes.indexOf(q);
       const last = data.history.find(h => h.quizId === q.id);
-      return `<article class="quiz-card"><div class="card-top"><span class="topic-icon ${colors[index % 4]}">${icon(symbols[index % 4])}</span>${button('quiz-menu', '', 'ellipsis', 'icon-button', `data-id="${esc(q.id)}" aria-label="Options for ${esc(q.name)}" title="Quiz options"`)}</div><h3><button class="title-button" data-action="open-quiz" data-id="${esc(q.id)}">${esc(q.name)}</button></h3><p class="card-description">${esc(q.description || 'Your next learning adventure')}</p><div class="card-meta">${icon('layers')}<span>${q.cards.length} questions</span><span class="meta-dot">&middot;</span><span>${last ? 'Practiced ' + relativeDate(last.date) : 'Ready when you are'}</span></div><div class="card-bottom"><span class="badge">${q.cards.length ? 'Ready to practice' : 'Add your first question'}</span>${button('open-quiz', 'Open quiz', 'arrow-up-right', 'text-button', `data-id="${esc(q.id)}"`)}</div></article>`;
+      return `<article class="quiz-card"><div class="card-top"><span class="topic-icon ${colors[index % 4]}">${icon(symbols[index % 4])}</span>${button('quiz-menu', '', 'ellipsis', 'icon-button', `data-id="${esc(q.id)}" aria-label="Options for ${esc(q.name)}" title="Quiz options"`)}</div><h3><button class="title-button" data-action="open-quiz" data-id="${esc(q.id)}">${esc(q.name)}</button></h3><p class="card-description">${esc(q.description || 'Your next learning adventure')}</p>${updateNotice(q)}<div class="card-meta">${icon('layers')}<span>${q.cards.length} questions</span><span class="meta-dot">&middot;</span><span>${last ? 'Practiced ' + relativeDate(last.date) : 'Ready when you are'}</span></div><div class="card-bottom"><span class="badge">${q.cards.length ? 'Ready to practice' : 'Add your first question'}</span>${button('open-quiz', 'Open quiz', 'arrow-up-right', 'text-button', `data-id="${esc(q.id)}"`)}</div></article>`;
     }).join('') || `<div class="empty-state">${icon('search')}<h3>${search ? 'No quizzes found' : 'Your library starts here'}</h3><p>${search ? 'Try a different search.' : 'Create a quiz or import a collection.'}</p>${!search ? button('new-quiz', 'New quiz', 'plus') : ''}</div>`;
     icons();
   }
@@ -94,7 +103,7 @@
   function renderQuiz() {
     const q = quiz();
     if (!q) { view = 'library'; render(); return; }
-    main.innerHTML = `${button('back', 'Quiz library', 'arrow-left', 'text-button back-button')}<div class="page-heading detail-heading"><div><div class="eyebrow">${q.cards.length} QUESTIONS</div><h1>${esc(q.name)}</h1><p>${esc(q.description || 'One question at a time.')}</p></div><div class="heading-actions">${button('export-quiz', '', 'download', 'icon-button bordered', 'aria-label="Export quiz" title="Export quiz"')}${button('edit-quiz', '', 'pencil', 'icon-button bordered', 'aria-label="Edit quiz details" title="Edit quiz details"')}${button('new-card', 'Add question', 'plus')}</div></div><div class="tabs" role="tablist" aria-label="Quiz views"><button role="tab" aria-selected="${tab === 'practice'}" data-action="tab" data-tab="practice" class="${tab === 'practice' ? 'selected' : ''}">${icon('book-open')}Practice</button><button role="tab" aria-selected="${tab === 'questions'}" data-action="tab" data-tab="questions" class="${tab === 'questions' ? 'selected' : ''}">${icon('list')}Questions <span class="count">${q.cards.length}</span></button></div><section id="quiz-content"></section>`;
+    main.innerHTML = `${button('back', 'Quiz library', 'arrow-left', 'text-button back-button')}<div class="page-heading detail-heading"><div><div class="eyebrow">${q.cards.length} QUESTIONS</div><h1>${esc(q.name)}</h1><p>${esc(q.description || 'One question at a time.')}</p></div><div class="heading-actions">${button('export-quiz', '', 'download', 'icon-button bordered', 'aria-label="Export quiz" title="Export quiz"')}${button('edit-quiz', '', 'pencil', 'icon-button bordered', 'aria-label="Edit quiz details" title="Edit quiz details"')}${button('new-card', 'Add question', 'plus')}</div></div>${updateNotice(q)}<div class="tabs" role="tablist" aria-label="Quiz views"><button role="tab" aria-selected="${tab === 'practice'}" data-action="tab" data-tab="practice" class="${tab === 'practice' ? 'selected' : ''}">${icon('book-open')}Practice</button><button role="tab" aria-selected="${tab === 'questions'}" data-action="tab" data-tab="questions" class="${tab === 'questions' ? 'selected' : ''}">${icon('list')}Questions <span class="count">${q.cards.length}</span></button></div><section id="quiz-content"></section>`;
     if (tab === 'questions') {
       $('#quiz-content').innerHTML = `<div class="section-toolbar"><h2>Questions & answers</h2><label class="search">${icon('search')}<input id="card-search" type="search" placeholder="Search questions" aria-label="Search questions" value="${esc(cardSearch)}"></label></div><div id="card-list"></div>`;
       renderCards();
@@ -221,7 +230,7 @@
   function confirmImport() {
     const target = $('#import-target').value;
     const map = new Map();
-    const fresh = imported.quizzes.map(q => { const newId = C.id(); map.set(q.id, newId); return { ...q, id: newId, cards: q.cards.map(c => ({ ...c, id: C.id() })) }; });
+    const fresh = imported.quizzes.map(q => { const newId = C.id(); map.set(q.id, newId); const { base, ...personal } = q; return { ...personal, id: newId, cards: q.cards.map(c => ({ ...c, id: C.id() })) }; });
     if (commit(next => {
       if (target === 'new') { next.quizzes.push(...fresh); next.history = [...imported.history.map(h => ({ ...h, id: C.id(), quizId: map.get(h.quizId) || null })), ...next.history].sort((a, b) => Date.parse(b.date) - Date.parse(a.date)).slice(0, 100); }
       else { const destination = next.quizzes.find(q => q.id === target); if (!destination) throw new Error('The destination quiz no longer exists.'); destination.cards.push(...fresh[0].cards); }
@@ -234,6 +243,10 @@
     if (!b || b.disabled) return;
     const action = b.dataset.action, id = b.dataset.id;
     if (action === 'close-dialog') dialog.close();
+    else if (action === 'base-update') showBaseUpdate(id);
+    else if (action === 'install-base-update') {
+      if (commit(next => C.applyBaseUpdate(next, id, window.QUIZ_SEED))) { dialog.close(); render(); toast('New quiz edition installed.'); }
+    }
     else if (action === 'leave-session') { dialog.close(); pendingNavigation?.(); pendingNavigation = null; }
     else if (action === 'back') navigate('library');
     else if (action === 'open-quiz') { mode = 'study'; navigate('quiz', id); }

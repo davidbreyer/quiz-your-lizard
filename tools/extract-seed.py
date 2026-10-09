@@ -1,5 +1,6 @@
 """Convert the archived SQLite seed into browser data without changing the source."""
 import json
+import copy
 import sqlite3
 from pathlib import Path
 
@@ -13,6 +14,20 @@ for set_id, name in db.execute('SELECT SetId, Name FROM [Set] ORDER BY SetId'):
              for row in db.execute('SELECT WordId, Word1, Word2, [Desc] FROM WordList WHERE SetId=? ORDER BY WordId', (set_id,))]
     quizzes.append(dict(id=f'legacy-set-{set_id}', name=name, description='Original collection, 2011', cards=cards))
 db.close()
+
+update = json.loads((root / 'data/state-capitals-update.json').read_text(encoding='utf-8'))
+previous = []
+for quiz in quizzes:
+    quiz['revision'] = 1
+    if quiz['id'] != 'legacy-set-4':
+        continue
+    previous.append(copy.deepcopy(quiz))
+    quiz.update({key: update[key] for key in ('revision', 'description', 'updateNotes')})
+    for card in quiz['cards']:
+        card['wrongAnswers'] = update['wrongAnswers'][card['question']]
+        assert len(set([card['answer'], *card['wrongAnswers']])) == 4
 target = root / 'seed.js'
 target.write_text('window.QUIZ_SEED = ' + json.dumps(quizzes, ensure_ascii=True, indent=2) + ';\n', encoding='utf-8')
+with target.open('a', encoding='utf-8') as output:
+    output.write('window.QUIZ_SEED_PREVIOUS = ' + json.dumps(previous, ensure_ascii=True, indent=2) + ';\n')
 print(f'Extracted {len(quizzes)} quizzes and {sum(len(q["cards"]) for q in quizzes)} linked cards.')

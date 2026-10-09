@@ -7,3 +7,5 @@
 .mobile-backup{display:none}#spelling-answer{font-size:21px;min-height:60px;padding:12px;margin:0;border-color:#c5d1bc}.dialog-error{color:#a73e37;margin-top:18px;font-size:13px}
 @media(max-width:800px){.mobile-backup{display:inline-flex}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.quiz-update{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#eef5e8;border:1px solid #d9e5d0;border-radius:6px;padding:12px 14px;margin:14px 0;color:var(--green);font-size:12px}.quiz-update .text-button{font-size:12px}.update-preservation{margin-top:16px}

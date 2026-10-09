@@ -18,7 +18,9 @@
     return quizzes.map(q => {
       if (!q || typeof q.name !== 'string' || !q.name.trim() || q.name.length > 200) throw new Error('Every quiz needs a name (up to 200 characters).');
       if (!Array.isArray(q.cards) || q.cards.length > 20000) throw new Error('Every quiz needs a question list (up to 20,000 questions).');
-      return { id: typeof q.id === 'string' ? q.id : id(), name: q.name.trim(), description: typeof q.description === 'string' ? q.description.slice(0, 1000) : '', cards: q.cards.map(c => {
+      const quizId = typeof q.id === 'string' ? q.id : id();
+      const base = q.base && q.base.id === quizId && Number.isInteger(q.base.revision) && q.base.revision > 0 ? { base: { id: quizId, revision: q.base.revision, modified: q.base.modified !== false } } : {};
+      return { id: quizId, ...base, name: q.name.trim(), description: typeof q.description === 'string' ? q.description.slice(0, 1000) : '', cards: q.cards.map(c => {
         if (!c || typeof c.question !== 'string' || !c.question.trim() || typeof c.answer !== 'string' || !c.answer.trim()) throw new Error('Every question needs both a question and an answer.');
         if (c.question.length > 10000 || c.answer.length > 10000 || (c.notes || '').length > 20000) throw new Error('A question is too long to import.');
         if (c.wrongAnswers !== undefined && (!Array.isArray(c.wrongAnswers) || c.wrongAnswers.length > 3 || c.wrongAnswers.some(a => typeof a !== 'string' || a.length > 10000))) throw new Error('Wrong answers must be a list of up to three text answers.');
@@ -39,15 +41,52 @@
     const settings = data.settings || {};
     return { version: VERSION, quizzes, settings: { count: Number.isInteger(settings.count) ? Math.max(1, Math.min(200, settings.count)) : 20, reverse: settings.reverse === true, secondChance: settings.secondChance !== false }, history: Array.isArray(data.history) ? data.history.filter(h => h && typeof h.quizName === 'string' && ['quiz', 'spelling'].includes(h.mode) && Number.isFinite(h.total) && h.total > 0 && Number.isFinite(h.first) && h.first >= 0 && h.first <= h.total && Number.isFinite(h.second) && h.second >= 0 && Number.isFinite(h.wrong) && h.wrong >= 0 && h.first + h.second + h.wrong === h.total && !Number.isNaN(Date.parse(h.date))).slice(0, 100) : [] };
   }
+  const quizContent = q => JSON.stringify({ name: q.name, description: q.description, cards: q.cards });
+  const seedRevision = q => Number.isInteger(q.revision) && q.revision > 0 ? q.revision : 1;
+  function baseQuiz(seed) {
+    const q = validateQuizzes([seed])[0];
+    return { ...q, base: { id: q.id, revision: seedRevision(seed), modified: false } };
+  }
+  function baseUpdate(q, seeds) {
+    if (!q?.base) return null;
+    const latest = seeds.find(s => s.id === q.base.id);
+    if (!latest || seedRevision(latest) <= q.base.revision) return null;
+    return { latest: baseQuiz(latest), notes: latest.updateNotes || 'An updated edition of this quiz is ready.', keepCopy: q.base.modified };
+  }
+  function applyBaseUpdate(data, quizId, seeds) {
+    const index = data.quizzes.findIndex(q => q.id === quizId);
+    const current = data.quizzes[index], update = baseUpdate(current, seeds);
+    if (!update) throw new Error('This quiz is already up to date.');
+    if (update.keepCopy) {
+      const suffix = ' (personal copy)';
+      const personal = { ...clone(current), id: id(), name: current.name.slice(0, 200 - suffix.length) + suffix };
+      delete personal.base;
+      data.quizzes.push(personal);
+      data.history.forEach(h => { if (h.quizId === current.id) h.quizId = personal.id; });
+    }
+    data.quizzes[index] = update.latest;
+  }
   class Store {
-    constructor(storage, seed) {
+    constructor(storage, seed, previousSeed = []) {
       this.storage = storage;
       this.raw = storage.getItem(KEY);
-      this.data = this.raw === null ? { version: VERSION, quizzes: validateQuizzes(clone(seed)), settings: { count: 20, reverse: false, secondChance: true }, history: [] } : validateState(JSON.parse(this.raw));
+      this.data = this.raw === null ? { version: VERSION, quizzes: seed.map(baseQuiz), settings: { count: 20, reverse: false, secondChance: true }, history: [] } : validateState(JSON.parse(this.raw));
+      // Recognize pre-versioning seed copies by their stable original IDs.
+      // Compare with the original edition; never replace content during adoption.
+      for (const q of this.data.quizzes) {
+        const latest = seed.find(s => s.id === q.id);
+        if (q.base || !latest) continue;
+        const original = previousSeed.find(s => s.id === q.id) || (seedRevision(latest) === 1 ? latest : null);
+        q.base = { id: q.id, revision: 1, modified: !original || quizContent(q) !== quizContent(validateQuizzes([original])[0]) };
+      }
     }
     save(data) {
       if (this.storage.getItem(KEY) !== this.raw) throw new Error('Quizzes changed in another tab. Close this editor and reload before saving.');
       const checked = validateState(data);
+      for (const q of checked.quizzes) {
+        const before = this.data.quizzes.find(old => old.id === q.id);
+        if (q.base && before?.base && q.base.revision === before.base.revision && (before.base.modified || quizContent(q) !== quizContent(before))) q.base.modified = true;
+      }
       const raw = JSON.stringify(checked);
       try { this.storage.setItem(KEY, raw); }
       catch { throw new Error('Could not save on this device. Storage may be full or disabled. Export a backup before closing.'); }
@@ -87,7 +126,7 @@
   function tally(outcomes) {
     return { first: outcomes.filter(o => o === 'first').length, second: outcomes.filter(o => o === 'second').length, wrong: outcomes.filter(o => o === 'wrong').length };
   }
-  const api = { VERSION, KEY, id, clone, normalize, shuffle, validateQuizzes, validateState, Store, choicesFor, buildSession, respond, tally };
+  const api = { VERSION, KEY, id, clone, normalize, shuffle, validateQuizzes, validateState, baseUpdate, applyBaseUpdate, Store, choicesFor, buildSession, respond, tally };
   if (typeof module !== 'undefined') module.exports = api;
   root.QuizCore = api;
 })(globalThis);

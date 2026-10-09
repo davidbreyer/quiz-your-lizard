@@ -34,6 +34,22 @@ jobs:
           cp -R assets vendor _site/
           touch _site/.nojekyll
 
+      - name: Version browser assets
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          site = Path('_site')
+          page = (site / 'index.html').read_text()
+          for name in ('styles.css', 'app.js', 'core.js', 'seed.js'):
+              asset = site / name
+              digest = hashlib.sha256(asset.read_bytes()).hexdigest()[:16]
+              versioned = f'{asset.stem}.{digest}{asset.suffix}'
+              asset.rename(site / versioned)
+              page = page.replace(f'"{name}"', f'"{versioned}"')
+          (site / 'index.html').write_text(page)
+          PY
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v4
         with:

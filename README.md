@@ -7,7 +7,8 @@ Repository: https://github.com/davidbreyer/quiz-your-lizard
 
 ## GitHub Pages
 
-Site address: https://davidbreyer.github.io/quiz-your-lizard/
+Site address: https://www.davidbreyer.com/quiz-your-lizard/
+The GitHub Pages address redirects to this existing custom domain.
 
 The workflow in `.github/workflows/pages.yml` publishes the static app on every
 push to `main` and can also be run manually from GitHub Actions. In the repository's
@@ -57,6 +58,36 @@ Storage key: `quiz-your-lizard:v1`. The versioned JSON document contains `quizze
 `settings`, and `history`. Each quiz contains `id`, `name`, `description`, and `cards`;
 each card contains `id`, `question`, `answer`, `notes`, and `wrongAnswers`.
 
+## Base Quiz Updates
+
+Published base quizzes have a revision number. Existing browsers show **Update
+available** on a quiz's library card and detail page after reopening or refreshing
+the updated site. Select it to review the changes, then choose **Update quiz** or
+**Later**. Updates are never installed automatically.
+
+Untouched base quizzes update in place and retain practice history. Edited base
+quizzes are kept as a separate **personal copy**, with their existing history; the
+new edition appears alongside them. Settings and other quizzes are preserved.
+Deleted quizzes are not re-added, and imported quizzes remain personal copies.
+Old libraries from before revision tracking are recognized without replacing their
+contents. If the original edition cannot be compared, the app preserves a copy.
+
+US State Capitals revision 2 includes three alternatives from the same state for
+each of its 50 questions. The alternatives were verified against the
+[Census National Places Gazetteer](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html).
+Hawaii alternatives are census-designated places. Reverse sessions continue to use
+other state names as alternatives.
+
+For maintenance, curated capital alternatives and release notes live in
+`data/state-capitals-update.json`. Run `python tools/extract-seed.py` to regenerate
+`seed.js`, retaining the original edition for safe adoption of older saved copies.
+Increase the quiz's revision for every published content change. Future revisions
+must keep stable quiz IDs; preserve original edition data for browsers that have
+not yet adopted revision tracking. To recheck the city names, download the Census
+2026 National Places ZIP and run `python tools/verify-state-cities.py PATH_TO_ZIP`.
+
+## Storage Safety
+
 Existing saved data is never silently replaced with seed data. Writes validate the
 whole document and report storage failures. A stale tab refuses to overwrite a newer
 save. Unreadable saved data is kept intact and can be downloaded as a recovery file.
@@ -74,9 +105,9 @@ current session settings. Importing the same file twice intentionally creates co
 Files must be smaller than 4 MiB. Unknown format versions and incomplete questions
 are rejected before the saved library changes.
 
-The four original seed collections contain 521 linked questions. The original SQLite
+The four base collections contain 521 linked questions. The original SQLite
 database also contains one row not linked to these collections; it was not included.
-These are archival 2011 collections, not refreshed reference material: geography,
+The remaining content and historical notes are archival 2011 material: geography,
 population notes, and shell commands should be reviewed before reuse.
 
 ## Tests
