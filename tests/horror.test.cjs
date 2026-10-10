@@ -33,11 +33,11 @@ test('new base quizzes require an explicit addition and keep stable IDs for futu
   const storage = { getItem: () => raw, setItem: (_, value) => { raw = value; } };
   const store = new C.Store(storage, seeds);
   assert.equal(store.data.quizzes.length, 0);
-  assert.deepEqual(C.newBaseQuizzes(store.data, seeds).map(q => q.id), [horror.id]);
+  assert.deepEqual(C.newBaseQuizzes(store.data, seeds).map(q => q.id), ['base-everyday-science', horror.id]);
   const next = C.clone(store.data);
   C.addBaseQuiz(next, horror.id, seeds); store.save(next);
   assert.equal(store.data.quizzes[0].base.revision, 1);
-  assert.equal(C.newBaseQuizzes(store.data, seeds).length, 0);
+  assert.deepEqual(C.newBaseQuizzes(store.data, seeds).map(q => q.id), ['base-everyday-science']);
   assert.throws(() => C.addBaseQuiz(store.data, horror.id, seeds), /already in your library/);
   const future = C.clone(seeds); future.find(q => q.id === horror.id).revision = 2;
   assert.equal(C.baseUpdate(store.data.quizzes[0], future).keepCopy, false);

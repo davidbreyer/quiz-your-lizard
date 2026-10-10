@@ -1276,1230 +1276,495 @@ window.QUIZ_SEED = [
     "revision": 1
   },
   {
-    "id": "legacy-set-8",
-    "name": "OSX Shell Commands",
-    "description": "Original collection, 2011",
+    "id": "base-everyday-science",
+    "name": "Everyday Science",
+    "revision": 1,
+    "offerToExisting": true,
+    "description": "40 small discoveries about cooking, home, weather, nature, and the night sky. Find the science hiding in everyday life.",
     "cards": [
       {
-        "id": "legacy-card-1318",
-        "question": "Create an alias",
-        "answer": "alias",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1319",
-        "question": "List used and free memory",
-        "answer": "alloc",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1320",
-        "question": "Find and Replace text within file(s)",
-        "answer": "awk",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1321",
-        "question": "Convert a full pathname to just a folder path",
-        "answer": "basename",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1322",
-        "question": "Bourne-Again SHell (Linux)",
-        "answer": "bash",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1323",
-        "question": "Set volume bootability and startup disk options.",
-        "answer": "bless",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1324",
-        "question": "Exit from a loop",
-        "answer": "break",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1325",
-        "question": "Display a calendar",
-        "answer": "cal",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1326",
-        "question": "Conditionally perform a command",
-        "answer": "case",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1327",
-        "question": "Display the contents of a file",
-        "answer": "cat",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1328",
-        "question": "Change Directory",
-        "answer": "cd",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1329",
-        "question": "Change a file or folder\u2019s flags.",
-        "answer": "chflags",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1330",
-        "question": "Change group ownership",
-        "answer": "chgrp",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1331",
-        "question": "Change access permissions",
-        "answer": "chmod",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1332",
-        "question": "Change file owner and group",
-        "answer": "chown",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1333",
-        "question": "Run a command with a different root directory",
-        "answer": "chroot",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1334",
-        "question": "Print CRC checksum and byte counts",
-        "answer": "cksum",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1335",
-        "question": "Clear terminal screen",
-        "answer": "clear",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1336",
-        "question": "Compare two files",
-        "answer": "cmp",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1337",
-        "question": "Compare two sorted files line by line",
-        "answer": "comm",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1338",
-        "question": "Edit a command completion [word/pattern/list]",
-        "answer": "complete",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1339",
-        "question": "Resume the next iteration of a loop",
-        "answer": "continue",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1340",
-        "question": "Copy one or more files to another location",
-        "answer": "cp",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1341",
-        "question": "Daemon to execute scheduled commands",
-        "answer": "cron",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1342",
-        "question": "Schedule a command to run at a later date/time",
-        "answer": "crontab",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1343",
-        "question": "Divide a file into several parts",
-        "answer": "cut",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1344",
-        "question": "Display or change the date & time",
-        "answer": "date",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1345",
-        "question": "Desk Calculator",
-        "answer": "dc",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1346",
-        "question": "Data Dump \u2013 Convert and copy a file",
-        "answer": "dd",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1347",
-        "question": "Display free disk space",
-        "answer": "df",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1348",
-        "question": "Display the differences between two files",
-        "answer": "diff",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1349",
-        "question": "Show differences among three files",
-        "answer": "diff3",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1350",
-        "question": "Convert a full pathname to just a path",
-        "answer": "dirname",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1351",
-        "question": "play list of remembered directories",
-        "answer": "dirs Di",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1352",
-        "question": "Disk utilities \u2013 Format, Verify, Repair",
-        "answer": "diskutil",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1353",
-        "question": "Copy files and folders",
-        "answer": "ditto",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1354",
-        "question": "Directory Service command line utility",
-        "answer": "dscl",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1355",
-        "question": "Estimate file space usage",
-        "answer": "du",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1356",
-        "question": "Display message on screen",
-        "answer": "echo",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1357",
-        "question": "A line-oriented text editor (edlin)",
-        "answer": "ed",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1358",
-        "question": "Stop or start printers and classes.",
-        "answer": "enable",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1359",
-        "question": "Set environment and run a utility",
-        "answer": "env",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1360",
-        "question": "Evaluate several commands/arguments",
-        "answer": "eval",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1361",
-        "question": "Execute a command",
-        "answer": "exec",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1362",
-        "question": "Exit the shell",
-        "answer": "exit",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1363",
-        "question": "Programmed dialogue with interactive programs",
-        "answer": "expect",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1364",
-        "question": "Convert tabs to spaces",
-        "answer": "expand",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1365",
-        "question": "Evaluate expressions",
-        "answer": "expr",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1366",
-        "question": "Do nothing, unsuccessfully",
-        "answer": "false",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1367",
-        "question": "Partition table manipulator for Darwin UFS/HFS/DOS",
-        "answer": "fdisk",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1368",
-        "question": "Search for files that meet a desired criteria",
-        "answer": "find",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1369",
-        "question": "Reformat paragraph text",
-        "answer": "fmt",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1370",
-        "question": "Wrap text to fit a specified width",
-        "answer": "fold",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1371",
-        "question": "Expand words, and execute commands",
-        "answer": "for",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1372",
-        "question": "Loop, expand words, and execute commands",
-        "answer": "foreach",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1373",
-        "question": "Filesystem consistency check and repair",
-        "answer": "fsck",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1374",
-        "question": "usage Filesystem usage (process/pathname)",
-        "answer": "fs",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1375",
-        "question": "Internet file transfer program",
-        "answer": "ftp",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1376",
-        "question": "Get attributes of HFS+ files",
-        "answer": "GetFileInfo",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1377",
-        "question": "Parse positional parameters",
-        "answer": "getopt",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1378",
-        "question": "Jump to label and continue execution",
-        "answer": "goto",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1379",
-        "question": "Search file(s) for lines that match a given pattern",
-        "answer": "grep",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1380",
-        "question": "Print group names a user is in",
-        "answer": "groups",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1381",
-        "question": "Compress or decompress files",
-        "answer": "gzip",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1382",
-        "question": "Display the first lines of a file",
-        "answer": "head",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1383",
-        "question": "Manipulate iso disk images",
-        "answer": "hdiutil",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1384",
-        "question": "Command History",
-        "answer": "history",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1385",
-        "question": "Print or set system name",
-        "answer": "hostname",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1386",
-        "question": "Print user and group names/id\u2019s",
-        "answer": "id",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1387",
-        "question": "Conditionally perform a command",
-        "answer": "if",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1388",
-        "question": "Help info",
-        "answer": "info",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1389",
-        "question": "Copy files and set attributes",
-        "answer": "install",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1390",
-        "question": "List active jobs",
-        "answer": "jobs",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1391",
-        "question": "Join lines on a common field",
-        "answer": "join",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1392",
-        "question": "Stop a process from running",
-        "answer": "kill",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1393",
-        "question": "List files in long format (ls -l)",
-        "answer": "l",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1394",
-        "question": "List files in long format, showing invisible files (ls -la)",
-        "answer": "ll",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1395",
-        "question": "Display output one screen at a time",
-        "answer": "less",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1396",
-        "question": "Make links between files (hard links, symbolic links)",
-        "answer": "ln",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1397",
-        "question": "Find files",
-        "answer": "locate",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1398",
-        "question": "Print current login name",
-        "answer": "logname",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1399",
-        "question": "log into the computer",
-        "answer": "login",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1400",
-        "question": "Exit a login shell (bye)",
-        "answer": "logout",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1401",
-        "question": "Print files",
-        "answer": "lpr",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1402",
-        "question": "Remove jobs from the print queue",
-        "answer": "lprm",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1403",
-        "question": "Printer status information",
-        "answer": "lpstat",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1404",
-        "question": "List information about file(s)",
-        "answer": "ls",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1405",
-        "question": "List a bill of materials file",
-        "answer": "lsbom",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1406",
-        "question": "List open files",
-        "answer": "lsof",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1407",
-        "question": "Help manual",
-        "answer": "man",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1408",
-        "question": "Create new folder(s)",
-        "answer": "mkdir",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1409",
-        "question": "Make FIFOs (named pipes)",
-        "answer": "mkfifo",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1410",
-        "question": "Display output one screen at a time",
-        "answer": "more",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1411",
-        "question": "Mount a file system",
-        "answer": "mount",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1412",
-        "question": "Move or rename files or directories",
-        "answer": "mv",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1413",
-        "question": "Manage network resources",
-        "answer": "net",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1414",
-        "question": "Set the priority of a command",
-        "answer": "nice",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1415",
-        "question": "Run a command immune to hangups",
-        "answer": "nohup",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1416",
-        "question": "Control the action of a shell interrupt",
-        "answer": "onintr",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1417",
-        "question": "Open a file/folder/URL/Application",
-        "answer": "open",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1418",
-        "question": "Execute AppleScript",
-        "answer": "osascript",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1419",
-        "question": "Modify a user password",
-        "answer": "passwd",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1420",
-        "question": "Merge lines of files",
-        "answer": "paste",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1421",
-        "question": "Copy data to the clipboard",
-        "answer": "pbcopy",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1422",
-        "question": "Paste data from the Clipboard",
-        "answer": "pbpaste",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1423",
-        "question": "Simple text editor",
-        "answer": "pico",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1424",
-        "question": "Test a network connection",
-        "answer": "ping",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1425",
-        "question": "Power Management settings",
-        "answer": "pmset",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1426",
-        "question": "Restore the previous value of the current directory",
-        "answer": "popd",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1427",
-        "question": "Convert text files for printing",
-        "answer": "pr",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1428",
-        "question": "Print environment variables",
-        "answer": "printenv",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1429",
-        "question": "Format and print data",
-        "answer": "printf",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1430",
-        "question": "Process status",
-        "answer": "ps",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1431",
-        "question": "Save and then change the current directory",
-        "answer": "pushd",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1432",
-        "question": "Print Working Directory",
-        "answer": "pwd",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1433",
-        "question": "Display disk usage and limits",
-        "answer": "quota",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1434",
-        "question": "Copy files between machines.",
-        "answer": "rcp",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1435",
-        "question": "Execute a command multiple times",
-        "answer": "repeat",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1436",
-        "question": "Remove files",
-        "answer": "rm",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1437",
-        "question": "Remove folder(s)",
-        "answer": "rmdir",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1438",
-        "question": "Remote Package Manager",
-        "answer": "rpm",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1439",
-        "question": "Remote file copy \u2013 Sync file tree (also RsyncX)",
-        "answer": "rsync",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1440",
-        "question": "Convert text to audible speech",
-        "answer": "say",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1441",
-        "question": "Schedule a command to run at a later time.",
-        "answer": "sched",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1442",
-        "question": "Capture screen image to file or disk",
-        "answer": "screencapture",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1443",
-        "question": "Merge two files interactively",
-        "answer": "sdiff",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1444",
-        "question": "Administer Keychains, keys, certificates and the Security framework",
-        "answer": "security",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1445",
-        "question": "Stream Editor",
-        "answer": "sed",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1446",
-        "question": "Set a shell variable = value",
-        "answer": "set",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1447",
-        "question": "Set an environment variable = value",
-        "answer": "setenv",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1448",
-        "question": "Set attributes of HFS+ files",
-        "answer": "setfile",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1449",
-        "question": "Shift positional parameters",
-        "answer": "shift",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1450",
-        "question": "Shutdown or restart OS X",
-        "answer": "shutdown",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1451",
-        "question": "Delay for a specified time",
-        "answer": "sleep",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1452",
-        "question": "System software update tool",
-        "answer": "softwareupdate",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1453",
-        "question": "Sort text files",
-        "answer": "sort",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1454",
-        "question": "Split a file into fixed-size pieces",
-        "answer": "split",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1455",
-        "question": "Stop a job or process",
-        "answer": "stop",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1456",
-        "question": "Substitute user identity",
-        "answer": "su",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1457",
-        "question": "Execute a command as another user",
-        "answer": "sudo",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1458",
-        "question": "Print a checksum for a file",
-        "answer": "sum",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1459",
-        "question": "Conditionally perform a command",
-        "answer": "switch",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1460",
-        "question": "Output the last part of files",
-        "answer": "tail",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1461",
-        "question": "Tape ARchiver",
-        "answer": "tar",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1462",
-        "question": "Redirect output to multiple files",
-        "answer": "tee",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1463",
-        "question": "Condition evaluation",
-        "answer": "test",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1464",
-        "question": "Measure Program Resource Use",
-        "answer": "time",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1465",
-        "question": "Change file timestamps",
-        "answer": "touch",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1466",
-        "question": "Trace Route to Host",
-        "answer": "traceroute",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1467",
-        "question": "Translate, squeeze, and/or delete characters",
-        "answer": "tr",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1468",
-        "question": "Do nothing, successfully",
-        "answer": "true",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1469",
-        "question": "Print filename of terminal on stdin",
-        "answer": "tty",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1470",
-        "question": "Describe a command",
-        "answer": "type",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1471",
-        "question": "Users file creation mask",
-        "answer": "umask",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1472",
-        "question": "unmount a device",
-        "answer": "umount",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1473",
-        "question": "Remove an alias",
-        "answer": "unalias",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1474",
-        "question": "Print system information",
-        "answer": "uname",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1475",
-        "question": "Convert spaces to tabs",
-        "answer": "unexpand",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1476",
-        "question": "Uniquify files",
-        "answer": "uniq",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1477",
-        "question": "Convert units from one scale to another",
-        "answer": "units",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1478",
-        "question": "Remove variable or function names",
-        "answer": "unset",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1479",
-        "question": "Remove environment variable",
-        "answer": "unsetenv",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1480",
-        "question": "Print login names of users currently logged in",
-        "answer": "users",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1481",
-        "question": "Encode a binary file",
-        "answer": "uuencode",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1482",
-        "question": "Decode a file created by uuencode",
-        "answer": "uudecode",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1483",
-        "question": "Text Editor",
-        "answer": "vi",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1484",
-        "question": "Print byte, word, and line counts",
-        "answer": "wc",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1485",
-        "question": "Report all known instances of a command",
-        "answer": "where",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1486",
-        "question": "Locate a program file in the user\u2019s path",
-        "answer": "which",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1487",
-        "question": "Execute commands",
-        "answer": "while",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1488",
-        "question": "Print all usernames currently logged on",
-        "answer": "who",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1489",
-        "question": "Print the current user id and name (`id -un\u2019)",
-        "answer": "whoami",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1490",
-        "question": "Execute utility \u2013 passing arguments",
-        "answer": "xargs",
-        "notes": "",
-        "wrongAnswers": []
-      },
-      {
-        "id": "legacy-card-1491",
-        "question": "Print a string until interrupted",
-        "answer": "yes",
-        "notes": "",
-        "wrongAnswers": []
+        "id": "everyday-science-001",
+        "question": "Which gas produced by baker's yeast helps bread dough rise?",
+        "answer": "Carbon dioxide",
+        "notes": "Yeast uses sugars and releases carbon dioxide. Trapped gas bubbles expand the dough.",
+        "wrongAnswers": [
+          "Oxygen",
+          "Nitrogen",
+          "Hydrogen"
+        ]
+      },
+      {
+        "id": "everyday-science-002",
+        "question": "Which type of ingredient reacts with baking soda to produce gas in a quick-bread batter?",
+        "answer": "An acid",
+        "notes": "An acid, such as the acid in buttermilk, reacts with baking soda to release carbon dioxide.",
+        "wrongAnswers": [
+          "A fat",
+          "A starch",
+          "A neutral salt"
+        ]
+      },
+      {
+        "id": "everyday-science-003",
+        "question": "Which protein network helps wheat bread dough stretch and hold gas bubbles?",
+        "answer": "Gluten",
+        "notes": "Mixing flour and water develops a gluten network that gives dough structure and elasticity.",
+        "wrongAnswers": [
+          "Collagen",
+          "Casein",
+          "Keratin"
+        ]
+      },
+      {
+        "id": "everyday-science-004",
+        "question": "Which reaction between sugars and amino acids helps give toast its brown color and roasted flavor?",
+        "answer": "The Maillard reaction",
+        "notes": "Maillard browning creates new colors and flavors. Caramelization is a different process involving sugars.",
+        "wrongAnswers": [
+          "Caramelization",
+          "Fermentation",
+          "Oxidative rancidity"
+        ]
+      },
+      {
+        "id": "everyday-science-005",
+        "question": "What happens to egg-white proteins when an egg cooks and the white becomes firm?",
+        "answer": "They unfold and bond together",
+        "notes": "Heat changes protein shapes. The proteins then link into a network that firms up the egg white.",
+        "wrongAnswers": [
+          "They crystallize into sugar",
+          "They break down into starch",
+          "They separate into liquid fat"
+        ]
+      },
+      {
+        "id": "everyday-science-006",
+        "question": "Why do plain cooking oil and water tend to separate after stirring?",
+        "answer": "Water is polar; oil is mostly nonpolar",
+        "notes": "Water molecules attract one another strongly. Nonpolar oil molecules do not mix readily with them.",
+        "wrongAnswers": [
+          "Water is nonpolar; oil is mostly polar",
+          "Both are polar but carry opposite charges",
+          "Both are nonpolar but have different temperatures"
+        ]
+      },
+      {
+        "id": "everyday-science-007",
+        "question": "Why does an ordinary ice cube float in liquid water?",
+        "answer": "Ice is less dense than liquid water",
+        "notes": "Water forms a more open molecular structure when it freezes, increasing its volume and lowering its density.",
+        "wrongAnswers": [
+          "Ice is more dense than liquid water",
+          "Ice has the same density as liquid water",
+          "Ice floats only because it contains air bubbles"
+        ]
+      },
+      {
+        "id": "everyday-science-008",
+        "question": "Why does opening a sealed soda bottle encourage bubbles to form?",
+        "answer": "Lower pressure lets dissolved gas escape",
+        "notes": "Soda contains dissolved carbon dioxide. Releasing the pressure lets more of that gas leave the liquid.",
+        "wrongAnswers": [
+          "Higher pressure lets dissolved gas escape",
+          "Fresh oxygen reacts with sugar to make gas",
+          "The sudden temperature drop boils the water"
+        ]
+      },
+      {
+        "id": "everyday-science-009",
+        "question": "Which process carries heat along a metal spoon sitting in hot soup?",
+        "answer": "Conduction",
+        "notes": "Conduction transfers thermal energy through matter, including from the hot end of a spoon toward its handle.",
+        "wrongAnswers": [
+          "Convection",
+          "Radiation",
+          "Evaporation"
+        ]
+      },
+      {
+        "id": "everyday-science-010",
+        "question": "What are the circulating currents called when warmer water rises and cooler water sinks in a heated pot?",
+        "answer": "Convection currents",
+        "notes": "Temperature differences can change water's density. Moving water then carries heat through the pot.",
+        "wrongAnswers": [
+          "Conduction currents",
+          "Electrical currents",
+          "Tidal currents"
+        ]
+      },
+      {
+        "id": "everyday-science-011",
+        "question": "Which change of state helps sweat cool your skin?",
+        "answer": "Evaporation",
+        "notes": "Changing liquid water into vapor requires energy, which can be taken as heat from the skin.",
+        "wrongAnswers": [
+          "Condensation",
+          "Freezing",
+          "Sublimation"
+        ]
+      },
+      {
+        "id": "everyday-science-012",
+        "question": "What is the main job of thermal insulation in a house?",
+        "answer": "Slow the transfer of heat",
+        "notes": "Insulation resists heat flow. It helps limit heat loss in winter and heat gain in summer.",
+        "wrongAnswers": [
+          "Generate heat without using energy",
+          "Store all heat permanently",
+          "Turn incoming heat into electricity"
+        ]
+      },
+      {
+        "id": "everyday-science-013",
+        "question": "What does a household refrigerator do to cool its interior?",
+        "answer": "Moves heat from inside to the room",
+        "notes": "A refrigerator uses energy to transfer heat out of its cooler interior into the warmer surroundings.",
+        "wrongAnswers": [
+          "Moves heat from the room to the food",
+          "Destroys heat inside its walls",
+          "Converts all heat into stored electricity"
+        ]
+      },
+      {
+        "id": "everyday-science-014",
+        "question": "A battery powering a flashlight converts which stored form of energy into electrical energy?",
+        "answer": "Chemical energy",
+        "notes": "Chemical reactions in a discharging battery drive electrons through the external circuit.",
+        "wrongAnswers": [
+          "Elastic energy",
+          "Gravitational energy",
+          "Nuclear energy"
+        ]
+      },
+      {
+        "id": "everyday-science-015",
+        "question": "What produces light in an LED?",
+        "answer": "A semiconductor device",
+        "notes": "An LED emits light electronically. It does not need a glowing-hot filament like an incandescent bulb.",
+        "wrongAnswers": [
+          "A heated tungsten filament",
+          "A burning magnesium strip",
+          "An electrical discharge through neon gas"
+        ]
+      },
+      {
+        "id": "everyday-science-016",
+        "question": "How does a traditional electrical fuse interrupt excessive current?",
+        "answer": "Its metal link melts and opens the circuit",
+        "notes": "Too much current heats the fuse link until it melts, breaking the conducting path.",
+        "wrongAnswers": [
+          "Its metal link expands and closes the circuit",
+          "It stores the excess current in a capacitor",
+          "It converts the circuit's voltage to zero permanently"
+        ]
+      },
+      {
+        "id": "everyday-science-017",
+        "question": "What produces the sound of thunder?",
+        "answer": "Rapid expansion of air heated by lightning",
+        "notes": "Lightning heats nearby air very quickly. The expanding air produces a sound wave.",
+        "wrongAnswers": [
+          "Collisions between neighboring storm clouds",
+          "Rain striking warm air below a cloud",
+          "Wind pushing cold air against the ground"
+        ]
+      },
+      {
+        "id": "everyday-science-018",
+        "question": "Why do you usually see a distant lightning flash before hearing its thunder?",
+        "answer": "Light travels faster than sound",
+        "notes": "The light and sound originate from the same event, but sound takes much longer to reach you.",
+        "wrongAnswers": [
+          "Sound travels faster than light",
+          "Thunder starts only after the lightning has ended",
+          "Clouds store the sound before releasing it"
+        ]
+      },
+      {
+        "id": "everyday-science-019",
+        "question": "Which process turns invisible water vapor into liquid droplets in a cloud?",
+        "answer": "Condensation",
+        "notes": "Cooling air can cause water vapor to become liquid droplets. Clouds may also contain ice crystals.",
+        "wrongAnswers": [
+          "Evaporation",
+          "Sublimation",
+          "Melting"
+        ]
+      },
+      {
+        "id": "everyday-science-020",
+        "question": "What usually makes ordinary fog visible near the ground?",
+        "answer": "Tiny liquid water droplets",
+        "notes": "Fog is a cloud near the surface. Water vapor itself is invisible; the droplets scatter light.",
+        "wrongAnswers": [
+          "Individual water-vapor molecules",
+          "Dry salt crystals suspended in air",
+          "Tiny oxygen bubbles in the atmosphere"
+        ]
+      },
+      {
+        "id": "everyday-science-021",
+        "question": "Where do water droplets on the outside of an intact cold drinking glass usually come from?",
+        "answer": "Water vapor in the surrounding air",
+        "notes": "The cold surface cools nearby air, allowing some of its water vapor to condense on the glass.",
+        "wrongAnswers": [
+          "Liquid leaking through microscopic glass pores",
+          "Water released by the glass as it cools",
+          "Ice inside the glass passing through its wall"
+        ]
+      },
+      {
+        "id": "everyday-science-022",
+        "question": "Which combination of light effects produces a primary rainbow in raindrops?",
+        "answer": "Refraction, dispersion, and internal reflection",
+        "notes": "Droplets bend light, separate its colors, and reflect some light internally before it reaches the observer.",
+        "wrongAnswers": [
+          "Diffraction, absorption, and fluorescence",
+          "Polarization, absorption, and incandescence",
+          "Scattering, phosphorescence, and interference"
+        ]
+      },
+      {
+        "id": "everyday-science-023",
+        "question": "Why does pure water boil at a lower temperature high in the mountains?",
+        "answer": "Atmospheric pressure is lower",
+        "notes": "Water boils when its vapor pressure matches the surrounding pressure. Lower air pressure lowers the boiling point.",
+        "wrongAnswers": [
+          "Atmospheric pressure is higher",
+          "Gravity heats water more strongly",
+          "Mountain air always contains more oxygen"
+        ]
+      },
+      {
+        "id": "everyday-science-024",
+        "question": "What draws water into the tiny spaces between fibers in a paper towel?",
+        "answer": "Capillary action",
+        "notes": "Adhesion to the fibers and cohesion between water molecules help draw liquid through the towel's small spaces.",
+        "wrongAnswers": [
+          "Osmosis through cell membranes",
+          "Magnetic attraction to cellulose",
+          "Condensation inside the dry fibers"
+        ]
+      },
+      {
+        "id": "everyday-science-025",
+        "question": "Which process lets green plants use sunlight to make sugars from carbon dioxide and water?",
+        "answer": "Photosynthesis",
+        "notes": "Photosynthesis stores light energy in chemical form. Plants use the resulting sugars for growth and energy.",
+        "wrongAnswers": [
+          "Cellular respiration",
+          "Fermentation",
+          "Transpiration"
+        ]
+      },
+      {
+        "id": "everyday-science-026",
+        "question": "Why does chlorophyll make many leaves look green?",
+        "answer": "It reflects or transmits green light",
+        "notes": "Chlorophyll absorbs much of the red and blue light that reaches it, leaving more green light visible.",
+        "wrongAnswers": [
+          "It absorbs green light more than all other colors",
+          "It produces green light by burning sugar",
+          "It turns all incoming colors into green light"
+        ]
+      },
+      {
+        "id": "everyday-science-027",
+        "question": "To which kingdom do ordinary mushrooms belong?",
+        "answer": "Fungi",
+        "notes": "A mushroom is the reproductive structure of certain fungi. Fungi are distinct from plants and animals.",
+        "wrongAnswers": [
+          "Plants",
+          "Animals",
+          "Bacteria"
+        ]
+      },
+      {
+        "id": "everyday-science-028",
+        "question": "How do decomposer fungi help fallen leaves contribute nutrients to a forest?",
+        "answer": "They break down dead organic matter",
+        "notes": "Decomposers digest dead material, helping nutrients return to the ecosystem.",
+        "wrongAnswers": [
+          "They turn sunlight directly into soil minerals",
+          "They convert leaf minerals into new elements",
+          "They store all leaf nutrients permanently in spores"
+        ]
+      },
+      {
+        "id": "everyday-science-029",
+        "question": "What does a bee transfer between flowers when it helps pollinate them?",
+        "answer": "Pollen",
+        "notes": "Pollen reaching a suitable flower's stigma can enable fertilization. Nectar is a food reward for many pollinators.",
+        "wrongAnswers": [
+          "Nectar",
+          "Seeds",
+          "Sap"
+        ]
+      },
+      {
+        "id": "everyday-science-030",
+        "question": "Which part of a typical garden plant absorbs most of its water and dissolved minerals from soil?",
+        "answer": "Roots",
+        "notes": "Roots absorb water and minerals and help anchor the plant. Sugars are made mainly in photosynthetic tissues.",
+        "wrongAnswers": [
+          "Petals",
+          "Anthers",
+          "Fruit"
+        ]
+      },
+      {
+        "id": "everyday-science-031",
+        "question": "What are the adjustable pores on leaves that allow gas exchange called?",
+        "answer": "Stomata",
+        "notes": "Stomata admit carbon dioxide and allow water vapor to escape. Guard cells control the openings.",
+        "wrongAnswers": [
+          "Chloroplasts",
+          "Root hairs",
+          "Lenticels"
+        ]
+      },
+      {
+        "id": "everyday-science-032",
+        "question": "Which plant tissue carries sugars from leaves to other parts of the plant?",
+        "answer": "Phloem",
+        "notes": "Phloem transports sugars and other organic compounds. Xylem mainly transports water and dissolved minerals.",
+        "wrongAnswers": [
+          "Xylem",
+          "Epidermis",
+          "Cork"
+        ]
+      },
+      {
+        "id": "everyday-science-033",
+        "question": "Which motion of Earth produces the everyday cycle of day and night?",
+        "answer": "Rotation on its axis",
+        "notes": "As Earth rotates, a location faces toward the Sun and then away from it.",
+        "wrongAnswers": [
+          "Revolution around the Sun",
+          "Precession of its axis",
+          "Revolution around the Moon"
+        ]
+      },
+      {
+        "id": "everyday-science-034",
+        "question": "What is the main reason Earth has seasons?",
+        "answer": "Its axis is tilted as it orbits the Sun",
+        "notes": "Axial tilt changes sunlight angles and day lengths over the year. Distance from the Sun is not the main cause.",
+        "wrongAnswers": [
+          "Its distance from the Sun changes over the year",
+          "The Sun's heat output cycles up and down each year",
+          "Earth's rotation slows in winter and speeds up in summer"
+        ]
+      },
+      {
+        "id": "everyday-science-035",
+        "question": "What is the main source of the moonlight we see from Earth?",
+        "answer": "Sunlight reflected by the Moon",
+        "notes": "The Moon reflects sunlight rather than producing visible light of its own.",
+        "wrongAnswers": [
+          "Heat radiated from the Moon's core",
+          "Light made by chemical reactions in lunar soil",
+          "Starlight reflected by Earth's atmosphere"
+        ]
+      },
+      {
+        "id": "everyday-science-036",
+        "question": "Why does the Moon show different phases during a month?",
+        "answer": "We see different portions of its sunlit half",
+        "notes": "As the Moon orbits Earth, our view of its illuminated half changes. Earth's shadow causes lunar eclipses, not ordinary phases.",
+        "wrongAnswers": [
+          "Earth's shadow regularly covers different portions",
+          "The Moon's surface changes its reflectivity each week",
+          "The Sun switches its light on different lunar regions"
+        ]
+      },
+      {
+        "id": "everyday-science-037",
+        "question": "Which celestial body has the largest influence on Earth's ocean tides?",
+        "answer": "The Moon",
+        "notes": "The Moon has the strongest tide-generating effect on Earth. The Sun also contributes.",
+        "wrongAnswers": [
+          "The Sun",
+          "Jupiter",
+          "Venus"
+        ]
+      },
+      {
+        "id": "everyday-science-038",
+        "question": "Which process supplies most of the Sun's energy?",
+        "answer": "Nuclear fusion",
+        "notes": "Hydrogen nuclei combine into helium in the Sun's core, releasing energy.",
+        "wrongAnswers": [
+          "Nuclear fission",
+          "Chemical combustion",
+          "Radioactive decay"
+        ]
+      },
+      {
+        "id": "everyday-science-039",
+        "question": "During a solar eclipse, which object passes between Earth and the Sun?",
+        "answer": "The Moon",
+        "notes": "The Moon can block our view of the Sun and cast a shadow on Earth when the alignment is right.",
+        "wrongAnswers": [
+          "Venus",
+          "Mars",
+          "Jupiter"
+        ]
+      },
+      {
+        "id": "everyday-science-040",
+        "question": "Why does a clear daytime sky usually look blue?",
+        "answer": "Air molecules scatter blue light more than red",
+        "notes": "Shorter visible wavelengths scatter more strongly in air. This scattering sends blue light toward us from across the sky.",
+        "wrongAnswers": [
+          "Air molecules absorb blue light more than red",
+          "Oceans reflect blue light onto the whole sky",
+          "Oxygen molecules emit blue light when warmed"
+        ]
       }
     ],
-    "revision": 1
+    "sources": {
+      "everyday-science-001": "https://annex.exploratorium.edu/cooking/bread/activity-yeast.html",
+      "everyday-science-002": "https://annex.exploratorium.edu/cooking/bread/bread_science.html",
+      "everyday-science-003": "https://annex.exploratorium.edu/cooking/bread/activity-gluten.html",
+      "everyday-science-004": "https://annex.exploratorium.edu/cooking/meat/activity-maillard.html",
+      "everyday-science-005": "https://annex.exploratorium.edu/cooking/eggs/deviled-pop.html",
+      "everyday-science-006": "https://www.acs.org/middleschoolchemistry/lessonplans/chapter5/lesson7.html",
+      "everyday-science-007": "https://www.usgs.gov/water-science-school/science/water-density",
+      "everyday-science-008": "https://www.acs.org/middleschoolchemistry/lessonplans/chapter5/lesson8.html",
+      "everyday-science-009": "https://www.energy.gov/sites/default/files/2023-03/insulation_guide_0.pdf",
+      "everyday-science-010": "https://www.energy.gov/sites/default/files/2023-03/insulation_guide_0.pdf",
+      "everyday-science-011": "https://www.usgs.gov/water-science-school/science/evaporation-and-water-cycle",
+      "everyday-science-012": "https://bsesc.energy.gov/energy-basics/heat-flow",
+      "everyday-science-013": "https://openstax.org/books/physics/pages/12-4-applications-of-thermodynamics-heat-engines-heat-pumps-and-refrigerators",
+      "everyday-science-014": "https://www.energy.gov/science/doe-explainsbatteries",
+      "everyday-science-015": "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/webinar_2007-10-11.pdf",
+      "everyday-science-016": "https://openstax.org/books/college-physics-ap-courses/pages/20-6-electric-hazards-and-the-human-body",
+      "everyday-science-017": "https://www.weather.gov/safety/lightning-science-thunder",
+      "everyday-science-018": "https://www.weather.gov/fgz/Lightning",
+      "everyday-science-019": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle",
+      "everyday-science-020": "https://www.weather.gov/otx/Full_Weather_Glossary",
+      "everyday-science-021": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle",
+      "everyday-science-022": "https://www.nesdis.noaa.gov/about/k-12-education/optical-phenomena/what-causes-rainbow",
+      "everyday-science-023": "https://www.usgs.gov/observatories/yvo/news/how-hot-are-yellowstones-boiling-waters-some-are-hotter-others",
+      "everyday-science-024": "https://www.usgs.gov/water-science-school/science/capillary-action-and-water",
+      "everyday-science-025": "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis",
+      "everyday-science-026": "https://openstax.org/books/biology-2e/pages/8-2-the-light-dependent-reactions-of-photosynthesis",
+      "everyday-science-027": "https://www.kew.org/read-and-watch/the-wonderful-world-of-fungi",
+      "everyday-science-028": "https://www.kew.org/sites/default/files/2024-10/Kew-Gardens-Comic-copy-V4.pdf",
+      "everyday-science-029": "https://openstax.org/books/biology-2e/pages/32-2-pollination-and-fertilization",
+      "everyday-science-030": "https://openstax.org/books/biology-2e/pages/30-3-roots",
+      "everyday-science-031": "https://openstax.org/books/biology-2e/pages/8-1-overview-of-photosynthesis",
+      "everyday-science-032": "https://openstax.org/books/biology-2e/pages/30-1-the-plant-body",
+      "everyday-science-033": "https://spaceplace.nasa.gov/seasons/en/",
+      "everyday-science-034": "https://spaceplace.nasa.gov/seasons/en/",
+      "everyday-science-035": "https://spaceplace.nasa.gov/moon-phases/en/",
+      "everyday-science-036": "https://spaceplace.nasa.gov/moon-phases/en/",
+      "everyday-science-037": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html?os=v",
+      "everyday-science-038": "https://science.nasa.gov/sun/facts/",
+      "everyday-science-039": "https://spaceplace.nasa.gov/eclipse-snap/en/",
+      "everyday-science-040": "https://spaceplace.nasa.gov/blue-sky/en/"
+    }
   },
   {
     "id": "legacy-set-9",

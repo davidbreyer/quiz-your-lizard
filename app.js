@@ -87,7 +87,8 @@
     'legacy-set-5': { color: 'peach', symbol: 'languages', label: 'Say something new' },
     'legacy-set-8': { color: 'lilac', symbol: 'terminal', label: 'Command your craft' },
     'legacy-set-9': { color: 'sky', symbol: 'globe', label: 'Around the world' },
-    'base-horror-movies': { color: 'horror', symbol: 'ghost', label: 'After dark' }
+    'base-horror-movies': { color: 'horror', symbol: 'ghost', label: 'After dark' },
+    'base-everyday-science': { color: 'lilac', symbol: 'flask-conical', label: 'Small discoveries' }
   };
   function updateNotice(q) {
     const update = !readOnly && C.baseUpdate(q, window.QUIZ_SEED);

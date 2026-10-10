@@ -15,6 +15,9 @@ for set_id, name in db.execute('SELECT SetId, Name FROM [Set] ORDER BY SetId'):
     quizzes.append(dict(id=f'legacy-set-{set_id}', name=name, description='Original collection, 2011', cards=cards))
 db.close()
 
+# Retire the archival shell quiz from new installs without deleting saved copies.
+quizzes = [quiz for quiz in quizzes if quiz['id'] != 'legacy-set-8']
+
 updates = {
     'legacy-set-4': json.loads((root / 'data/state-capitals-update.json').read_text(encoding='utf-8')),
     'legacy-set-9': json.loads((root / 'data/world-capitals-update.json').read_text(encoding='utf-8')),
@@ -32,6 +35,7 @@ for quiz in quizzes:
         card.update(update.get('cardOverrides', {}).get(card['id'], {}))
         assert len(card['wrongAnswers']) == 3
         assert len(set(value.casefold() for value in [card['answer'], *card['wrongAnswers']])) == 4
+quizzes.insert(2, json.loads((root / 'data/everyday-science.json').read_text(encoding='utf-8')))
 quizzes.append(json.loads((root / 'data/horror-movies.json').read_text(encoding='utf-8')))
 target = root / 'seed.js'
 credit = '// World city alternatives adapted from GeoNames (https://www.geonames.org/), CC BY 4.0\n// (https://creativecommons.org/licenses/by/4.0/). Curated selections; see data/world-capitals-update.json.\n'

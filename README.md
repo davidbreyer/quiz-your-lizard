@@ -78,14 +78,23 @@ each card contains `id`, `question`, `answer`, `notes`, and `wrongAnswers`.
 
 ## Base Quiz Updates
 
+Everyday Science is the new default in place of OSX Shell Commands. Its 40 original
+questions cover kitchen science, household physics, weather and water, plants and
+fungi, and everyday astronomy. Every question has three curated wrong answers and
+an explanatory study note. Research references and the editable source are in
+`data/everyday-science.json`. Existing saved OSX quizzes, personal edits, and their
+practice history remain on the device; retiring a default does not remove it from
+an existing library.
+
 Horror Movies is a new Halloween collection with 31 original, spoiler-light movie
 clues and three curated wrong answers per question. It spans classic horror,
 slashers, creature features, and modern films. Release and director notes identify
 the intended version when a title has remakes. The editable source and research
 references are in `data/horror-movies.json`.
 
-Fresh browsers include all five collections. Existing libraries show **New quiz
-available: Horror Movies** after refreshing the site. Choose **Add to library**,
+Fresh browsers include five collections, including Everyday Science and Horror
+Movies. Existing libraries offer either new collection when it is missing after
+refreshing the site. Choose **Add to library**,
 review the description, then confirm **Add to library**. Adding a quiz preserves
 other collections, settings, and history. New collections are never silently
 inserted into saved libraries, and deleted quizzes stay deleted until you choose
@@ -149,8 +158,10 @@ current session settings. Importing the same file twice intentionally creates co
 Files must be smaller than 4 MiB. Unknown format versions and incomplete questions
 are rejected before the saved library changes.
 
-The four legacy collections contain 521 linked questions; Horror Movies adds 31,
-for a total of 552. The original SQLite
+The three active legacy collections contain 347 linked questions; Everyday Science
+adds 40 and Horror Movies adds 31, for a default total of 418. The archived OSX
+collection contains 174 additional questions and remains in the original source.
+The original SQLite
 database also contains one row not linked to these collections; it was not included.
 The remaining content and historical notes are archival 2011 material: geography,
 population notes, and shell commands should be reviewed before reuse.
