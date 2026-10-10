@@ -274,6 +274,56 @@ async function upload(t, text, name = 'test.json') {
   t.$('#import-file').dispatchEvent(new t.w.Event('change'));
   await new Promise(resolve => setImmediate(resolve));
 }
+test('import guide downloads a usable template and imports it without replacing saved content', async () => {
+  const old = fixture(), t = boot(old);
+  t.click('[data-action="import-guide"]');
+  assert.equal(t.$('#dialog-title').textContent, 'Create an import file');
+  const example = t.$('#import-json-example').textContent;
+  assert.ok(Array.isArray(JSON.parse(example)));
+  t.click('[data-action="download-import-example"]');
+  const exported = await new Promise((resolve, reject) => {
+    const reader = new t.w.FileReader();
+    reader.onload = () => resolve(reader.result); reader.onerror = reject;
+    reader.readAsText(t.downloads[0]);
+  });
+  assert.equal(exported, example);
+  assert.deepEqual(t.savedData(), old);
+  t.click('[data-action="guide-import"]');
+  assert.equal(t.$('#dialog').open, false);
+  await upload(t, exported, 'quiz-example.json');
+  assert.match(t.$('#dialog-content').textContent, /1 quiz/);
+  t.click('[data-action="confirm-import"]');
+  const saved = t.savedData();
+  assert.deepEqual(saved.quizzes[0], old.quizzes[0]);
+  assert.deepEqual(saved.settings, old.settings);
+  assert.deepEqual(saved.history, old.history);
+  assert.equal(saved.quizzes[1].cards[0].answer, '4');
+  assert.deepEqual(saved.quizzes[1].cards[0].wrongAnswers, ['3', '5', '6']);
+  assert.ok(saved.quizzes[1].id);
+  end(t);
+});
+
+test('AI prompt copies with its example and offers manual selection when clipboard access fails', async () => {
+  const t = boot(fixture());
+  t.click('[data-action="import-guide"]');
+  let copied;
+  Object.defineProperty(t.w.navigator, 'clipboard', { value: { writeText: async value => { copied = value; } }, configurable: true });
+  t.click('[data-action="copy-import-prompt"]');
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(copied, t.$('#import-ai-prompt').value);
+  assert.match(copied, /\[TOPIC\]/);
+  assert.match(copied, /top-level array/);
+  assert.match(copied, /exactly three plausible wrongAnswers/);
+  assert.match(t.$('#copy-prompt-status').textContent, /Prompt copied/);
+  t.w.navigator.clipboard.writeText = async () => { throw new Error('Denied'); };
+  t.click('[data-action="copy-import-prompt"]');
+  await new Promise(resolve => setImmediate(resolve));
+  assert.match(t.$('#copy-prompt-status').textContent, /Select and copy/);
+  assert.equal(t.$('#import-ai-prompt').selectionStart, 0);
+  assert.equal(t.$('#import-ai-prompt').selectionEnd, copied.length);
+  end(t);
+});
+
 test('JSON imports append fresh identifiers and preserve/remap history', async () => {
   const original = fixture(); original.history = [{ id: 'result', quizId: 'fixture', quizName: 'Test collection', mode: 'quiz', date: new Date().toISOString(), total: 2, first: 1, second: 1, wrong: 0 }];
   const t = boot(fixture()); await upload(t, JSON.stringify(original)); t.click('[data-action="confirm-import"]');

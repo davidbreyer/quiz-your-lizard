@@ -107,7 +107,7 @@
   }
   function renderLibrary() {
     const total = data.quizzes.reduce((sum, q) => sum + q.cards.length, 0);
-    main.innerHTML = `<div class="page-heading library-heading"><div><div class="eyebrow">YOUR DAILY DOSE OF DISCOVERY</div><h1>Your quiz library<span class="heading-dot">.</span></h1></div><div class="heading-actions">${button('import', 'Import', 'upload', 'button secondary')}${button('new-quiz', 'New quiz', 'plus')}</div></div>
+    main.innerHTML = `<div class="page-heading library-heading"><div><div class="eyebrow">YOUR DAILY DOSE OF DISCOVERY</div><h1>Your quiz library<span class="heading-dot">.</span></h1></div><div class="library-tools"><div class="heading-actions">${button('import', 'Import', 'upload', 'button secondary')}${button('new-quiz', 'New quiz', 'plus')}</div>${button('import-guide', 'Import guide', 'circle-help', 'text-button import-guide-link')}</div></div>
       <section class="library-hero" aria-label="Welcome"><div class="hero-copy"><span class="hero-kicker">${icon('sparkles')} A LITTLE PRACTICE. A LOT OF POSSIBILITY.</span><h2>Feed your<br><em>curiosity.</em></h2><p><span class="hero-intro">Big discoveries start with small questions.<br></span>Pick a quiz and see where it takes you.</p><a class="hero-link" href="#quiz-grid">Find your next challenge ${icon('arrow-down')}</a></div><div class="hero-art" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="hero-spark spark-one">${icon('sparkles')}</span><span class="hero-spark spark-two">${icon('star')}</span><img src="${esc(asset('assets/lizard-mark.svg'))}" alt=""><span class="hero-note">Small steps. Big brain energy.</span></div></section>
       <section class="stats-band" aria-label="Library summary"><div><span class="stat-label">Quizzes in your library</span><strong>${data.quizzes.length}<small>collections</small></strong></div><div><span class="stat-label">A world of questions</span><strong>${total.toLocaleString()}<small>questions</small></strong></div><div><span class="stat-label">Practice makes progress</span><strong>${data.history.length}<small>completed sessions</small></strong></div><div class="stat-note">${icon('sparkles')}<span>Stay curious.<br>Keep growing.</span></div></section>
       ${readOnly ? '' : C.newBaseQuizzes(data, window.QUIZ_SEED).map(q => `<section class="quiz-update" aria-label="New quiz available"><div><strong>New quiz available: ${esc(q.name)}</strong><p>${esc(q.description)}</p></div>${button('new-base-quiz', 'Add to library', 'plus', 'button secondary', `data-id="${esc(q.id)}" aria-label="Add ${esc(q.name)} to library"`)}</section>`).join('')}
@@ -225,6 +225,46 @@
     if (!q) return;
     openDialog('Export ' + q.name, `<div class="export-options">${button('export-json', 'Quiz file (.json)', 'file-json', 'button secondary', `data-id="${esc(q.id)}"`)}${button('export-qyl', 'Legacy file (.qyl)', 'file-code', 'button secondary', `data-id="${esc(q.id)}"`)}</div>`);
   }
+  const importExample = [{
+    name: 'My first quiz',
+    description: 'A sample question to get you started.',
+    cards: [{
+      question: 'What is 2 + 2?',
+      answer: '4',
+      notes: 'Adding two pairs gives four.',
+      wrongAnswers: ['3', '5', '6']
+    }]
+  }];
+  const importPrompt = `Create a Quiz Your Lizard quiz about [TOPIC] with [NUMBER] questions for [AUDIENCE / DIFFICULTY].
+
+Return a downloadable UTF-8 file named quiz.json if possible. Otherwise return only valid JSON, with no Markdown fences or extra text, so I can save it as quiz.json.
+
+Use a top-level array of quiz objects. Each quiz needs a name (at most 200 characters) and a cards array. description is optional (at most 1,000 characters). Each card needs nonempty question and answer strings (at most 10,000 characters each). Include a short explanatory notes string (at most 20,000 characters) and exactly three plausible wrongAnswers strings. The wrong answers must be distinct from each other and from the correct answer. All fields containing text must be strings, including numeric answers. Do not add IDs, version, settings, history, or base metadata.
+
+Use clear questions with exactly one correct answer. Avoid duplicate questions and ambiguous alternatives. Verify factual answers against reliable sources. Keep the file under 4 MiB; at most 1,000 quizzes and 20,000 cards per quiz are supported.
+
+Follow this structure, replacing the sample content:
+${JSON.stringify(importExample, null, 2)}`;
+  function showImportGuide() {
+    openDialog('Create an import file', `<div class="import-guide"><p>Make your own quiz in a text editor, or ask an AI tool to create one.</p><ol class="guide-steps"><li>Save a plain-text <strong>.json</strong> file using UTF-8. Start with the example below, or use the AI prompt.</li><li>Replace the sample with your quiz name, questions, and answers.</li><li>Choose <strong>Import</strong>, select the file, then review the quizzes and destination before confirming.</li></ol><p class="guide-preservation">Imports add to your library and keep your existing quizzes, settings, and history. Importing twice creates copies.</p>${button('download-import-example', 'Download example .json', 'download', 'button secondary')}<details class="guide-section"><summary>Create a quiz with AI</summary><p>Replace the bracketed placeholders in this prompt, then paste it into your AI tool. Check the generated answers before importing.</p>${button('copy-import-prompt', 'Copy AI prompt', 'copy', 'button secondary')}<label for="import-ai-prompt" class="sr-only">AI quiz creation prompt</label><textarea id="import-ai-prompt" readonly rows="8" spellcheck="false">${esc(importPrompt)}</textarea></details><details class="guide-section"><summary>JSON format and example</summary><p>The file is an <strong>array of quizzes</strong>, even for one quiz. Use <code>name</code> and <code>cards</code>; every card needs <code>question</code> and <code>answer</code>. All text, including numeric answers, goes in double quotes.</p><p><code>description</code>, <code>notes</code>, and <code>wrongAnswers</code> are optional. For a stronger pop quiz, include three distinct wrong answers that cannot also be correct. Without them, the app can use other answers in the collection.</p><pre id="import-json-example"><code>${esc(JSON.stringify(importExample, null, 2))}</code></pre><p>Repeat card objects inside <code>cards</code> to add questions. Separate entries with commas; do not leave a comma after the last entry. You do not need IDs or a version number.</p></details><details class="guide-section"><summary>File limits and other supported formats</summary><p>Keep the file under 4 MiB. A file supports up to 1,000 quizzes and 20,000 questions per quiz. Quiz names can have up to 200 characters; descriptions up to 1,000; questions, answers, and each wrong answer up to 10,000; notes up to 20,000. <code>wrongAnswers</code> accepts zero to three strings.</p><p>Existing Quiz Your Lizard JSON exports and backups also work, as do legacy <strong>.qyl</strong> and quiz XML files. JSON is the easiest format for creating new quizzes.</p></details><div class="dialog-actions">${button('close-dialog', 'Close', null, 'button secondary')}${button('guide-import', 'Choose a file', 'upload')}</div></div>`, true);
+  }
+  async function copyImportPrompt() {
+    const field = $('#import-ai-prompt');
+    if (!field) return;
+    let status = $('#copy-prompt-status');
+    if (!status) {
+      status = document.createElement('p');
+      status.id = 'copy-prompt-status'; status.setAttribute('role', 'status');
+      field.before(status);
+    }
+    try {
+      await navigator.clipboard.writeText(importPrompt);
+      status.textContent = 'Prompt copied. Replace the bracketed placeholders before using it.';
+    } catch {
+      if (field.isConnected) { field.focus(); field.select(); }
+      status.textContent = 'Select and copy the prompt below using your device’s copy command.';
+    }
+  }
   async function readImport(file) {
     if (!file) return;
     try {
@@ -321,6 +361,10 @@
     else if (action === 'export-qyl') { exportQyl(data.quizzes.find(q => q.id === id)); dialog.close(); }
     else if (action === 'backup') download(recovery ? 'quiz-lizard-recovery.json' : `quiz-lizard-backup-${new Date().toISOString().slice(0, 10)}.json`, recovery || JSON.stringify(data, null, 2));
     else if (action === 'import') $('#import-file').click();
+    else if (action === 'import-guide') showImportGuide();
+    else if (action === 'download-import-example') download('quiz-example.json', JSON.stringify(importExample, null, 2));
+    else if (action === 'copy-import-prompt') copyImportPrompt();
+    else if (action === 'guide-import') { dialog.close(); $('#import-file').click(); }
     else if (action === 'confirm-import') confirmImport();
   });
   document.addEventListener('submit', event => {

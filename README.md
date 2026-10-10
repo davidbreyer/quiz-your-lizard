@@ -146,6 +146,14 @@ not yet adopted revision tracking. To recheck the city names, download the Censu
 
 ## Storage Safety
 
+The library's **Import guide** opens a compact guide with a downloadable JSON
+example, a copyable AI prompt, and format rules. For authoring, use a top-level
+array of quiz objects: `name`, optional `description`, and a `cards` array. Each
+card needs string `question` and `answer` fields; `notes` and `wrongAnswers`
+(zero to three strings) are optional. IDs and version metadata are unnecessary.
+Save as UTF-8 `.json`, then use **Import** and review the destination before
+confirming. The guide also explains limits and the supported backup/QYL formats.
+
 Existing saved data is never silently replaced with seed data. Writes validate the
 whole document and report storage failures. A stale tab refuses to overwrite a newer
 save. Unreadable saved data is kept intact and can be downloaded as a recovery file.

@@ -47,6 +47,19 @@ main { padding-top: 25px; }
 .library-heading { align-items: center; }
 .library-heading h1 { font-size: 32px; }
 .library-heading .eyebrow { font-size: 9px; margin-bottom: 6px; }
+.library-tools { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.import-guide-link { font-size: 12px; color: var(--muted); }
+.import-guide { font-size: 14px; line-height: 1.65; }
+.guide-steps { padding-left: 22px; margin: 16px 0; }
+.guide-steps li + li { margin-top: 9px; }
+.guide-preservation { color: var(--muted); margin-bottom: 18px; }
+.guide-section { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 14px; }
+.guide-section summary { cursor: pointer; font-weight: 650; min-height: 44px; display: list-item; padding: 8px 0; }
+.guide-section p { margin: 8px 0 14px; }
+.guide-section pre { background: #edf1e6; border-radius: 12px; padding: 14px; font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.guide-section textarea { display: block; width: 100%; margin-top: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; font-size: 16px; background: #fff; color: var(--ink); }
+#copy-prompt-status { color: var(--green); }
+@media (max-width: 520px) { .library-tools { width: 100%; align-items: flex-start; } }
 .library-hero {
   position: relative;
   isolation: isolate;
