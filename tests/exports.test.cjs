@@ -7,6 +7,7 @@ const root = path.resolve(__dirname, '..');
 test('JSON backup and QYL exports preserve special characters and custom wrong answers', async () => {
   const dom = new JSDOM(fs.readFileSync(path.join(root, 'index.html'), 'utf8'), { url: 'https://export-test.example/', runScripts: 'outside-only' });
   const w = dom.window;
+  w.scrollTo = () => {};
   const downloads = [];
   w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
   w.HTMLDialogElement.prototype.close = function () { this.open = false; };

@@ -20,16 +20,39 @@ function boot(saved) {
   w.URL.createObjectURL = blob => { downloads.push(blob); return 'blob:test'; };
   w.URL.revokeObjectURL = () => {};
   w.TextDecoder = TextDecoder;
+  w.scrollTo = () => {};
   if (saved !== undefined) w.localStorage.setItem(key, typeof saved === 'string' ? saved : JSON.stringify(saved));
   for (const file of ['vendor/lucide.min.js', 'seed.js', 'core.js', 'app.js']) w.eval(read(file));
   const $ = selector => w.document.querySelector(selector);
-  const click = selector => { const el = $(selector); assert.ok(el, 'Missing ' + selector); assert.equal(el.disabled, false); el.click(); assert.equal(errors.length, 0, errors[0]?.stack); };
+  const click = selector => { const el = $(selector); assert.ok(el, 'Missing ' + selector); assert.notEqual(el.disabled, true); if (el.tagName === 'A') el.dispatchEvent(new w.MouseEvent('click', { bubbles: true, cancelable: true })); else el.click(); assert.equal(errors.length, 0, errors[0]?.stack); };
   const fill = (selector, value) => { const el = $(selector); assert.ok(el); el.value = value; el.dispatchEvent(new w.Event('input', { bubbles: true })); };
   const submit = selector => { $(selector).dispatchEvent(new w.Event('submit', { bubbles: true, cancelable: true })); assert.equal(errors.length, 0, errors[0]?.stack); };
   const savedData = () => JSON.parse(w.localStorage.getItem(key));
   return { dom, w, $, click, fill, submit, savedData, errors, downloads };
 }
 const end = t => t.dom.window.close();
+
+test('home and labeled navigation retain active state and protect an unfinished session', () => {
+  const t = boot(fixture()), before = t.savedData();
+  t.click('.nav-button[data-view="history"]');
+  assert.equal(t.$('.nav-button[data-view="history"]').getAttribute('aria-current'), 'page');
+  assert.equal(t.$('.nav-button[data-view="library"]').hasAttribute('aria-current'), false);
+  t.click('.brand');
+  assert.equal(t.$('.nav-button[data-view="library"]').getAttribute('aria-current'), 'page');
+  assert.equal(t.w.document.activeElement, t.$('#main'));
+  t.click('[data-action="open-quiz"]');
+  assert.equal(t.$('.nav-button[data-view="library"]').getAttribute('aria-current'), 'page');
+  t.click('[data-action="start"]');
+  t.click('.brand');
+  assert.match(t.$('#dialog-title').textContent, /Leave this session/);
+  t.click('[data-action="close-dialog"]');
+  assert.ok(t.$('.session-stage'));
+  t.click('.nav-button[data-view="history"]');
+  t.click('[data-action="leave-session"]');
+  assert.equal(t.$('.nav-button[data-view="history"]').getAttribute('aria-current'), 'page');
+  assert.deepEqual(t.savedData(), before);
+  end(t);
+});
 function oldCapitalsState() {
   const t = boot(), saved = t.savedData();
   saved.quizzes = JSON.parse(JSON.stringify(t.w.QUIZ_SEED_PREVIOUS)).filter(q => q.id === 'legacy-set-4');

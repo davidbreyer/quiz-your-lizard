@@ -54,7 +54,11 @@
     icons();
   }
   function navigate(target, id = null) {
-    const go = () => { session = null; view = target; activeId = id; search = ''; cardSearch = ''; tab = 'practice'; render(); };
+    const go = () => {
+      session = null; view = target; activeId = id; search = ''; cardSearch = ''; tab = 'practice'; render();
+      main.focus({ preventScroll: true });
+      window.scrollTo(0, 0);
+    };
     if (session && session.index < session.items.length) {
       openDialog('Leave this session?', `<p>Your answers in this session will not be saved.</p><div class="dialog-actions">${button('close-dialog', 'Keep practicing', null, 'button secondary')}${button('leave-session', 'Leave session', 'log-out')}</div>`);
       pendingNavigation = go;
@@ -62,7 +66,12 @@
   }
   let pendingNavigation = null;
   function render() {
-    document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    document.querySelectorAll('[data-view]').forEach(b => {
+      const active = b.dataset.view === (view === 'quiz' ? 'library' : view);
+      b.classList.toggle('active', active);
+      if (active) b.setAttribute('aria-current', 'page');
+      else b.removeAttribute('aria-current');
+    });
     $('#breadcrumb').textContent = view === 'library' ? 'Your workspace / Quiz library' : view === 'history' ? 'Your workspace / Practice history' : `Quiz library / ${quiz()?.name || session?.quizName || 'Quiz'}`;
     if (view === 'library') renderLibrary();
     else if (view === 'history') renderHistory();
@@ -73,6 +82,13 @@
   }
   const colors = ['sage', 'peach', 'lilac', 'sky'];
   const symbols = ['globe', 'languages', 'terminal', 'map'];
+  const topics = {
+    'legacy-set-4': { color: 'sage', symbol: 'map-pinned', label: 'Across America' },
+    'legacy-set-5': { color: 'peach', symbol: 'languages', label: 'Say something new' },
+    'legacy-set-8': { color: 'lilac', symbol: 'terminal', label: 'Command your craft' },
+    'legacy-set-9': { color: 'sky', symbol: 'globe', label: 'Around the world' },
+    'base-horror-movies': { color: 'horror', symbol: 'ghost', label: 'After dark' }
+  };
   function updateNotice(q) {
     const update = !readOnly && C.baseUpdate(q, window.QUIZ_SEED);
     return update ? `<div class="quiz-update"><span>A new edition is ready</span>${button('base-update', 'Update available', 'refresh-cw', 'text-button', `data-id="${esc(q.id)}" aria-label="Update available for ${esc(q.name)}"`)}</div>` : '';
@@ -89,7 +105,8 @@
   }
   function renderLibrary() {
     const total = data.quizzes.reduce((sum, q) => sum + q.cards.length, 0);
-    main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">A CURIOUS MIND IS A GOOD START</div><h1>Your quiz library<span class="heading-dot">.</span></h1><p>A familiar topic, a new challenge. What will you learn today?</p></div><div class="heading-actions">${button('import', 'Import', 'upload', 'button secondary')}${button('new-quiz', 'New quiz', 'plus')}</div></div>
+    main.innerHTML = `<div class="page-heading library-heading"><div><div class="eyebrow">YOUR DAILY DOSE OF DISCOVERY</div><h1>Your quiz library<span class="heading-dot">.</span></h1></div><div class="heading-actions">${button('import', 'Import', 'upload', 'button secondary')}${button('new-quiz', 'New quiz', 'plus')}</div></div>
+      <section class="library-hero" aria-label="Welcome"><div class="hero-copy"><span class="hero-kicker">${icon('sparkles')} A LITTLE PRACTICE. A LOT OF POSSIBILITY.</span><h2>Feed your<br><em>curiosity.</em></h2><p><span class="hero-intro">Big discoveries start with small questions.<br></span>Pick a quiz and see where it takes you.</p><a class="hero-link" href="#quiz-grid">Find your next challenge ${icon('arrow-down')}</a></div><div class="hero-art" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="hero-spark spark-one">${icon('sparkles')}</span><span class="hero-spark spark-two">${icon('star')}</span><img src="${esc(asset('assets/lizard-mark.svg'))}" alt=""><span class="hero-note">Small steps. Big brain energy.</span></div></section>
       <section class="stats-band" aria-label="Library summary"><div><span class="stat-label">Quizzes in your library</span><strong>${data.quizzes.length}<small>collections</small></strong></div><div><span class="stat-label">A world of questions</span><strong>${total.toLocaleString()}<small>questions</small></strong></div><div><span class="stat-label">Practice makes progress</span><strong>${data.history.length}<small>completed sessions</small></strong></div><div class="stat-note">${icon('sparkles')}<span>Stay curious.<br>Keep growing.</span></div></section>
       ${readOnly ? '' : C.newBaseQuizzes(data, window.QUIZ_SEED).map(q => `<section class="quiz-update" aria-label="New quiz available"><div><strong>New quiz available: ${esc(q.name)}</strong><p>${esc(q.description)}</p></div>${button('new-base-quiz', 'Add to library', 'plus', 'button secondary', `data-id="${esc(q.id)}" aria-label="Add ${esc(q.name)} to library"`)}</section>`).join('')}
       <div class="section-toolbar"><h2>All quizzes <span class="count">${data.quizzes.length}</span></h2><label class="search">${icon('search')}<input id="quiz-search" placeholder="Search your quizzes" aria-label="Search your quizzes" value="${esc(search)}" type="search"></label></div><section class="quiz-grid" id="quiz-grid" aria-label="Quizzes"></section>`;
@@ -100,7 +117,8 @@
     $('#quiz-grid').innerHTML = filtered.map(q => {
       const index = data.quizzes.indexOf(q);
       const last = data.history.find(h => h.quizId === q.id);
-      return `<article class="quiz-card"><div class="card-top"><span class="topic-icon ${colors[index % 4]}">${icon(q.id === 'base-horror-movies' ? 'ghost' : symbols[index % 4])}</span>${button('quiz-menu', '', 'ellipsis', 'icon-button', `data-id="${esc(q.id)}" aria-label="Options for ${esc(q.name)}" title="Quiz options"`)}</div><h3><button class="title-button" data-action="open-quiz" data-id="${esc(q.id)}">${esc(q.name)}</button></h3><p class="card-description">${esc(q.description || 'Your next learning adventure')}</p>${updateNotice(q)}<div class="card-meta">${icon('layers')}<span>${q.cards.length} questions</span><span class="meta-dot">&middot;</span><span>${last ? 'Practiced ' + relativeDate(last.date) : 'Ready when you are'}</span></div><div class="card-bottom"><span class="badge">${q.cards.length ? 'Ready to practice' : 'Add your first question'}</span>${button('open-quiz', 'Open quiz', 'arrow-up-right', 'text-button', `data-id="${esc(q.id)}"`)}</div></article>`;
+      const topic = topics[q.base?.id || q.id] || { color: colors[index % 4], symbol: symbols[index % 4], label: 'Made for a curious mind' };
+      return `<article class="quiz-card theme-${topic.color}"><div class="card-top"><span class="topic-icon ${topic.color}">${icon(topic.symbol)}</span><span class="card-kicker">${topic.label}</span>${button('quiz-menu', '', 'ellipsis', 'icon-button', `data-id="${esc(q.id)}" aria-label="Options for ${esc(q.name)}" title="Quiz options"`)}</div><div class="card-body"><h3><button class="title-button" data-action="open-quiz" data-id="${esc(q.id)}">${esc(q.name)}</button></h3><p class="card-description">${esc(q.description || 'Your next learning adventure')}</p>${updateNotice(q)}<div class="card-meta">${icon('layers')}<span>${q.cards.length} questions</span><span class="meta-dot">&middot;</span><span>${last ? 'Practiced ' + relativeDate(last.date) : 'Ready when you are'}</span></div><div class="card-bottom"><span class="badge">${q.cards.length ? 'Ready to practice' : 'Add your first question'}</span>${button('open-quiz', 'Open quiz', 'arrow-up-right', 'text-button', `data-id="${esc(q.id)}"`)}</div></div></article>`;
     }).join('') || `<div class="empty-state">${icon('search')}<h3>${search ? 'No quizzes found' : 'Your library starts here'}</h3><p>${search ? 'Try a different search.' : 'Create a quiz or import a collection.'}</p>${!search ? button('new-quiz', 'New quiz', 'plus') : ''}</div>`;
     icons();
   }
@@ -117,7 +135,7 @@
       renderCards();
     } else {
       const s = data.settings;
-      $('#quiz-content').innerHTML = `<div class="practice-layout"><div class="practice-main"><div class="eyebrow">FIND YOUR RHYTHM</div><h2>A little practice goes a long way.</h2><div class="mode-selector" role="group" aria-label="Practice mode">${[['study', 'book-open', 'Study'], ['quiz', 'circle-check', 'Pop quiz'], ['spelling', 'spell-check', 'Spelling']].map(([key, symbol, label]) => `<button data-action="mode" data-mode="${key}" class="${mode === key ? 'selected' : ''}" aria-pressed="${mode === key}">${icon(symbol)}${label}</button>`).join('')}</div><div class="practice-art"><img src="${esc(asset('assets/lizard.png'))}" alt="Original Quiz Your Lizard mascot"><div><span class="practice-kicker">${mode === 'study' ? 'A MOMENT TO REMEMBER' : mode === 'quiz' ? 'PUT IT TO THE TEST' : 'MAKE EVERY LETTER COUNT'}</span><h3>${mode === 'study' ? 'Let your curiosity lead.' : mode === 'quiz' ? 'Ready for a challenge?' : 'The answer is in you.'}</h3></div></div>${button('start', mode === 'study' ? 'Start studying' : mode === 'quiz' ? 'Start quiz' : 'Start spelling', 'arrow-right', 'button start-button', q.cards.length ? '' : 'disabled')}</div><aside class="session-options"><h3>Session options</h3><label class="option"><span>Questions per session</span><input id="question-count" type="number" min="1" max="200" value="${s.count}" aria-label="Questions per session"></label><label class="toggle-row"><span>Reverse questions & answers</span><input id="reverse" type="checkbox" role="switch" ${s.reverse ? 'checked' : ''}></label><label class="toggle-row"><span>Second chance in pop quiz</span><input id="second-chance" type="checkbox" role="switch" ${s.secondChance ? 'checked' : ''}></label><div class="options-meta">${icon('layers')}<span>${q.cards.length} questions in this collection</span></div></aside></div>`;
+      $('#quiz-content').innerHTML = `<div class="practice-layout"><div class="practice-main"><div class="eyebrow">FIND YOUR RHYTHM</div><h2>A little practice goes a long way.</h2><div class="mode-selector" role="group" aria-label="Practice mode">${[['study', 'book-open', 'Study'], ['quiz', 'circle-check', 'Pop quiz'], ['spelling', 'spell-check', 'Spelling']].map(([key, symbol, label]) => `<button data-action="mode" data-mode="${key}" class="${mode === key ? 'selected' : ''}" aria-pressed="${mode === key}">${icon(symbol)}${label}</button>`).join('')}</div><div class="practice-art"><img src="${esc(asset('assets/lizard-mark.svg'))}" alt="Quiz Your Lizard mascot"><div><span class="practice-kicker">${mode === 'study' ? 'A MOMENT TO REMEMBER' : mode === 'quiz' ? 'PUT IT TO THE TEST' : 'MAKE EVERY LETTER COUNT'}</span><h3>${mode === 'study' ? 'Let your curiosity lead.' : mode === 'quiz' ? 'Ready for a challenge?' : 'The answer is in you.'}</h3></div></div>${button('start', mode === 'study' ? 'Start studying' : mode === 'quiz' ? 'Start quiz' : 'Start spelling', 'arrow-right', 'button start-button', q.cards.length ? '' : 'disabled')}</div><aside class="session-options"><h3>Session options</h3><label class="option"><span>Questions per session</span><input id="question-count" type="number" min="1" max="200" value="${s.count}" aria-label="Questions per session"></label><label class="toggle-row"><span>Reverse questions & answers</span><input id="reverse" type="checkbox" role="switch" ${s.reverse ? 'checked' : ''}></label><label class="toggle-row"><span>Second chance in pop quiz</span><input id="second-chance" type="checkbox" role="switch" ${s.secondChance ? 'checked' : ''}></label><div class="options-meta">${icon('layers')}<span>${q.cards.length} questions in this collection</span></div></aside></div>`;
     }
   }
   function renderCards() {
@@ -136,6 +154,7 @@
     session = C.buildSession(quiz(), mode, data.settings);
     if (!session.items.length) { session = null; toast(mode === 'quiz' ? 'Add another distinct answer or a custom wrong answer to enable pop quiz.' : 'Add a question first.'); return; }
     render();
+    window.scrollTo(0, 0);
   }
   function renderSession() {
     if (session.index >= session.items.length) { renderResults(); return; }
@@ -246,7 +265,7 @@
   }
   document.addEventListener('click', event => {
     const nav = event.target.closest('[data-view]');
-    if (nav) { navigate(nav.dataset.view); return; }
+    if (nav) { event.preventDefault(); navigate(nav.dataset.view); return; }
     const b = event.target.closest('[data-action]');
     if (!b || b.disabled) return;
     const action = b.dataset.action, id = b.dataset.id;
