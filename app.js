@@ -82,10 +82,16 @@
     if (!update || readOnly) return;
     openDialog('Update ' + update.latest.name, `<p>${esc(update.notes)}</p><p class="update-preservation">${update.keepCopy ? `Your edited quiz and its practice history will be kept as <strong>${esc(q.name)} (personal copy)</strong>. The new edition will appear alongside it.` : 'Your practice history and settings will be kept. The new edition will replace this untouched base quiz.'}</p><div class="dialog-actions">${button('close-dialog', 'Later', null, 'button secondary')}${button('install-base-update', 'Update quiz', 'refresh-cw', 'button', `data-id="${esc(id)}"`)}</div>`);
   }
+  function showNewBaseQuiz(id) {
+    const seed = C.newBaseQuizzes(data, window.QUIZ_SEED).find(q => q.id === id);
+    if (!seed || readOnly) return;
+    openDialog('Add ' + seed.name, `<p>${esc(seed.description)}</p><p class="update-preservation">${seed.cards.length} questions with three custom wrong answers each. Your existing quizzes, settings, and practice history will be kept.</p><div class="dialog-actions">${button('close-dialog', 'Later', null, 'button secondary')}${button('install-base-quiz', 'Add to library', 'plus', 'button', `data-id="${esc(id)}"`)}</div>`);
+  }
   function renderLibrary() {
     const total = data.quizzes.reduce((sum, q) => sum + q.cards.length, 0);
     main.innerHTML = `<div class="page-heading"><div><div class="eyebrow">A CURIOUS MIND IS A GOOD START</div><h1>Your quiz library<span class="heading-dot">.</span></h1><p>A familiar topic, a new challenge. What will you learn today?</p></div><div class="heading-actions">${button('import', 'Import', 'upload', 'button secondary')}${button('new-quiz', 'New quiz', 'plus')}</div></div>
       <section class="stats-band" aria-label="Library summary"><div><span class="stat-label">Quizzes in your library</span><strong>${data.quizzes.length}<small>collections</small></strong></div><div><span class="stat-label">A world of questions</span><strong>${total.toLocaleString()}<small>questions</small></strong></div><div><span class="stat-label">Practice makes progress</span><strong>${data.history.length}<small>completed sessions</small></strong></div><div class="stat-note">${icon('sparkles')}<span>Stay curious.<br>Keep growing.</span></div></section>
+      ${readOnly ? '' : C.newBaseQuizzes(data, window.QUIZ_SEED).map(q => `<section class="quiz-update" aria-label="New quiz available"><div><strong>New quiz available: ${esc(q.name)}</strong><p>${esc(q.description)}</p></div>${button('new-base-quiz', 'Add to library', 'plus', 'button secondary', `data-id="${esc(q.id)}" aria-label="Add ${esc(q.name)} to library"`)}</section>`).join('')}
       <div class="section-toolbar"><h2>All quizzes <span class="count">${data.quizzes.length}</span></h2><label class="search">${icon('search')}<input id="quiz-search" placeholder="Search your quizzes" aria-label="Search your quizzes" value="${esc(search)}" type="search"></label></div><section class="quiz-grid" id="quiz-grid" aria-label="Quizzes"></section>`;
     renderGrid();
   }
@@ -94,7 +100,7 @@
     $('#quiz-grid').innerHTML = filtered.map(q => {
       const index = data.quizzes.indexOf(q);
       const last = data.history.find(h => h.quizId === q.id);
-      return `<article class="quiz-card"><div class="card-top"><span class="topic-icon ${colors[index % 4]}">${icon(symbols[index % 4])}</span>${button('quiz-menu', '', 'ellipsis', 'icon-button', `data-id="${esc(q.id)}" aria-label="Options for ${esc(q.name)}" title="Quiz options"`)}</div><h3><button class="title-button" data-action="open-quiz" data-id="${esc(q.id)}">${esc(q.name)}</button></h3><p class="card-description">${esc(q.description || 'Your next learning adventure')}</p>${updateNotice(q)}<div class="card-meta">${icon('layers')}<span>${q.cards.length} questions</span><span class="meta-dot">&middot;</span><span>${last ? 'Practiced ' + relativeDate(last.date) : 'Ready when you are'}</span></div><div class="card-bottom"><span class="badge">${q.cards.length ? 'Ready to practice' : 'Add your first question'}</span>${button('open-quiz', 'Open quiz', 'arrow-up-right', 'text-button', `data-id="${esc(q.id)}"`)}</div></article>`;
+      return `<article class="quiz-card"><div class="card-top"><span class="topic-icon ${colors[index % 4]}">${icon(q.id === 'base-horror-movies' ? 'ghost' : symbols[index % 4])}</span>${button('quiz-menu', '', 'ellipsis', 'icon-button', `data-id="${esc(q.id)}" aria-label="Options for ${esc(q.name)}" title="Quiz options"`)}</div><h3><button class="title-button" data-action="open-quiz" data-id="${esc(q.id)}">${esc(q.name)}</button></h3><p class="card-description">${esc(q.description || 'Your next learning adventure')}</p>${updateNotice(q)}<div class="card-meta">${icon('layers')}<span>${q.cards.length} questions</span><span class="meta-dot">&middot;</span><span>${last ? 'Practiced ' + relativeDate(last.date) : 'Ready when you are'}</span></div><div class="card-bottom"><span class="badge">${q.cards.length ? 'Ready to practice' : 'Add your first question'}</span>${button('open-quiz', 'Open quiz', 'arrow-up-right', 'text-button', `data-id="${esc(q.id)}"`)}</div></article>`;
     }).join('') || `<div class="empty-state">${icon('search')}<h3>${search ? 'No quizzes found' : 'Your library starts here'}</h3><p>${search ? 'Try a different search.' : 'Create a quiz or import a collection.'}</p>${!search ? button('new-quiz', 'New quiz', 'plus') : ''}</div>`;
     icons();
   }
@@ -248,6 +254,10 @@
     else if (action === 'base-update') showBaseUpdate(id);
     else if (action === 'install-base-update') {
       if (commit(next => C.applyBaseUpdate(next, id, window.QUIZ_SEED))) { dialog.close(); render(); toast('New quiz edition installed.'); }
+    }
+    else if (action === 'new-base-quiz') showNewBaseQuiz(id);
+    else if (action === 'install-base-quiz') {
+      if (commit(next => C.addBaseQuiz(next, id, window.QUIZ_SEED))) { dialog.close(); mode = 'study'; navigate('quiz', id); toast('Quiz added to your library.'); }
     }
     else if (action === 'leave-session') { dialog.close(); pendingNavigation?.(); pendingNavigation = null; }
     else if (action === 'back') navigate('library');

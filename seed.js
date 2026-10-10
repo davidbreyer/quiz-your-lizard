@@ -4665,6 +4665,389 @@ window.QUIZ_SEED = [
     ],
     "revision": 2,
     "updateNotes": "All 196 questions now have three curated wrong answers, mostly cities and towns from the same country. Monaco, Singapore, and Vatican City use nearby capitals. Outdated capital answers are corrected, and questions with multiple capitals specify the role being asked. Your edits and practice history are preserved."
+  },
+  {
+    "id": "base-horror-movies",
+    "name": "Horror Movies",
+    "revision": 1,
+    "offerToExisting": true,
+    "description": "31 spoiler-light movie clues for Halloween: classics, slashers, creatures, and modern chills. Can you name the film?",
+    "cards": [
+      {
+        "id": "horror-movie-001",
+        "question": "Which 1978 film sends Michael Myers after babysitter Laurie Strode in Haddonfield?",
+        "answer": "Halloween",
+        "notes": "1978. Directed by John Carpenter.",
+        "wrongAnswers": [
+          "Black Christmas",
+          "Prom Night",
+          "Friday the 13th"
+        ]
+      },
+      {
+        "id": "horror-movie-002",
+        "question": "Which original 1984 film makes falling asleep dangerous for teenagers targeted by Freddy Krueger?",
+        "answer": "A Nightmare on Elm Street",
+        "notes": "1984. Directed by Wes Craven.",
+        "wrongAnswers": [
+          "Dreamscape",
+          "Phantasm",
+          "Hellraiser"
+        ]
+      },
+      {
+        "id": "horror-movie-003",
+        "question": "Which 1980 slasher follows counselors trying to reopen Camp Crystal Lake?",
+        "answer": "Friday the 13th",
+        "notes": "1980. Directed by Sean S. Cunningham.",
+        "wrongAnswers": [
+          "The Burning",
+          "Sleepaway Camp",
+          "The Prowler"
+        ]
+      },
+      {
+        "id": "horror-movie-004",
+        "question": "Which 1996 film pairs a masked Ghostface killer with Sidney Prescott and horror-movie rules?",
+        "answer": "Scream",
+        "notes": "1996. Directed by Wes Craven.",
+        "wrongAnswers": [
+          "Urban Legend",
+          "I Know What You Did Last Summer",
+          "Cherry Falls"
+        ]
+      },
+      {
+        "id": "horror-movie-005",
+        "question": "Which 1960 Alfred Hitchcock film introduces Marion Crane to Norman Bates at an isolated motel?",
+        "answer": "Psycho",
+        "notes": "1960. Directed by Alfred Hitchcock.",
+        "wrongAnswers": [
+          "Peeping Tom",
+          "The Haunting",
+          "The Innocents"
+        ]
+      },
+      {
+        "id": "horror-movie-006",
+        "question": "Which 1980 film follows the Torrance family through a winter at the Overlook Hotel?",
+        "answer": "The Shining",
+        "notes": "1980. Directed by Stanley Kubrick.",
+        "wrongAnswers": [
+          "The Amityville Horror",
+          "The Changeling",
+          "Poltergeist"
+        ]
+      },
+      {
+        "id": "horror-movie-007",
+        "question": "Which 1973 film follows a mother seeking help for her possessed daughter Regan?",
+        "answer": "The Exorcist",
+        "notes": "1973. Directed by William Friedkin.",
+        "wrongAnswers": [
+          "The Omen",
+          "Rosemary's Baby",
+          "The Sentinel"
+        ]
+      },
+      {
+        "id": "horror-movie-008",
+        "question": "Which 1979 film traps the crew of the Nostromo with an unwanted extraterrestrial passenger?",
+        "answer": "Alien",
+        "notes": "1979. Directed by Ridley Scott.",
+        "wrongAnswers": [
+          "Event Horizon",
+          "The Thing",
+          "Pandorum"
+        ]
+      },
+      {
+        "id": "horror-movie-009",
+        "question": "Which 1982 John Carpenter film pits an Antarctic research team against a creature that can imitate its victims?",
+        "answer": "The Thing",
+        "notes": "1982. Directed by John Carpenter.",
+        "wrongAnswers": [
+          "Invasion of the Body Snatchers",
+          "The Blob",
+          "Leviathan"
+        ]
+      },
+      {
+        "id": "horror-movie-010",
+        "question": "Which 1975 film sends a police chief, a marine biologist, and a shark hunter out to protect Amity?",
+        "answer": "Jaws",
+        "notes": "1975. Directed by Steven Spielberg.",
+        "wrongAnswers": [
+          "Orca",
+          "Piranha",
+          "Deep Blue Sea"
+        ]
+      },
+      {
+        "id": "horror-movie-011",
+        "question": "Which original 1976 film centers on a bullied high-school girl with telekinetic powers?",
+        "answer": "Carrie",
+        "notes": "1976. Directed by Brian De Palma.",
+        "wrongAnswers": [
+          "The Fury",
+          "Firestarter",
+          "Jennifer's Body"
+        ]
+      },
+      {
+        "id": "horror-movie-012",
+        "question": "Which black-and-white 1968 film has survivors sheltering in a farmhouse while the dead gather outside?",
+        "answer": "Night of the Living Dead",
+        "notes": "1968. Directed by George A. Romero.",
+        "wrongAnswers": [
+          "The Last Man on Earth",
+          "Carnival of Souls",
+          "The Crazies"
+        ]
+      },
+      {
+        "id": "horror-movie-013",
+        "question": "Which original 1978 zombie film turns a shopping mall into a survivors' refuge?",
+        "answer": "Dawn of the Dead",
+        "notes": "1978. Directed by George A. Romero.",
+        "wrongAnswers": [
+          "Day of the Dead",
+          "The Return of the Living Dead",
+          "Night of the Comet"
+        ]
+      },
+      {
+        "id": "horror-movie-014",
+        "question": "Which 1999 found-footage film follows student filmmakers into the Maryland woods to investigate a local legend?",
+        "answer": "The Blair Witch Project",
+        "notes": "1999. Directed by Daniel Myrick and Eduardo Sanchez.",
+        "wrongAnswers": [
+          "The Last Broadcast",
+          "Paranormal Activity",
+          "The Taking of Deborah Logan"
+        ]
+      },
+      {
+        "id": "horror-movie-015",
+        "question": "Which 2002 American film gives viewers of a mysterious videotape seven days to live?",
+        "answer": "The Ring",
+        "notes": "2002. Directed by Gore Verbinski.",
+        "wrongAnswers": [
+          "The Grudge",
+          "Dark Water",
+          "Pulse"
+        ]
+      },
+      {
+        "id": "horror-movie-016",
+        "question": "Which 2004 American remake follows a nurse in Tokyo who encounters a curse in a haunted house?",
+        "answer": "The Grudge",
+        "notes": "2004. Directed by Takashi Shimizu.",
+        "wrongAnswers": [
+          "The Ring",
+          "One Missed Call",
+          "Shutter"
+        ]
+      },
+      {
+        "id": "horror-movie-017",
+        "question": "Which 2013 film brings paranormal investigators Ed and Lorraine Warren to the Perron family's farmhouse?",
+        "answer": "The Conjuring",
+        "notes": "2013. Directed by James Wan.",
+        "wrongAnswers": [
+          "The Amityville Horror",
+          "Sinister",
+          "Insidious"
+        ]
+      },
+      {
+        "id": "horror-movie-018",
+        "question": "Which film follows the Lambert family as their son Dalton falls into an unexplained coma and their home seems haunted?",
+        "answer": "Insidious",
+        "notes": "2011 theatrical release. Directed by James Wan.",
+        "wrongAnswers": [
+          "Sinister",
+          "The Conjuring",
+          "Paranormal Activity"
+        ]
+      },
+      {
+        "id": "horror-movie-019",
+        "question": "Which original 2004 film begins with two men chained inside a grimy bathroom as part of a deadly game?",
+        "answer": "Saw",
+        "notes": "2004. Directed by James Wan.",
+        "wrongAnswers": [
+          "Cube",
+          "Hostel",
+          "Escape Room"
+        ]
+      },
+      {
+        "id": "horror-movie-020",
+        "question": "Which original 1988 film introduces Chucky, a seemingly ordinary Good Guy doll with a sinister secret?",
+        "answer": "Child's Play",
+        "notes": "1988. Directed by Tom Holland.",
+        "wrongAnswers": [
+          "Dolls",
+          "Puppet Master",
+          "Dolly Dearest"
+        ]
+      },
+      {
+        "id": "horror-movie-021",
+        "question": "Which original 1987 film connects a mysterious puzzle box with the Cenobites?",
+        "answer": "Hellraiser",
+        "notes": "1987. Directed by Clive Barker.",
+        "wrongAnswers": [
+          "Phantasm",
+          "Wishmaster",
+          "The Gate"
+        ]
+      },
+      {
+        "id": "horror-movie-022",
+        "question": "Which original 1982 film finds the Freeling family facing supernatural activity that first fascinates young Carol Anne through the television?",
+        "answer": "Poltergeist",
+        "notes": "1982. Directed by Tobe Hooper.",
+        "wrongAnswers": [
+          "The Amityville Horror",
+          "The Changeling",
+          "House"
+        ]
+      },
+      {
+        "id": "horror-movie-023",
+        "question": "Which 2014 Australian film links a mother and son's fears to an unsettling pop-up storybook?",
+        "answer": "The Babadook",
+        "notes": "2014. Directed by Jennifer Kent.",
+        "wrongAnswers": [
+          "The Boogeyman",
+          "Mama",
+          "Lights Out"
+        ]
+      },
+      {
+        "id": "horror-movie-024",
+        "question": "Which film follows Jay as a curse brings a relentless, slow-moving figure that can take different human forms?",
+        "answer": "It Follows",
+        "notes": "2014 premiere. Directed by David Robert Mitchell.",
+        "wrongAnswers": [
+          "Smile",
+          "The Ring",
+          "Drag Me to Hell"
+        ]
+      },
+      {
+        "id": "horror-movie-025",
+        "question": "Which 2017 Jordan Peele film follows Chris on an increasingly unsettling visit to his girlfriend's parents?",
+        "answer": "Get Out",
+        "notes": "2017. Directed by Jordan Peele.",
+        "wrongAnswers": [
+          "The Invitation",
+          "The Visit",
+          "Ready or Not"
+        ]
+      },
+      {
+        "id": "horror-movie-026",
+        "question": "Which 2019 Jordan Peele film confronts a vacationing family with threatening doubles of themselves?",
+        "answer": "Us",
+        "notes": "2019. Directed by Jordan Peele.",
+        "wrongAnswers": [
+          "Get Out",
+          "The Strangers",
+          "Funny Games"
+        ]
+      },
+      {
+        "id": "horror-movie-027",
+        "question": "Which 2022 Jordan Peele film follows horse-training siblings investigating a strange presence above their California ranch?",
+        "answer": "Nope",
+        "notes": "2022. Directed by Jordan Peele.",
+        "wrongAnswers": [
+          "Signs",
+          "Dark Skies",
+          "The Vast of Night"
+        ]
+      },
+      {
+        "id": "horror-movie-028",
+        "question": "Which Robert Eggers film follows Thomasin and her family beside a threatening forest in 1630 New England?",
+        "answer": "The Witch",
+        "notes": "2016 US theatrical release. Directed by Robert Eggers.",
+        "wrongAnswers": [
+          "The Wicker Man",
+          "The Village",
+          "Apostle"
+        ]
+      },
+      {
+        "id": "horror-movie-029",
+        "question": "Which 2019 Ari Aster film follows Dani and her friends to a Swedish midsummer festival?",
+        "answer": "Midsommar",
+        "notes": "2019. Directed by Ari Aster.",
+        "wrongAnswers": [
+          "The Wicker Man",
+          "The Ritual",
+          "Apostle"
+        ]
+      },
+      {
+        "id": "horror-movie-030",
+        "question": "Which 2018 Ari Aster film follows the Graham family as grief reveals disturbing secrets about their ancestry?",
+        "answer": "Hereditary",
+        "notes": "2018. Directed by Ari Aster.",
+        "wrongAnswers": [
+          "The Lodge",
+          "The Others",
+          "The Orphanage"
+        ]
+      },
+      {
+        "id": "horror-movie-031",
+        "question": "Which 2018 film follows the Abbott family, who must avoid making noise to survive creatures that hunt by sound?",
+        "answer": "A Quiet Place",
+        "notes": "2018. Directed by John Krasinski.",
+        "wrongAnswers": [
+          "Bird Box",
+          "The Silence",
+          "Don't Breathe"
+        ]
+      }
+    ],
+    "sources": {
+      "horror-movie-001": "https://www.bfi.org.uk/lists/10-great-autumnal-horror-films",
+      "horror-movie-002": "https://www.bfi.org.uk/lists/great-horror-film-from-every-year-from-1922-now",
+      "horror-movie-003": "https://www.paramountpictures.com/movies/friday-the-13th",
+      "horror-movie-004": "https://www.bfi.org.uk/lists/scream-5-essential-moments-from-meta-slasher-series",
+      "horror-movie-005": "https://www.universalpicturesathome.com/movies/psycho-1960",
+      "horror-movie-006": "https://www.bfi.org.uk/film/4d39487e-a464-5771-a2f3-2533c7ba9c8c/the-shining",
+      "horror-movie-007": "https://www.bfi.org.uk/film/cb7b1684-e40a-5ff2-a580-20545b054df2/the-exorcist",
+      "horror-movie-008": "https://www.bfi.org.uk/film/71399b2f-6846-5377-83c6-bf3c21e84965/alien",
+      "horror-movie-009": "https://www.bfi.org.uk/film/0123a4ec-0162-5556-b29d-fc07d9f5aef4/the-thing",
+      "horror-movie-010": "https://www.universalpicturesathome.com/movies/jaws",
+      "horror-movie-011": "https://www.bfi.org.uk/lists/10-great-films-1976",
+      "horror-movie-012": "https://www.bfi.org.uk/features/night-living-dead-george-romero",
+      "horror-movie-013": "https://www.bfi.org.uk/sight-and-sound/interviews/george-romero-sight-sound-interview",
+      "horror-movie-014": "https://www.bfi.org.uk/lists/great-horror-film-from-every-year-from-1922-now",
+      "horror-movie-015": "https://www.bfi.org.uk/lists/great-horror-film-from-every-year-from-1922-now",
+      "horror-movie-016": "https://www.sonypictures.com/movies/thegrudge2004",
+      "horror-movie-017": "https://www.bfi.org.uk/lists/great-horror-film-from-every-year-from-1922-now",
+      "horror-movie-018": "https://www.sonypictures.com/movies/insidious",
+      "horror-movie-019": "https://www.bfi.org.uk/film/58fd0003-8231-59ce-9e43-e613a24e78c1/saw",
+      "horror-movie-020": "https://www.bfi.org.uk/lists/10-great-doll-films",
+      "horror-movie-021": "https://www.bfi.org.uk/lists/13-british-horror-debuts",
+      "horror-movie-022": "https://www.bfi.org.uk/lists/10-great-dark-suburbia-films",
+      "horror-movie-023": "https://www.bfi.org.uk/lists/10-great-supernatural-horror-films-21st-century",
+      "horror-movie-024": "https://www.bfi.org.uk/sight-and-sound/reviews/film-week-it-follows",
+      "horror-movie-025": "https://www.universalpicturesathome.com/movies/jordan-peele-3-movie-collection",
+      "horror-movie-026": "https://www.universalpicturesathome.com/movies/jordan-peele-3-movie-collection",
+      "horror-movie-027": "https://www.universalpicturesathome.com/movies/jordan-peele-3-movie-collection",
+      "horror-movie-028": "https://a24films.com/films/witch",
+      "horror-movie-029": "https://a24films.com/films/midsommar",
+      "horror-movie-030": "https://a24films.com/films/hereditary",
+      "horror-movie-031": "https://www.paramountpictures.com/movies/a-quiet-place"
+    }
   }
 ];
 window.QUIZ_SEED_PREVIOUS = [

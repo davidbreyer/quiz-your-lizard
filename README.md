@@ -78,6 +78,19 @@ each card contains `id`, `question`, `answer`, `notes`, and `wrongAnswers`.
 
 ## Base Quiz Updates
 
+Horror Movies is a new Halloween collection with 31 original, spoiler-light movie
+clues and three curated wrong answers per question. It spans classic horror,
+slashers, creature features, and modern films. Release and director notes identify
+the intended version when a title has remakes. The editable source and research
+references are in `data/horror-movies.json`.
+
+Fresh browsers include all five collections. Existing libraries show **New quiz
+available: Horror Movies** after refreshing the site. Choose **Add to library**,
+review the description, then confirm **Add to library**. Adding a quiz preserves
+other collections, settings, and history. New collections are never silently
+inserted into saved libraries, and deleted quizzes stay deleted until you choose
+to add them again. Only seeds marked `offerToExisting` appear in this new-quiz offer.
+
 Published base quizzes have a revision number. Existing browsers show **Update
 available** on a quiz's library card and detail page after reopening or refreshing
 the updated site. Select it to review the changes, then choose **Update quiz** or
@@ -136,7 +149,8 @@ current session settings. Importing the same file twice intentionally creates co
 Files must be smaller than 4 MiB. Unknown format versions and incomplete questions
 are rejected before the saved library changes.
 
-The four base collections contain 521 linked questions. The original SQLite
+The four legacy collections contain 521 linked questions; Horror Movies adds 31,
+for a total of 552. The original SQLite
 database also contains one row not linked to these collections; it was not included.
 The remaining content and historical notes are archival 2011 material: geography,
 population notes, and shell commands should be reviewed before reuse.

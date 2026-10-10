@@ -69,14 +69,52 @@ test('failed base update retains the dialog and previous library for retry', () 
   assert.match(t.$('.dialog-error').textContent, /Could not save/);
   assert.deepEqual(t.savedData(), old); end(t);
 });
-test('library loads the 521 linked legacy cards and icons without network resources', () => {
+test('fresh library loads legacy collections and the Halloween quiz without network resources', () => {
   const t = boot();
-  assert.equal(t.$('#quiz-grid').children.length, 4);
-  assert.equal(t.savedData().quizzes.reduce((sum, q) => sum + q.cards.length, 0), 521);
+  assert.equal(t.$('#quiz-grid').children.length, 5);
+  assert.equal(t.savedData().quizzes.filter(q => q.id.startsWith('legacy-')).reduce((sum, q) => sum + q.cards.length, 0), 521);
+  assert.equal(t.savedData().quizzes.reduce((sum, q) => sum + q.cards.length, 0), 552);
   assert.ok(t.$('svg.lucide-library'));
+  assert.ok(t.$('svg.lucide-ghost'));
   t.fill('#quiz-search', 'German'); assert.equal(t.$('#quiz-grid').children.length, 1);
   assert.match(t.$('#quiz-grid').textContent, /German Numbers/);
   end(t);
+});
+
+test('existing libraries can review and add Horror Movies without changing saved collections', () => {
+  const old = fixture(), t = boot(old);
+  assert.equal(t.savedData().quizzes.length, 1);
+  assert.ok(t.$('[aria-label="Add Horror Movies to library"]'));
+  t.click('[data-action="new-base-quiz"]');
+  assert.match(t.$('#dialog-content').textContent, /31 questions/);
+  t.click('[data-action="close-dialog"]');
+  assert.deepEqual(t.savedData(), old);
+  t.click('[data-action="new-base-quiz"]'); t.click('[data-action="install-base-quiz"]');
+  const saved = t.savedData();
+  assert.deepEqual(saved.quizzes[0], old.quizzes[0]);
+  assert.deepEqual(saved.settings, old.settings);
+  assert.deepEqual(saved.history, old.history);
+  assert.equal(saved.quizzes[1].id, 'base-horror-movies');
+  assert.deepEqual(saved.quizzes[1].base, { id: 'base-horror-movies', revision: 1, modified: false });
+  assert.equal(saved.quizzes[1].cards.length, 31);
+  assert.equal(t.$('#main h1').textContent, 'Horror Movies');
+  t.click('[data-mode="quiz"]'); t.click('[data-action="start"]');
+  assert.equal(t.w.document.querySelectorAll('.answer-choice').length, 4);
+  assert.ok(saved.quizzes[1].cards.some(c => c.question === t.$('.session-stage h1').textContent));
+  end(t);
+  const again = boot(saved);
+  assert.equal(again.$('[data-action="new-base-quiz"]'), null);
+  assert.equal(again.savedData().quizzes.length, 2); end(again);
+});
+
+test('failed additions retain the original library and keep the add dialog for retry', () => {
+  const old = fixture(), t = boot(old);
+  t.click('[data-action="new-base-quiz"]');
+  t.w.Storage.prototype.setItem = () => { throw new Error('Quota'); };
+  t.click('[data-action="install-base-quiz"]');
+  assert.equal(t.$('#dialog').open, true);
+  assert.match(t.$('.dialog-error').textContent, /Could not save/);
+  assert.deepEqual(t.savedData(), old); end(t);
 });
 test('the footer release version also versions static and dynamically rendered assets', () => {
   const t = boot();

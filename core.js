@@ -66,6 +66,15 @@
     }
     data.quizzes[index] = update.latest;
   }
+  function newBaseQuizzes(data, seeds) {
+    const owned = new Set(data.quizzes.map(q => q.id));
+    return seeds.filter(q => q.offerToExisting === true && !owned.has(q.id));
+  }
+  function addBaseQuiz(data, quizId, seeds) {
+    const seed = newBaseQuizzes(data, seeds).find(q => q.id === quizId);
+    if (!seed) throw new Error('This quiz is already in your library or is no longer available.');
+    data.quizzes.push(baseQuiz(seed));
+  }
   class Store {
     constructor(storage, seed, previousSeed = []) {
       this.storage = storage;
@@ -126,7 +135,7 @@
   function tally(outcomes) {
     return { first: outcomes.filter(o => o === 'first').length, second: outcomes.filter(o => o === 'second').length, wrong: outcomes.filter(o => o === 'wrong').length };
   }
-  const api = { VERSION, KEY, id, clone, normalize, shuffle, validateQuizzes, validateState, baseUpdate, applyBaseUpdate, Store, choicesFor, buildSession, respond, tally };
+  const api = { VERSION, KEY, id, clone, normalize, shuffle, validateQuizzes, validateState, baseUpdate, applyBaseUpdate, newBaseQuizzes, addBaseQuiz, Store, choicesFor, buildSession, respond, tally };
   if (typeof module !== 'undefined') module.exports = api;
   root.QuizCore = api;
 })(globalThis);
