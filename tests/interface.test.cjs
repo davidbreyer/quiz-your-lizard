@@ -92,15 +92,16 @@ test('failed base update retains the dialog and previous library for retry', () 
   assert.match(t.$('.dialog-error').textContent, /Could not save/);
   assert.deepEqual(t.savedData(), old); end(t);
 });
-test('fresh library loads the science replacement and Halloween quiz without network resources', () => {
+test('fresh library loads all default quizzes without network resources', () => {
   const t = boot();
-  assert.equal(t.$('#quiz-grid').children.length, 5);
+  assert.equal(t.$('#quiz-grid').children.length, 6);
   assert.equal(t.savedData().quizzes.filter(q => q.id.startsWith('legacy-')).reduce((sum, q) => sum + q.cards.length, 0), 347);
-  assert.equal(t.savedData().quizzes.reduce((sum, q) => sum + q.cards.length, 0), 418);
+  assert.equal(t.savedData().quizzes.reduce((sum, q) => sum + q.cards.length, 0), 458);
   assert.equal(t.savedData().quizzes.some(q => q.id === 'legacy-set-8'), false);
   assert.ok(t.$('svg.lucide-flask-conical'));
   assert.ok(t.$('svg.lucide-library'));
   assert.ok(t.$('svg.lucide-ghost'));
+  assert.ok(t.$('svg.lucide-landmark'));
   t.fill('#quiz-search', 'German'); assert.equal(t.$('#quiz-grid').children.length, 1);
   assert.match(t.$('#quiz-grid').textContent, /German Numbers/);
   end(t);
@@ -154,6 +155,30 @@ test('existing libraries can add and practice Everyday Science without changing 
   const again = boot(saved);
   assert.equal(again.$(offer), null);
   assert.ok(again.$('.theme-lilac svg.lucide-flask-conical'));
+  end(again);
+});
+
+test('existing libraries can add and practice Founding Fathers while preserving saved content', () => {
+  const old = fixture(), t = boot(old);
+  const offer = '[data-action="new-base-quiz"][data-id="base-founding-fathers"]';
+  t.click(offer);
+  assert.match(t.$('#dialog-content').textContent, /40 questions/);
+  t.click('[data-action="close-dialog"]');
+  assert.deepEqual(t.savedData(), old);
+  t.click(offer); t.click('[data-action="install-base-quiz"]');
+  const saved = t.savedData();
+  assert.deepEqual(saved.quizzes[0], old.quizzes[0]);
+  assert.deepEqual(saved.settings, old.settings);
+  assert.deepEqual(saved.history, old.history);
+  assert.equal(saved.quizzes[1].cards.length, 40);
+  assert.deepEqual(saved.quizzes[1].base, { id: 'base-founding-fathers', revision: 1, modified: false });
+  assert.equal(t.$('#main h1').textContent, 'Founding Fathers');
+  t.click('[data-mode="quiz"]'); t.click('[data-action="start"]');
+  assert.equal(t.w.document.querySelectorAll('.answer-choice').length, 4);
+  end(t);
+  const again = boot(saved);
+  assert.equal(again.$(offer), null);
+  assert.ok(again.$('.theme-peach svg.lucide-landmark'));
   end(again);
 });
 

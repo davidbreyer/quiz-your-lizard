@@ -92,8 +92,13 @@ slashers, creature features, and modern films. Release and director notes identi
 the intended version when a title has remakes. The editable source and research
 references are in `data/horror-movies.json`.
 
-Fresh browsers include five collections, including Everyday Science and Horror
-Movies. Existing libraries offer either new collection when it is missing after
+Founding Fathers adds 40 original clues about revolutionary leadership, diplomacy,
+constitutional debates, inventions, and the founders' lives. Each has three curated
+wrong answers and a study explanation. The editable source and per-question research
+references are in `data/founding-fathers.json`.
+
+Fresh browsers include six collections, including Everyday Science, Horror Movies,
+and Founding Fathers. Existing libraries offer these new collections when missing after
 refreshing the site. Choose **Add to library**,
 review the description, then confirm **Add to library**. Adding a quiz preserves
 other collections, settings, and history. New collections are never silently
@@ -159,7 +164,8 @@ Files must be smaller than 4 MiB. Unknown format versions and incomplete questio
 are rejected before the saved library changes.
 
 The three active legacy collections contain 347 linked questions; Everyday Science
-adds 40 and Horror Movies adds 31, for a default total of 418. The archived OSX
+adds 40, Horror Movies adds 31, and Founding Fathers adds 40, for a default total of
+458. The archived OSX
 collection contains 174 additional questions and remains in the original source.
 The original SQLite
 database also contains one row not linked to these collections; it was not included.

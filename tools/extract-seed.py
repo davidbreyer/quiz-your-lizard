@@ -37,6 +37,7 @@ for quiz in quizzes:
         assert len(set(value.casefold() for value in [card['answer'], *card['wrongAnswers']])) == 4
 quizzes.insert(2, json.loads((root / 'data/everyday-science.json').read_text(encoding='utf-8')))
 quizzes.append(json.loads((root / 'data/horror-movies.json').read_text(encoding='utf-8')))
+quizzes.append(json.loads((root / 'data/founding-fathers.json').read_text(encoding='utf-8')))
 target = root / 'seed.js'
 credit = '// World city alternatives adapted from GeoNames (https://www.geonames.org/), CC BY 4.0\n// (https://creativecommons.org/licenses/by/4.0/). Curated selections; see data/world-capitals-update.json.\n'
 target.write_text(credit + 'window.QUIZ_SEED = ' + json.dumps(quizzes, ensure_ascii=True, indent=2) + ';\n', encoding='utf-8')

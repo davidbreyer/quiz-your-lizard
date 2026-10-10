@@ -4313,6 +4313,497 @@ window.QUIZ_SEED = [
       "horror-movie-030": "https://a24films.com/films/hereditary",
       "horror-movie-031": "https://www.paramountpictures.com/movies/a-quiet-place"
     }
+  },
+  {
+    "id": "base-founding-fathers",
+    "name": "Founding Fathers",
+    "revision": 1,
+    "offerToExisting": true,
+    "description": "40 clues about the people, debates, and discoveries behind the United States' founding. Meet the familiar names and a few unsung figures.",
+    "cards": [
+      {
+        "id": "founding-fathers-001",
+        "question": "Who commanded the Continental Army during the American Revolution?",
+        "answer": "George Washington",
+        "notes": "Congress chose Washington in 1775. He led the army through the struggle for independence.",
+        "wrongAnswers": [
+          "Nathanael Greene",
+          "Horatio Gates",
+          "Henry Knox"
+        ]
+      },
+      {
+        "id": "founding-fathers-002",
+        "question": "Who presided over the Constitutional Convention in Philadelphia in 1787?",
+        "answer": "George Washington",
+        "notes": "Washington chaired the convention; the Constitution emerged from the work and compromises of many delegates.",
+        "wrongAnswers": [
+          "Benjamin Franklin",
+          "James Madison",
+          "John Hancock"
+        ]
+      },
+      {
+        "id": "founding-fathers-003",
+        "question": "Which Virginia estate was George Washington's home?",
+        "answer": "Mount Vernon",
+        "notes": "Washington returned to Mount Vernon after public service. Enslaved people supplied much of the plantation's labor.",
+        "wrongAnswers": [
+          "Monticello",
+          "Montpelier",
+          "Gunston Hall"
+        ]
+      },
+      {
+        "id": "founding-fathers-004",
+        "question": "How many presidential terms did George Washington serve before retiring?",
+        "answer": "Two",
+        "notes": "Washington's retirement after two terms established a precedent followed by most later presidents.",
+        "wrongAnswers": [
+          "One",
+          "Three",
+          "Four"
+        ]
+      },
+      {
+        "id": "founding-fathers-005",
+        "question": "Who was the principal drafter of the Declaration of Independence?",
+        "answer": "Thomas Jefferson",
+        "notes": "Jefferson prepared the initial draft. The Committee of Five and Congress revised it before adoption.",
+        "wrongAnswers": [
+          "John Adams",
+          "Benjamin Franklin",
+          "Roger Sherman"
+        ]
+      },
+      {
+        "id": "founding-fathers-006",
+        "question": "Who served as the first U.S. Secretary of State under George Washington?",
+        "answer": "Thomas Jefferson",
+        "notes": "Jefferson led the State Department from 1790 to 1793, handling the new government's foreign affairs.",
+        "wrongAnswers": [
+          "Alexander Hamilton",
+          "John Jay",
+          "Edmund Randolph"
+        ]
+      },
+      {
+        "id": "founding-fathers-007",
+        "question": "Which Virginia home did Thomas Jefferson design and name after an Italian phrase for a small mountain?",
+        "answer": "Monticello",
+        "notes": "Monticello was Jefferson's home and an enslaved community. Its name means little mountain in Italian.",
+        "wrongAnswers": [
+          "Montpelier",
+          "Mount Vernon",
+          "Gunston Hall"
+        ]
+      },
+      {
+        "id": "founding-fathers-008",
+        "question": "Who drafted the Virginia Statute for Religious Freedom?",
+        "answer": "Thomas Jefferson",
+        "notes": "Jefferson wrote the statute; James Madison helped secure its passage in 1786.",
+        "wrongAnswers": [
+          "George Mason",
+          "Patrick Henry",
+          "James Monroe"
+        ]
+      },
+      {
+        "id": "founding-fathers-009",
+        "question": "Which university did Thomas Jefferson help found in Charlottesville?",
+        "answer": "University of Virginia",
+        "notes": "Jefferson counted founding this university among the achievements he wanted recorded on his tombstone.",
+        "wrongAnswers": [
+          "College of William and Mary",
+          "University of Pennsylvania",
+          "Princeton University"
+        ]
+      },
+      {
+        "id": "founding-fathers-010",
+        "question": "Who was the first Vice President of the United States?",
+        "answer": "John Adams",
+        "notes": "Adams served as Washington's vice president for eight years before becoming the second president.",
+        "wrongAnswers": [
+          "Thomas Jefferson",
+          "John Jay",
+          "Alexander Hamilton"
+        ]
+      },
+      {
+        "id": "founding-fathers-011",
+        "question": "Which future president defended British soldiers accused after the Boston Massacre?",
+        "answer": "John Adams",
+        "notes": "Adams supported colonial rights while insisting the accused soldiers deserved a legal defense.",
+        "wrongAnswers": [
+          "Thomas Jefferson",
+          "James Madison",
+          "James Monroe"
+        ]
+      },
+      {
+        "id": "founding-fathers-012",
+        "question": "Which future U.S. president helped negotiate and signed the 1783 Treaty of Paris?",
+        "answer": "John Adams",
+        "notes": "Adams, Benjamin Franklin, and John Jay signed the peace treaty with Britain that recognized U.S. independence.",
+        "wrongAnswers": [
+          "George Washington",
+          "Thomas Jefferson",
+          "James Madison"
+        ]
+      },
+      {
+        "id": "founding-fathers-013",
+        "question": "Who was the principal drafter of the Massachusetts Constitution of 1780?",
+        "answer": "John Adams",
+        "notes": "Adams played the leading drafting role in this state constitution before serving as vice president and president.",
+        "wrongAnswers": [
+          "Samuel Adams",
+          "John Hancock",
+          "James Bowdoin"
+        ]
+      },
+      {
+        "id": "founding-fathers-014",
+        "question": "Which founder is credited with designing bifocal glasses?",
+        "answer": "Benjamin Franklin",
+        "notes": "Franklin described combining lenses for near and distant vision in the same pair of glasses.",
+        "wrongAnswers": [
+          "Thomas Jefferson",
+          "David Rittenhouse",
+          "Benjamin Rush"
+        ]
+      },
+      {
+        "id": "founding-fathers-015",
+        "question": "Who published Poor Richard's Almanack?",
+        "answer": "Benjamin Franklin",
+        "notes": "Franklin's popular annual publication mixed practical information, observations, and memorable sayings.",
+        "wrongAnswers": [
+          "Thomas Paine",
+          "John Dickinson",
+          "Samuel Adams"
+        ]
+      },
+      {
+        "id": "founding-fathers-016",
+        "question": "Which founder helped negotiate the alliance with France during the Revolution while serving there as a diplomat?",
+        "answer": "Benjamin Franklin",
+        "notes": "Franklin helped obtain French support through diplomacy. The alliance was formalized in 1778.",
+        "wrongAnswers": [
+          "George Mason",
+          "Patrick Henry",
+          "Roger Sherman"
+        ]
+      },
+      {
+        "id": "founding-fathers-017",
+        "question": "Who was the oldest delegate at the 1787 Constitutional Convention, aged 81?",
+        "answer": "Benjamin Franklin",
+        "notes": "Franklin brought decades of experience to the convention and encouraged delegates to compromise.",
+        "wrongAnswers": [
+          "George Washington",
+          "Roger Sherman",
+          "John Dickinson"
+        ]
+      },
+      {
+        "id": "founding-fathers-018",
+        "question": "Which founder became president of the Pennsylvania Abolition Society in 1787?",
+        "answer": "Benjamin Franklin",
+        "notes": "Late in life, Franklin supported abolition and signed a petition asking Congress to act against slavery.",
+        "wrongAnswers": [
+          "Alexander Hamilton",
+          "Thomas Jefferson",
+          "James Madison"
+        ]
+      },
+      {
+        "id": "founding-fathers-019",
+        "question": "Who was the first U.S. Secretary of the Treasury?",
+        "answer": "Alexander Hamilton",
+        "notes": "Hamilton took office in 1789 and developed plans for federal credit, debt repayment, and a national bank.",
+        "wrongAnswers": [
+          "Robert Morris",
+          "Thomas Jefferson",
+          "John Jay"
+        ]
+      },
+      {
+        "id": "founding-fathers-020",
+        "question": "Which future Treasury secretary served as George Washington's aide-de-camp during the Revolution?",
+        "answer": "Alexander Hamilton",
+        "notes": "Hamilton joined Washington's staff in 1777, working as a secretary and trusted aide.",
+        "wrongAnswers": [
+          "Albert Gallatin",
+          "Oliver Wolcott Jr.",
+          "Samuel Dexter"
+        ]
+      },
+      {
+        "id": "founding-fathers-021",
+        "question": "Which founder championed creating a national bank while leading the Treasury Department?",
+        "answer": "Alexander Hamilton",
+        "notes": "Hamilton proposed a national bank as part of his program to strengthen the country's finances.",
+        "wrongAnswers": [
+          "Thomas Jefferson",
+          "James Madison",
+          "Patrick Henry"
+        ]
+      },
+      {
+        "id": "founding-fathers-022",
+        "question": "On which Caribbean island was Alexander Hamilton born?",
+        "answer": "Nevis",
+        "notes": "Hamilton was born on Nevis, grew up partly on St. Croix, and later traveled to New York.",
+        "wrongAnswers": [
+          "St. Croix",
+          "Barbados",
+          "Jamaica"
+        ]
+      },
+      {
+        "id": "founding-fathers-023",
+        "question": "Which founder is commonly called the Father of the Constitution?",
+        "answer": "James Madison",
+        "notes": "Madison helped shape the Constitution and recorded the convention debates, but the document was a collective achievement.",
+        "wrongAnswers": [
+          "Alexander Hamilton",
+          "George Washington",
+          "Gouverneur Morris"
+        ]
+      },
+      {
+        "id": "founding-fathers-024",
+        "question": "Which representative introduced proposed constitutional amendments in the House on June 8, 1789, helping lead to the Bill of Rights?",
+        "answer": "James Madison",
+        "notes": "Congress revised Madison's proposals. Ten amendments were ratified in 1791 as the Bill of Rights.",
+        "wrongAnswers": [
+          "George Mason",
+          "Alexander Hamilton",
+          "John Jay"
+        ]
+      },
+      {
+        "id": "founding-fathers-025",
+        "question": "Which founding-era president was in office when the United States entered the War of 1812?",
+        "answer": "James Madison",
+        "notes": "Madison's presidency faced disputes with Britain over shipping and other issues that led to war.",
+        "wrongAnswers": [
+          "Thomas Jefferson",
+          "John Adams",
+          "James Monroe"
+        ]
+      },
+      {
+        "id": "founding-fathers-026",
+        "question": "Which Virginia estate was James Madison's lifelong home?",
+        "answer": "Montpelier",
+        "notes": "Madison lived at Montpelier and returned there in retirement, including to edit his convention notes.",
+        "wrongAnswers": [
+          "Monticello",
+          "Mount Vernon",
+          "Gunston Hall"
+        ]
+      },
+      {
+        "id": "founding-fathers-027",
+        "question": "Who was the first Chief Justice of the United States?",
+        "answer": "John Jay",
+        "notes": "Washington appointed Jay to lead the Supreme Court. Jay took his judicial oath in 1789.",
+        "wrongAnswers": [
+          "John Marshall",
+          "John Rutledge",
+          "James Wilson"
+        ]
+      },
+      {
+        "id": "founding-fathers-028",
+        "question": "With which country did John Jay negotiate the treaty signed in 1794 that bears his name?",
+        "answer": "Great Britain",
+        "notes": "Jay's Treaty sought to resolve disputes left unsettled after independence. It provoked fierce political disagreement.",
+        "wrongAnswers": [
+          "France",
+          "Spain",
+          "The Netherlands"
+        ]
+      },
+      {
+        "id": "founding-fathers-029",
+        "question": "Who co-wrote The Federalist Papers with Alexander Hamilton and James Madison?",
+        "answer": "John Jay",
+        "notes": "The three authors published essays supporting ratification of the Constitution under the shared pen name Publius.",
+        "wrongAnswers": [
+          "John Adams",
+          "Thomas Jefferson",
+          "George Mason"
+        ]
+      },
+      {
+        "id": "founding-fathers-030",
+        "question": "Which Connecticut delegate helped drive the Great Compromise over representation at the Constitutional Convention?",
+        "answer": "Roger Sherman",
+        "notes": "The compromise combined population-based representation in the House with equal state representation in the Senate.",
+        "wrongAnswers": [
+          "James Madison",
+          "William Paterson",
+          "Gouverneur Morris"
+        ]
+      },
+      {
+        "id": "founding-fathers-031",
+        "question": "Which Connecticut delegate served on the Committee of Five that prepared the Declaration of Independence?",
+        "answer": "Roger Sherman",
+        "notes": "Sherman joined Jefferson, Adams, Franklin, and Robert Livingston on the declaration's drafting committee.",
+        "wrongAnswers": [
+          "Oliver Ellsworth",
+          "William Samuel Johnson",
+          "Samuel Huntington"
+        ]
+      },
+      {
+        "id": "founding-fathers-032",
+        "question": "Who was the principal author of the Virginia Declaration of Rights in 1776?",
+        "answer": "George Mason",
+        "notes": "Mason's declaration influenced other rights documents, including the later federal Bill of Rights.",
+        "wrongAnswers": [
+          "James Madison",
+          "Thomas Jefferson",
+          "Patrick Henry"
+        ]
+      },
+      {
+        "id": "founding-fathers-033",
+        "question": "Which Virginia delegate refused to sign the Constitution in part because it lacked a declaration of rights?",
+        "answer": "George Mason",
+        "notes": "Mason objected to several features of the Constitution, especially its lack of explicit protections for individual rights.",
+        "wrongAnswers": [
+          "George Washington",
+          "James Madison",
+          "John Blair"
+        ]
+      },
+      {
+        "id": "founding-fathers-034",
+        "question": "Which delegate on the Committee of Style is credited with drafting much of the Constitution's final wording?",
+        "answer": "Gouverneur Morris",
+        "notes": "Morris shaped the final text; the convention as a whole determined its structure and provisions.",
+        "wrongAnswers": [
+          "Robert Morris",
+          "James Madison",
+          "Alexander Hamilton"
+        ]
+      },
+      {
+        "id": "founding-fathers-035",
+        "question": "Who served as Superintendent of Finance under the Articles of Confederation from 1781 to 1784?",
+        "answer": "Robert Morris",
+        "notes": "Morris organized wartime financing and supplies before the Constitution created the new federal government.",
+        "wrongAnswers": [
+          "Gouverneur Morris",
+          "Alexander Hamilton",
+          "Roger Sherman"
+        ]
+      },
+      {
+        "id": "founding-fathers-036",
+        "question": "Which Scottish-born signer of the Constitution became one of the first U.S. Supreme Court justices?",
+        "answer": "James Wilson",
+        "notes": "Wilson emigrated from Scotland, represented Pennsylvania at the convention, and joined the Supreme Court in 1789.",
+        "wrongAnswers": [
+          "John Jay",
+          "John Blair",
+          "William Paterson"
+        ]
+      },
+      {
+        "id": "founding-fathers-037",
+        "question": "Who was president of the Continental Congress when the Declaration of Independence was adopted in 1776?",
+        "answer": "John Hancock",
+        "notes": "Hancock's prominent signature helped make his name closely associated with the Declaration.",
+        "wrongAnswers": [
+          "Peyton Randolph",
+          "Samuel Adams",
+          "John Adams"
+        ]
+      },
+      {
+        "id": "founding-fathers-038",
+        "question": "Which Boston revolutionary, a cousin of John Adams, helped organize resistance to British taxation?",
+        "answer": "Samuel Adams",
+        "notes": "Samuel Adams used political organizing, correspondence, and newspaper writing to build opposition to British policies.",
+        "wrongAnswers": [
+          "John Hancock",
+          "James Otis Jr.",
+          "Joseph Warren"
+        ]
+      },
+      {
+        "id": "founding-fathers-039",
+        "question": "Who became the first governor of the independent Commonwealth of Virginia in 1776?",
+        "answer": "Patrick Henry",
+        "notes": "Henry helped establish Virginia's new government and served multiple one-year terms as governor.",
+        "wrongAnswers": [
+          "Thomas Jefferson",
+          "Edmund Randolph",
+          "George Mason"
+        ]
+      },
+      {
+        "id": "founding-fathers-040",
+        "question": "Who wrote Common Sense, the 1776 pamphlet arguing for American independence?",
+        "answer": "Thomas Paine",
+        "notes": "Paine's widely read pamphlet made a forceful case against monarchy and for independence from Britain.",
+        "wrongAnswers": [
+          "John Dickinson",
+          "Benjamin Franklin",
+          "Samuel Adams"
+        ]
+      }
+    ],
+    "sources": {
+      "founding-fathers-001": "https://www.mountvernon.org/george-washington",
+      "founding-fathers-002": "https://www.mountvernon.org/george-washington",
+      "founding-fathers-003": "https://www.mountvernon.org/george-washington",
+      "founding-fathers-004": "https://www.mountvernon.org/george-washington/biography",
+      "founding-fathers-005": "https://www.monticello.org/the-declaration-of-independence/jefferson-and-the-declaration",
+      "founding-fathers-006": "https://history.state.gov/departmenthistory/people/jefferson-thomas",
+      "founding-fathers-007": "https://www.monticello.org/jefferson-day/a-delightful-recreation/building-monticello",
+      "founding-fathers-008": "https://www.monticello.org/encyclopedia/virginia-statute-religious-freedom",
+      "founding-fathers-009": "https://www.monticello.org/stories/divided-we-stand-united-we-fall",
+      "founding-fathers-010": "https://www.nps.gov/adam/learn/historyculture/john-adams-1735-1826.htm",
+      "founding-fathers-011": "https://www.nps.gov/adam/learn/historyculture/john-adams-1735-1826.htm",
+      "founding-fathers-012": "https://www.nps.gov/inde/learn/historyculture/people-franklin-traits.htm",
+      "founding-fathers-013": "https://www.nps.gov/adam/learn/historyculture/john-adams-1735-1826.htm",
+      "founding-fathers-014": "https://www.loc.gov/exhibits/franklin/franklin-scientist.html",
+      "founding-fathers-015": "https://www.archives.gov/founding-docs/founding-fathers-pennsylvania",
+      "founding-fathers-016": "https://www.archives.gov/founding-docs/founding-fathers-pennsylvania",
+      "founding-fathers-017": "https://www.archives.gov/founding-docs/founding-fathers",
+      "founding-fathers-018": "https://www.archives.gov/founding-docs/founding-fathers-pennsylvania",
+      "founding-fathers-019": "https://www.archives.gov/founding-docs/founding-fathers-new-york",
+      "founding-fathers-020": "https://www.archives.gov/founding-docs/founding-fathers-new-york",
+      "founding-fathers-021": "https://www.archives.gov/founding-docs/founding-fathers-new-york",
+      "founding-fathers-022": "https://www.archives.gov/founding-docs/founding-fathers-new-york",
+      "founding-fathers-023": "https://www.archives.gov/founding-docs/constitution-q-and-a",
+      "founding-fathers-024": "https://www.archives.gov/press/press-releases/2014/nr14-93.html",
+      "founding-fathers-025": "https://www.archives.gov/founding-docs/founding-fathers-virginia",
+      "founding-fathers-026": "https://www.archives.gov/founding-docs/founding-fathers-virginia",
+      "founding-fathers-027": "https://www.supremecourt.gov/about/oath/oathsofthechiefjustices.aspx",
+      "founding-fathers-028": "https://guides.loc.gov/jays-treaty",
+      "founding-fathers-029": "https://guides.loc.gov/federalist-papers/full-text",
+      "founding-fathers-030": "https://www.archives.gov/founding-docs/founding-fathers-connecticut",
+      "founding-fathers-031": "https://blogs.loc.gov/families/2023/07/o-say-did-you-know-the-story-of-the-declaration-of-independence/",
+      "founding-fathers-032": "https://www.archives.gov/founding-docs/founding-fathers-virginia",
+      "founding-fathers-033": "https://www.archives.gov/founding-docs/founding-fathers-virginia",
+      "founding-fathers-034": "https://www.archives.gov/founding-docs/founding-fathers-pennsylvania",
+      "founding-fathers-035": "https://www.archives.gov/founding-docs/founding-fathers-pennsylvania",
+      "founding-fathers-036": "https://www.archives.gov/founding-docs/founding-fathers-pennsylvania",
+      "founding-fathers-037": "https://www.nps.gov/people/john-hancock.htm",
+      "founding-fathers-038": "https://www.nps.gov/articles/000/samuel-adams-boston-revolutionary.htm",
+      "founding-fathers-039": "https://www.lva.virginia.gov/events/exhibitions/200-years-200-stories/stories/121",
+      "founding-fathers-040": "https://www.loc.gov/exhibitions/declarations-promise/about-this-exhibition/drafting-the-declaration/common-sense/"
+    }
   }
 ];
 window.QUIZ_SEED_PREVIOUS = [
