@@ -167,6 +167,9 @@ dialog, dialog.wide { border-radius: 22px; background: #fffef8; max-height: calc
 .dialog-heading h2 { font-weight: 750; }
 form input:not([type=checkbox]), form textarea, .import-target select { font-size: 16px; min-height: 48px; border-radius: 10px; }
 .dialog-actions { flex-wrap: wrap; }
+.answer-explanation { text-align: left; background: #edf1e6; border: 1px solid #dce3d0; border-radius: 14px; padding: 18px 20px; margin: 0 0 22px; }
+.answer-explanation h2 { font-size: 15px; font-weight: 700; margin-bottom: 7px; }
+.answer-explanation .answer-notes { font-size: 14px; margin: 0; white-space: pre-line; overflow-wrap: anywhere; }
 .quiz-update { background: #e8efda; border-color: #d9e2c7; border-radius: 14px; font-size: 13px; }
 .quiz-update p { font-size: 13px; }
 footer { color: #6f7a65; font-size: 11px; }

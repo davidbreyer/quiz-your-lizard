@@ -242,6 +242,74 @@ test('second chance and first attempt results persist as separate outcomes', () 
   t.click('[data-view="history"]'); assert.match(t.$('.history-score').textContent, /50%/);
   assert.equal(t.errors.length, 0); end(t);
 });
+test('pop quiz explanations stay hidden until resolution and render notes as text', () => {
+  const state = fixture();
+  state.quizzes[0].cards.forEach(c => { c.notes = 'An explanation <img src=x onerror=alert(1)>\nMore context.'; });
+  const t = boot(state);
+  t.click('[data-action="open-quiz"]'); t.click('[data-mode="quiz"]'); t.click('[data-action="start"]');
+  const expected = state.quizzes[0].cards.find(c => c.question === t.$('.session-stage h1').textContent).answer;
+  const pick = correct => Array.from(t.w.document.querySelectorAll('.answer-choice')).find(b => !b.disabled && (b.querySelector('span:nth-child(2)').textContent === expected) === correct).click();
+  assert.equal(t.$('.answer-explanation'), null);
+  pick(false); assert.equal(t.$('.answer-explanation'), null);
+  pick(false);
+  assert.equal(t.$('.answer-explanation .answer-notes').textContent, state.quizzes[0].cards[0].notes);
+  assert.equal(t.$('.answer-explanation img'), null);
+  t.click('[data-action="next"]'); assert.equal(t.$('.answer-explanation'), null);
+  const nextExpected = state.quizzes[0].cards.find(c => c.question === t.$('.session-stage h1').textContent).answer;
+  Array.from(t.w.document.querySelectorAll('.answer-choice')).find(b => b.querySelector('span:nth-child(2)').textContent === nextExpected).click();
+  assert.ok(t.$('.answer-explanation'));
+  end(t);
+});
+
+test('missed-question practice uses the original mode and full answer pool, preserves history, and repeats its subset', () => {
+  const state = fixture(); state.settings.count = 1; state.settings.secondChance = false;
+  state.quizzes[0].cards.forEach(c => { c.wrongAnswers = []; });
+  const t = boot(state);
+  t.click('[data-action="open-quiz"]'); t.click('[data-mode="quiz"]'); t.click('[data-action="start"]');
+  const prompt = t.$('.session-stage h1').textContent;
+  const answer = state.quizzes[0].cards.find(c => c.question === prompt).answer;
+  Array.from(t.w.document.querySelectorAll('.answer-choice')).find(b => b.querySelector('span:nth-child(2)').textContent !== answer).click();
+  t.click('[data-action="next"]');
+  const originalResult = t.savedData().history[0];
+  assert.equal(originalResult.wrong, 1);
+  t.click('[data-action="practice-missed"]');
+  assert.equal(t.$('.session-stage h1').textContent, prompt);
+  assert.match(t.$('.session-top').textContent, /Pop quiz \/ Missed questions/);
+  assert.equal(t.w.document.querySelectorAll('.answer-choice').length, 2);
+  assert.deepEqual(t.savedData().history, [originalResult]);
+  Array.from(t.w.document.querySelectorAll('.answer-choice')).find(b => b.querySelector('span:nth-child(2)').textContent === answer).click();
+  t.click('[data-action="next"]');
+  assert.equal(t.$('[data-action="practice-missed"]'), null);
+  assert.equal(t.savedData().history[0].first, 1);
+  assert.deepEqual(t.savedData().history[1], originalResult);
+  assert.deepEqual(t.savedData().settings, state.settings);
+  t.click('[data-action="retry"]');
+  assert.equal(t.$('.session-stage h1').textContent, prompt);
+  end(t);
+});
+
+test('missed spelling questions retain reverse mode and can be studied without changing results', () => {
+  const state = fixture(); state.settings.reverse = true;
+  const t = boot(state);
+  t.click('[data-action="open-quiz"]'); t.click('[data-mode="spelling"]'); t.click('[data-action="start"]');
+  const missed = t.$('.session-stage h1').textContent;
+  t.click('[data-action="skip"]'); t.click('[data-action="next"]');
+  const answer = state.quizzes[0].cards.find(c => c.answer === t.$('.session-stage h1').textContent).question;
+  t.fill('#spelling-answer', answer); t.submit('#spelling-form'); t.click('[data-action="next"]');
+  t.click('[data-action="practice-missed"]');
+  assert.equal(t.$('.session-stage h1').textContent, missed);
+  assert.match(t.$('.session-top').textContent, /Spelling \/ Missed questions \/ Reversed/);
+  assert.ok(t.$('#spelling-answer'));
+  t.click('[data-action="skip"]'); t.click('[data-action="next"]');
+  const history = t.savedData().history;
+  t.click('[data-action="review-missed"]');
+  assert.equal(t.$('.session-stage h1').textContent, missed);
+  t.click('[data-action="reveal"]');
+  assert.ok(t.$('.flashcard-answer h2'));
+  assert.deepEqual(t.savedData().history, history);
+  end(t);
+});
+
 test('reverse flashcards swap sides, reveal notes, and can move backward', () => {
   const state = fixture(); state.settings.reverse = true;
   const t = boot(state); t.click('[data-action="open-quiz"]'); t.click('[data-action="start"]');

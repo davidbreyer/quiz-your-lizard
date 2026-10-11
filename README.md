@@ -61,7 +61,9 @@ can make the browser use a different storage area.
 - Spelling practice with Unicode-aware, case-insensitive answer matching,
   progressive hints, answer reveal, and assisted versus unassisted scoring.
 - Configurable quiz/spelling session length, from 1 to 200 questions.
-- Results, missed-question review, and the last 100 completed quiz/spelling sessions.
+- Results, missed-question study and practice, and the last 100 completed quiz/spelling sessions.
+- Pop quizzes show explanatory notes after an answer is resolved, preserving a second chance before revealing them.
+- **Practice what I missed** starts a new quiz or spelling session using only missed questions, retaining reverse mode and settings. Pop-quiz choices still use the full collection. Each completed attempt is saved separately; **Practice again** repeats the current practice subset.
 - Complete JSON backup export and import; single-quiz JSON and legacy XML `.qyl` export.
 - Imports can create new collections or add questions to an existing collection.
 - Responsive styles for desktop, tablets, and phones; keyboard-accessible dialogs.
