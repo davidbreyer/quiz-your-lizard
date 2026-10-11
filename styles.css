@@ -28,7 +28,7 @@ h1, h2, h3, .title-button { letter-spacing: -.035em; }
 h1 { font-weight: 750; font-size: 38px; }
 .sidebar { background: #eeefe4; border-color: #e2e4d5; padding: 32px 20px 24px; }
 .brand { gap: 11px; font-weight: 600; }
-.brand img { width: 52px; height: 52px; border-radius: 50%; }
+.brand img { width: 52px; height: 52px; border-radius: 0; object-fit: contain; }
 .brand strong { font-size: 25px; letter-spacing: -.04em; }
 .nav-label { color: #707c65; font-size: 10px; letter-spacing: .12em; }
 .nav-button { min-height: 48px; border-radius: 13px; font-size: 14px; }
@@ -83,7 +83,7 @@ main { padding-top: 25px; }
 .hero-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 18px; font-size: 13px; color: #fffef2; text-underline-offset: 5px; }
 .hero-link svg { width: 16px; height: 16px; }
 .hero-art { position: relative; display: grid; place-items: center; height: 260px; }
-.hero-art img { position: relative; width: 212px; height: 212px; transform: rotate(-12deg); filter: drop-shadow(8px 12px 0 #173c2b33); }
+.hero-art img { position: relative; width: 212px; height: 212px; object-fit: contain; filter: drop-shadow(8px 12px 0 #173c2b33); }
 .orbit { position: absolute; width: 320px; height: 320px; border-radius: 50%; border: 1px solid #e2f5bb25; }
 .orbit-two { width: 410px; height: 410px; border-style: dashed; transform: rotate(20deg); }
 .hero-spark { position: absolute; color: #d7f18a; }
@@ -134,7 +134,7 @@ main { padding-top: 25px; }
 .mode-selector { border-radius: 13px; background: #eeefe3; padding: 5px; }
 .mode-selector button { min-height: 46px; border-radius: 9px; color: #626f59; font-weight: 600; }
 .mode-selector button.selected { background: #dce8bf; box-shadow: none; }
-.practice-art img { border-radius: 50%; }
+.practice-art img { border-radius: 0; object-fit: contain; }
 .practice-kicker { font-size: 9px; color: #65774f; letter-spacing: .08em; }
 .practice-art h3 { color: #36503c; }
 .start-button { min-width: 210px; }
@@ -227,7 +227,7 @@ footer { color: #6f7a65; font-size: 11px; }
   .hero-intro { display: none; }
   .library-hero p { font-size: 12px; max-width: 230px; }
   .hero-link { font-size: 12px; margin-top: 4px; }
-  .hero-art { position: absolute; right: -24px; top: 17px; width: 155px; height: 126px; z-index: -1; }
+  .hero-art { position: absolute; right: -8px; top: 17px; width: 155px; height: 126px; z-index: -1; }
   .hero-art img { width: 116px; height: 116px; }
   .hero-note, .spark-two { display: none; }
   .spark-one { right: 26px; top: -20px; }
@@ -272,8 +272,8 @@ footer { color: #6f7a65; font-size: 11px; }
   main { padding-inline: 16px; }
   .library-hero { padding: 22px 20px; }
   .library-hero h2 { font-size: 38px; }
-  .hero-art { right: -55px; }
-  .hero-art img { width: 105px; height: 105px; }
+  .hero-art { right: -12px; width: 120px; }
+  .hero-art img { width: 85px; height: 85px; }
   .hero-kicker { max-width: 180px; }
   .card-kicker { font-size: 9px; }
   .badge { font-size: 9px; }
